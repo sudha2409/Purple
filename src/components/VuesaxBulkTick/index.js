@@ -1,0 +1,1 @@
+export { VuesaxBulkTick } from "./VuesaxBulkTick";

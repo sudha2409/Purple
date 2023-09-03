@@ -1,0 +1,152 @@
+.product-card {
+    max-width: 400px; 
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: flex;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo-image {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  
+  .headline {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  .display-link {
+    color: #007bff;
+    text-decoration: none;
+    margin: 5px 0;
+  }
+  
+  .cta-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .video-container {
+    margin-top: 20px;
+  }
+  
+  .video-container video {
+    max-width: 100%;
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 20px; 
+  }
+  
+  @media (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+.logo-name-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 50px;
+  height: auto; 
+  margin-right: 10px; 
+}
+
+
+
+.card-body {
+  display: grid;
+  grid-template-columns: 5fr; 
+  grid-gap: 6px; 
+}
+
+.media-container {
+  max-width: 100%;
+}
+
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.logo-name-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.logo-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.headline {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+
+.description {
+  margin-bottom: 15px;
+}
+
+.display-link {
+  color: #007bff;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+.media-container {
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+.media-image,
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+

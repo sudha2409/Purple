@@ -1,0 +1,1 @@
+export { VuesaxBulkPlay } from "./VuesaxBulkPlay";
