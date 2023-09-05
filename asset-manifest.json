@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/PurpleMaze/static/css/main.3567a73a.css",
+    "main.js": "/PurpleMaze/static/js/main.235d40c0.js",
+    "static/js/787.1c1b3ed8.chunk.js": "/PurpleMaze/static/js/787.1c1b3ed8.chunk.js",
+    "index.html": "/PurpleMaze/index.html",
+    "main.3567a73a.css.map": "/PurpleMaze/static/css/main.3567a73a.css.map",
+    "main.235d40c0.js.map": "/PurpleMaze/static/js/main.235d40c0.js.map",
+    "787.1c1b3ed8.chunk.js.map": "/PurpleMaze/static/js/787.1c1b3ed8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3567a73a.css",
+    "static/js/main.235d40c0.js"
+  ]
+}
