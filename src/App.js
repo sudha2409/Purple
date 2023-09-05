@@ -33,8 +33,8 @@ const App = () => {
           <Route path="/parent" element={<ParentComponent />} />
           <Route path="/SearchPage/:page" element={<ParentComponent />} />
           <Route path="/SearchPage" element={<SearchPage />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-and-conditions" element={<TermsCondition />} />
+          <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+          <Route path="/termsandconditions" element={<TermsCondition />} />
           <Route Component={NotFound} />
         </Routes>
   );
