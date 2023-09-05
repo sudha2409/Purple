@@ -71,8 +71,8 @@ export const Footer = ({
             <div className="text-wrapper-8">About Us</div>
             <div className="text-wrapper-7">Careers</div>
             <div className="text-wrapper-7">FAQs</div>
-            <div className="text-wrapper-7"> <a href="\privacypolicy">Privacy</a></div>               
-            <div className="text-wrapper-7"> <a href="\termsandconditions">Terms</a></div>
+            <div className="text-wrapper-7"> <a href="\PurpleMaze\privacy-policy">Privacy</a></div>               
+            <div className="text-wrapper-7"> <a href="\PurpleMaze\terms-and-conditions">Terms</a></div>
             <div className="text-wrapper-7">Contact Us</div>
           </div>
         </div>

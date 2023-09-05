@@ -8,7 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 const root = createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename={"/"}>
+    <BrowserRouter basename={"/PurpleMaze"}>
       <App />
     </BrowserRouter>
   </React.StrictMode>
