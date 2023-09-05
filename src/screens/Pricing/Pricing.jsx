@@ -5,6 +5,7 @@ import { VuesaxBulkTick } from "../../components/VuesaxBulkTick";
 import { VuesaxBulkPlayCircle } from "../../icons/VuesaxBulkPlayCircle";
 import { VuesaxBulkTickCircle } from "../../icons/VuesaxBulkTickCircle";
 import "../Pricing/pricingstyle.css";
+import Navbar from "../Home/Navbar";
 const Pricing = () => {
   return (
     <div className="index">
@@ -370,11 +371,7 @@ const Pricing = () => {
           className="footer-instance"
           img="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/-.svg"
         />
-        <LogoutHeader
-          className="logout-header-instance"
-          groupClassName="design-component-instance-node"
-          img="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d53bb23acc02a59b7cfa6b/img/--1.svg"
-        />
+        <Navbar/>
       </div>
     </div>
   );

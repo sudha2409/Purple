@@ -5,7 +5,7 @@ import LogInHeader from "./LogInHeader";
 import EcommercePage from "../Search/EcommercePage";
 import Filter from "./Filter";
 import axios from "axios";
-import { Link } from "react-router-dom"; // Import Link component
+import { Link } from "react-router-dom"; 
 import { useParams } from "react-router-dom";
 
 export const SearchPage = () => {
@@ -34,13 +34,13 @@ export const SearchPage = () => {
       <div className="div-2">
         <LogInHeader />
         <div className="cards">
-          <Filter />
+          {/* <Filter /> */}
           <EcommercePage products={products} />
         </div>
         {/* Pagination */}
         <div className="pagination">
           <button
-            disabled={page === "1"} // Adjust this condition accordingly
+            disabled={page === "1"} 
             onClick={() => window.location.href = `/SearchPage?page=${parseInt(page) - 1}`}
           >
             Previous

@@ -1,1 +1,0 @@
-export { IconFacebook } from "./IconFacebook";

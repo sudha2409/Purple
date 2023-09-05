@@ -68,7 +68,7 @@ const SignUp = () => {
           {(formik) => (
             <Form>
               <div className="form-group my-3">
-                <label>email</label>
+                <label>Email</label>
                 <Field
                   type="text"
                   name="email"
@@ -85,7 +85,7 @@ const SignUp = () => {
                 </ErrorMessage>
               </div>
               <div className="form-group my-3">
-                <label>password</label>
+                <label>Password</label>
                 <Field
                   type="password"
                   name="password"

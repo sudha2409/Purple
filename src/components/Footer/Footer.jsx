@@ -1,4 +1,5 @@
 
+
 import PropTypes from "prop-types";
 import React from "react";
 import { IconFacebook1 } from "../../icons/IconFacebook1";
@@ -10,7 +11,7 @@ import "./style.css";
 
 export const Footer = ({
   className,
-  img = "https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d53bb23acc02a59b7cfa6b/img/--3.svg",
+  img = "https://generation-sessions.s3.amazonaws.com/27ef0faa38aabce506c661f34f7307c9/img/--2.svg",
 }) => {
   return (
     <div className={`footer ${className}`}>
@@ -34,7 +35,7 @@ export const Footer = ({
       <img
         className="line"
         alt="Line"
-        src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/line-1.svg"
+        src="https://generation-sessions.s3.amazonaws.com/27ef0faa38aabce506c661f34f7307c9/img/line-1-1.svg"
       />
       <div className="frame-3">
         <div className="frame-4">

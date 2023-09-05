@@ -1,1 +1,0 @@
-export { IconTwitter } from "./IconTwitter";

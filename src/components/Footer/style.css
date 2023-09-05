@@ -3,10 +3,9 @@
   background-color: #363f50;
   display: inline-flex;
   flex-direction: column;
-  gap: 100px;
-  padding: 175px;
+  gap: 75px;
+  padding: 75px;
   position: relative;
-  margin-top: 30px;
 }
 
 .footer .frame {
@@ -137,7 +136,7 @@
 }
 
 .footer .group {
-  background-image: url(https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/union.svg);
+  background-image: url(https://generation-sessions.s3.amazonaws.com/27ef0faa38aabce506c661f34f7307c9/img/union-3.svg);
   background-size: 100% 100%;
   height: 39.01px;
   position: relative;

@@ -5,7 +5,7 @@ const TermsCondition = () => {
       <h1 className="text-center">Terms and Conditions</h1>
       <p>
         Welcome to [insert brand name]! This website is owned by [insert name of
-        owner] and is operated under the brand name, [insert brand name] (“we”,
+        owner] and is operated under the brand name, Purple Maze(“we”,
         “us” or “[Insert Brand Name]”).
       </p>
       <p>
@@ -62,16 +62,16 @@ const TermsCondition = () => {
         of age, you will still be responsible for ensuring that such individuals
         comply with the terms. You will be responsible for all actions these
         individuals take in and/or through your account. You also acknowledge
-        that [insert brand name] does not have the responsibility of ensuring
+        that Purple Mazedoes not have the responsibility of ensuring
         that you meet the aforesaid requirements. You agree to comply with all
         applicable laws when using the Services, and you may only use the
-        Services for lawful purposes. [insert brand name] reserves the right to
+        Services for lawful purposes. Purple Mazereserves the right to
         terminate your subscription and / or refuse to provide you with access
         to the Website, or any part thereof, or access to any of the products or
         services offered therein, if it is discovered that you are under the age
         of 18 (eighteen) years and the consent to use the products or services
         is not made by your parent/legal guardian or any information provided by
-        you is inaccurate. You acknowledge that [insert brand name] does not
+        you is inaccurate. You acknowledge that Purple Mazedoes not
         have the responsibility to ensure that you conform to the aforesaid
         eligibility criteria. It shall be your sole responsibility to ensure
         that you meet the required qualification. Any persons under the age of
@@ -80,7 +80,7 @@ const TermsCondition = () => {
         other family members on the website. Please be aware that [insert brand
         name] reserves the right to revoke your access to the website, subject
         to our reasonable discretion. In this regard, we may also choose to
-        suspend your [insert brand name] Account or your access to the same. As
+        suspend your Purple MazeAccount or your access to the same. As
         a registered User, in such an event, you may contact our support team to
         assist you/resolve the situation.
       </p>
@@ -100,10 +100,10 @@ const TermsCondition = () => {
       <p>
         To the fullest extent permissible pursuant to applicable law, the
         materials on this website are provided "as is" and without warranties of
-        any kind either expressed or implied and [insert brand name] disclaims
+        any kind either expressed or implied and Purple Mazedisclaims
         all warranties, expressed or implied, including, but not limited to,
         implied warranties of merchantability and fitness for a particular
-        purpose. [insert brand name] does not warrant that the functions
+        purpose. Purple Mazedoes not warrant that the functions
         contained in the materials will be uninterrupted or error-free, that
         defects will be corrected, or that this website or the server that makes
         it available are free of viruses or other harmful components. [insert
@@ -116,19 +116,19 @@ const TermsCondition = () => {
         to the products and services, but are provided solely for general
         informational purposes. Prices and availability are subject to change.
         This website is linked to other websites which are not maintained by
-        [insert brand name] and we are not responsible for the content of those
+        Purple Mazeand we are not responsible for the content of those
         websites. The inclusion of any link to such websites does not imply
-        approval of or endorsement by [insert brand name] of the websites or the
+        approval of or endorsement by Purple Mazeof the websites or the
         content thereof.{" "}
       </p>
       <h5>Limitation of Liability</h5>
       <p>
-        While [insert brand name] uses reasonable efforts to include accurate
+        While Purple Mazeuses reasonable efforts to include accurate
         and up to date information on this website, errors or omissions
-        sometimes occur. [insert brand name] makes no warranties or
+        sometimes occur. Purple Mazemakes no warranties or
         representations as to the accuracy of this website. Under no
         circumstances, including, but not limited to, negligence, shall [insert
-        name of owner] or [insert brand name] or any party involved in creating,
+        name of owner] or Purple Mazeor any party involved in creating,
         producing, or delivering the website be liable to you for any direct,
         incidental, consequential, indirect, or punitive damages that result
         from the use of, or the inability to use, the materials on this website,
@@ -136,7 +136,7 @@ const TermsCondition = () => {
         advised of the possibility of such damages. In no event shall [insert
         brand name]’s total liability to you for all damages, losses, and causes
         of action exceed the amount paid by you, if any, for accessing this
-        website. [insert brand name] also assumes no responsibility, and shall
+        website. Purple Mazealso assumes no responsibility, and shall
         not be liable for, any damages to, or viruses that may infect, your
         computer equipment or other property as a result of your access to, use
         of, or browsing in the website or your downloading of any materials,
@@ -164,7 +164,7 @@ const TermsCondition = () => {
         website should be construed as granting, by implication, estoppel, or
         otherwise, any license or right to use any trademark or other
         intellectual property displayed on this website without the written
-        permission of [insert brand name] or such third party that may own the
+        permission of Purple Mazeor such third party that may own the
         trademarks displayed on this website. Your use of the trademarks
         displayed on this website, or any other content on this website, except
         as provided herein, is strictly prohibited.
@@ -180,7 +180,7 @@ const TermsCondition = () => {
       <h5>Contacting [insert brand name]</h5>
       <p>
         For questions, comments, complaints, or claims please contact us at:
-        [insert brand name] [insert mailing address] [insert e-mail address]
+        Purple Maze[insert mailing address] [insert e-mail address]
       </p>
     </div>
   );

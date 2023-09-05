@@ -1,9 +1,9 @@
 import React from "react";
-import { IconFacebook } from "../../components/IconFacebook";
-import { IconInstagram } from "../../components/IconInstagram";
-import { IconLinkedin } from "../../components/IconLinkedin";
-import { IconTwitter } from "../../components/IconTwitter";
-import { IconYoutube } from "../../components/IconYoutube";
+import { IconFacebook1 } from "../../icons/IconFacebook1";
+import { IconInstagram } from "../../icons/IconInstagram";
+import { IconLinkedin } from "../../icons/IconLinkedin";
+import { IconTwitter } from "../../icons/IconTwitter2";
+import { IconYoutube } from "../../icons/IconYoutube";
 import { VuesaxBulkPlay } from "../../components/VuesaxBulkPlay";
 import { VuesaxBulkTick } from "../../components/VuesaxBulkTick";
 import "./style.css";
