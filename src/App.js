@@ -19,8 +19,6 @@ import TermsCondition from "./screens/PrivacyPolicy/TermsCondition";
 
 const App = () => {
   return (
-    <div>
-      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignUp />} />
@@ -35,12 +33,10 @@ const App = () => {
           <Route path="/parent" element={<ParentComponent />} />
           <Route path="/SearchPage/:page" element={<ParentComponent />} />
           <Route path="/SearchPage" element={<SearchPage />} />
-          <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
-          <Route path="/termsCondition" element={<TermsCondition />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsCondition />} />
           <Route Component={NotFound} />
         </Routes>
-      </HashRouter>
-    </div>
   );
 };
 
