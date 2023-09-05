@@ -1203,19 +1203,6 @@
   width: 80px;
 }
 
-.home .footer {
-  align-items: flex-start;
-  background-color: #363f50;
-  display: inline-flex;
-  flex-direction: column;
-  gap: 75px;
-  left: 0;
-  mix-blend-mode: normal;
-  padding: 75px;
-  position: absolute;
-  top: 4182px;
-}
-
 .home .frame-39 {
   align-items: center;
   display: inline-flex;
@@ -1416,6 +1403,20 @@
   gap: 24px;
   position: relative;
 }
+
+.homePage .footer {
+  align-items: flex-start;
+  background-color: #363f50;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 75px;
+  left: 0;
+  mix-blend-mode: normal;
+  padding: 75px;
+  position: absolute;
+  top: 4182px;
+}
+
 
 .home .menu-footer {
   align-items: flex-start;
