@@ -16,7 +16,7 @@ const Login = () => {
 
   const onSubmit = (values) => {
     console.log(values);
-    axios.post('http://65.0.101.75:3500/api/v1/users/login',values)
+    axios.post('https://auth.purplemaze.co/api/v1/users/login',values)
     .then((response) => {
       if (response.status === 200) {
         const authToken = response.data.token; // Assuming the server sends a token

@@ -24,7 +24,7 @@ const ForgotPassword = () => {
     const onSubmit = (values) => {
       //console.log(values);
       axios
-      .post("http://65.0.101.75:3500/api/v1/users/forgot-password", values)  // if else wali conditions lagani h     
+      .post("https://auth.purplemaze.co/api/v1/users/forgot-password", values)  // if else wali conditions lagani h     
       .then(
         (response) => {
           if(response.status === 200) {

@@ -37,7 +37,7 @@ const NewPassword = () => {
     // Send data to the backend
 
     axios
-      .post('http://65.0.101.75:3500/api/v1/users/forgot-password-change', dataToSend) 
+      .post('https://auth.purplemaze.co/api/v1/users/forgot-password-change', dataToSend) 
       .then((response) => {
         console.log('Password change successful:', response);
         localStorage.removeItem('userToken')

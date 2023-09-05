@@ -17,7 +17,7 @@ const ReverificationEmail = () => {
       };
       const onSubmit = (values) => {
         console.log(values);
-        axios.post("http://65.0.101.75:3500/api/v1/users/email-reverification", values)
+        axios.post("https://auth.purplemaze.co/api/v1/users/email-reverification", values)
         .then((response) => {
           if (response.status === 200) {
             setRequestResponse({

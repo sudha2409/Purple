@@ -20,7 +20,7 @@ const SignUp = () => {
   const onSubmit = (values) => {
     //console.log(values);
     axios
-    .post("http://65.0.101.75:3500/api/v1/users/register", values)
+    .post("https://auth.purplemaze.co/api/v1/users/register", values)
     .then(
       (response) => {
         setRequestResponse({

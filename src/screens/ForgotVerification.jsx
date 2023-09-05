@@ -20,7 +20,7 @@ const ForgotVerification = () => {
         //console.log(values);
         const verifyToken = {passwordVerificationCode:forgotTokenString}
         axios
-        .post("http://65.0.101.75:3500/api/v1/users/verify-forgot-password", verifyToken)
+        .post("https://auth.purplemaze.co/api/v1/users/verify-forgot-password", verifyToken)
         .then(
           (response) => {
             setRequestResponse({

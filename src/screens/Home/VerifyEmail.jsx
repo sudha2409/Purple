@@ -18,7 +18,7 @@ const VerifyEmail = () => {
         //console.log(values);
         const verifyToken = {verificationCode:verifyTokenString}
         axios
-        .post("http://65.0.101.75:3500/api/v1/users/email-verification", verifyToken)
+        .post("https://auth.purplemaze.co/api/v1/users/email-verification", verifyToken)
         .then(
           (response) => {
             setRequestResponse({
