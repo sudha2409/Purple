@@ -7,7 +7,7 @@ import { IconInstagram } from "../../icons/IconInstagram";
 import { IconLinkedin } from "../../icons/IconLinkedin";
 import { IconTwitter2 } from "../../icons/IconTwitter2";
 import { IconYoutube } from "../../icons/IconYoutube";
-import "./style.css";
+import "./footerstyle.css";
 
 export const Footer = ({
   className,
@@ -62,9 +62,7 @@ export const Footer = ({
         <div className="menu-footer">
           <div className="text-wrapper-5">How to Reach Us</div>
           <div className="frame-7">
-            <p className="text-wrapper-6">Some address with street number city and state</p>
-            <div className="text-wrapper-7">info@email.com</div>
-            <div className="text-wrapper-7">(+91) 9876543210</div>
+            <div className="text-wrapper-7">support@purplemaze.co</div>
           </div>
         </div>
         <div className="menu-footer">
@@ -73,7 +71,8 @@ export const Footer = ({
             <div className="text-wrapper-8">About Us</div>
             <div className="text-wrapper-7">Careers</div>
             <div className="text-wrapper-7">FAQs</div>
-            <div className="text-wrapper-7">Teams</div>
+            <div className="text-wrapper-7"> <a href="\privacy-policy">Privacy</a></div>               
+            <div className="text-wrapper-7"> <a href="\terms-and-conditions">Terms</a></div>
             <div className="text-wrapper-7">Contact Us</div>
           </div>
         </div>
