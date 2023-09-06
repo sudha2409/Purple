@@ -6,6 +6,8 @@ import { IconTwitter } from "../../icons/IconTwitter2";
 import { IconYoutube } from "../../icons/IconYoutube";
 import { VuesaxBulkPlay } from "../../components/VuesaxBulkPlay";
 import { VuesaxBulkTick } from "../../components/VuesaxBulkTick";
+import VideoModal from './VideoModal';
+
 import "./style.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -14,7 +16,7 @@ import Navbar from "./Navbar";
 import PopupMsg from "../Pop-Ups/PopupMsg";
 
 export const Home = () => {
-  const navigate = useNavigate();
+  const videoUrl = 'https://www.youtube.com/watch?v=og_ob8Xdlvk';
   return (
     <div className="homePage">
       <div className="home">
@@ -27,11 +29,7 @@ export const Home = () => {
                   alt="Rectangle"
                   src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/rectangle-6.png"
                 />
-                <img
-                  className="vuesax-bulk-play"
-                  alt="Vuesax bulk play"
-                  src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/vuesax-bulk-play-circle.svg"
-                />
+                <VideoModal videoUrl={videoUrl} />
               </div>
               <div className="overlap-2">
                 <img
@@ -66,10 +64,18 @@ export const Home = () => {
                   </p>
                   <div className="frame-3">
                     <div className="div-wrapper">
-                      <div className="text-wrapper-3">Get Started</div>
+                      <div >
+                        <a className="text-wrapper-3" style={{ textDecorationLine: 'none' }} href="/#/signup">
+                          Get Started              
+                        </a>
+                      </div>
                     </div>
                     <div className="frame-4">
-                      <div className="text-wrapper-4">See Pricing Options</div>
+                      <div >
+                        <a className="text-wrapper-4" style={{ textDecorationLine: 'none' }} href="/#/pricing">
+                          See Pricing Options
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -113,22 +119,26 @@ export const Home = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="frame-11">
+                  <div className="frame-9">
                     <div className="text-wrapper-8">02</div>
                     <div className="frame-10">
-                      <div className="text-wrapper-9">Filter to your needs</div>
+                      <div className="text-wrapper-9">
+                      Filter to your needs                      
+                      </div>
                       <p className="text-wrapper-10">
-                        Narrow down by product, industry, location, platform
+                      Narrow down by product, industry, location, platform
                         &amp; more
                       </p>
                     </div>
                   </div>
-                  <div className="frame-12">
+                  <div className="frame-9">
                     <div className="text-wrapper-8">03</div>
-                    <div className="frame-13">
-                      <p className="text-wrapper-9">Stay up to the trend</p>
+                    <div className="frame-10">
+                      <div className="text-wrapper-9">
+                        Stay up to the trend
+                      </div>
                       <p className="text-wrapper-10">
-                        We add 100+ creatives every month after analyzing
+                      We add 100+ creatives every month after analyzing
                         thousands of latest creatives
                       </p>
                     </div>
@@ -202,39 +212,16 @@ export const Home = () => {
                         </span>
                       </p>
                     </div>
-                    <div className="frame-28">
-                      <img
-                        className="vuesax-bulk-tick"
-                        alt="Vuesax bulk tick"
-                        src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/vuesax-bulk-tick-circle-3@2x.png"
-                      />
-                      <p className="div-2">
-                        <span className="text-wrapper-21">30 influencers</span>
-                        <span className="text-wrapper-22">
-                          {" "}
-                          apply per month
-                        </span>
-                      </p>
-                    </div>
-                    <div className="frame-28">
-                      <img
-                        className="vuesax-bulk-tick-2"
-                        alt="Vuesax bulk tick"
-                        src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/vuesax-bulk-tick-circle-3@2x.png"
-                      />
-                      <p className="div-2">
-                        <span className="text-wrapper-21">30 influencers</span>
-                        <span className="text-wrapper-22">
-                          {" "}
-                          apply per month
-                        </span>
-                      </p>
-                    </div>
+                    <div className="magin-bottom-1"> </div>
                   </div>
                   <div className="frame-27">
                     <div className="frame-29">
                       <div className="frame-30">
-                        <div className="text-wrapper-3">Sign Up</div>
+                        <div >
+                          <a className="text-wrapper-3" style={{ textDecorationLine: 'none' }} href="/#/signup">
+                            Sign Up        
+                          </a>
+                        </div>
                       </div>
                       <div className="text-wrapper-23">Current Plan</div>
                     </div>
@@ -314,7 +301,11 @@ export const Home = () => {
                   <div className="frame-27">
                     <div className="frame-29">
                       <div className="frame-30">
-                        <div className="text-wrapper-3">Upgrade</div>
+                        <div >
+                          <a className="text-wrapper-3" style={{ textDecorationLine: 'none' }} href="/#/signup">
+                          Upgrade      
+                          </a>
+                        </div>
                       </div>
                       <div className="text-wrapper-23">Cancel Anytime</div>
                     </div>
@@ -432,56 +423,22 @@ export const Home = () => {
               </p>
               <div className="frame-3">
                 <div className="div-wrapper">
-                  <div className="text-wrapper-3">Get Started</div>
+                  <div >
+                    <a className="text-wrapper-3" style={{ textDecorationLine: 'none' }} href="/#/signup">
+                      Get Started              
+                    </a>
+                  </div>
                 </div>
                 <div className="frame-4">
-                  <div className="text-wrapper-4">See Pricing Options</div>
+                  <div >
+                    <a className="text-wrapper-4" style={{ textDecorationLine: 'none' }} href="/#/pricing">
+                      See Pricing Options
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="frame-37">
-              <div className="frame-38">
-                <img
-                  className="IMAGE-2"
-                  alt="Image"
-                  src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/image-8@2x.png"
-                />
-                <div className="frame-34">
-                  <div className="text-wrapper-33">Reason one For choosing</div>
-                  <p className="text-wrapper-34">
-                    Duis mollis gravida commodo id luctus erat porttitor ligula,
-                    eget lacinia odio sem aget elit.
-                  </p>
-                </div>
-              </div>
-              <div className="frame-38">
-                <img
-                  className="IMAGE-3"
-                  alt="Image"
-                  src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d90915bde965d8a1d78907/img/image-9@2x.png"
-                />
-                <div className="frame-34">
-                  <div className="text-wrapper-33">Reason one For choosing</div>
-                  <p className="text-wrapper-34">
-                    Duis mollis gravida commodo id luctus erat porttitor ligula,
-                    eget lacinia odio sem aget elit.
-                  </p>
-                </div>
-              </div>
-              <div className="frame-38">
-                <img
-                  className="IMAGE-4"
-                  alt="Image"
-                  src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d90915bde965d8a1d78907/img/image-10@2x.png"
-                />
-                <div className="frame-34">
-                  <div className="text-wrapper-33">Reason one For choosing</div>
-                  <p className="text-wrapper-34">
-                    Duis mollis gravida commodo id luctus erat porttitor ligula,
-                    eget lacinia odio sem aget elit.
-                  </p>
-                </div>
-              </div>
               <div className="frame-38">
                 <img
                   className="IMAGE-5"
