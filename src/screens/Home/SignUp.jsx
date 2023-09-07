@@ -4,14 +4,11 @@ import "./style.css";
 import { FaGoogle } from "react-icons/fa";
 import axios from "axios";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const navigate = useNavigate();
-  const [RequestResponse, setRequestResponse] = useState({
-    textMessage: "",
-    alertClass: "",
-  });
+  const [RequestResponse, setRequestResponse] = useState('');
   const initialValues = {
     email: "",
     password: "",
@@ -23,26 +20,17 @@ const SignUp = () => {
     .post("https://auth.purplemaze.co/api/v1/users/register", values)
     .then(
       (response) => {
-        setRequestResponse({
-          textMessage: "Login successful",
-          alertClass: "alert alert-success",
-        });
-
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("user", JSON.stringify(response.data.user));
         localStorage.setItem("emailVerificationRequired", "true");
         navigate("/");
         console.log(response);
       },
-
-      (error) => {
-        setRequestResponse({
-          textMessage: error.response.data.message,
-          alertClass: "alert alert-danger",
-        })
-      }
     )
-    .catch((error) => console.log(error));
+    .catch((error) => {
+      console.log(error.response.data.msg)
+      setRequestResponse( error.response.data.msg);
+    });
 };
 
 
@@ -60,6 +48,7 @@ const SignUp = () => {
     <div className="centered-container">
       <div className="wrapper" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
         <h1 className="text-center">Sign Up</h1>
+        <div style={{color: "red"}}>{RequestResponse}</div>
         <Formik
           initialValues={initialValues}
           onSubmit={onSubmit}
@@ -140,6 +129,12 @@ const SignUp = () => {
           </svg>
           Continue with Google
         </button>
+
+        <div className="text-center mt-3 ">
+          <p className="text-center new-user">
+            Already Sign in? <Link className='joinNow' to="/login"> Log in </Link>
+          </p>
+        </div>
       </div>
     </div>
   );
