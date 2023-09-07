@@ -48,11 +48,11 @@ const EcommercePage = ({products}) => {
 
   return (
     <div className="ad-list">
-      {/* <Filter
+      <Filter
         selectedFilters={selectedFilters}
         setSelectedFilters={setSelectedFilters}
         // pass filter options from API as props
-      /> */}
+      />
       <div className="product-grid">
         {filteredAds.map((ad) => (
           <ProductCard key={ad.id} ad={ad} />
