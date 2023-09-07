@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import './contactUs.css'
 import Navbar from '../Home/Navbar';
 import { Footer } from '../../components/Footer';
+import axios from 'axios';
 
 const ContactUs = () => {
+    const [responseMessage, setResponseMessage] = useState("")
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,6 +23,7 @@ const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData); // Log the form data for testing
+    sentMail(formData)
 
     setFormData({
         name: '',
@@ -29,12 +32,27 @@ const ContactUs = () => {
       })
   };
 
+  const sentMail = async (values) => {
+    console.log(values);
+    try{
+      const response = await axios.post('https://auth.purplemaze.co/api/v1/users/contact-us',values);
+      if (response.status === 200) {
+        setResponseMessage(response.data.msg)
+      }
+    }
+    catch(error) {
+      console.log(error);
+        setResponseMessage("Something went wrong")
+    };
+  };
+
   return (
     <div>
     <Navbar />
 
     <div className="contact-us-container">
       <h1>Contact Us</h1>
+      <div style={{color: 'blue'}}>{responseMessage} </div>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name</label>
