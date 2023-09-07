@@ -17,7 +17,7 @@ const EcommercePage = () => {
     fetch("https://sfb6484cu3.execute-api.ap-south-1.amazonaws.com/v1/api/advertisements?page=0", 
     {
       headers: {
-        'Authorization': accessAuth.accessToken,
+        'Authorization': accessAuth?.accessToken,
         'Content-Type': 'application/json'
       },
     })
