@@ -6,20 +6,29 @@ import EcommercePage from "../Search/EcommercePage";
 import Filter from "./Filter";
 import axios from "axios";
 import { Link } from "react-router-dom"; 
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import useLogout from '../../hooks/useLogout';
+import moment from 'moment';
 
 export const SearchPage = () => {
   const { page } = useParams();
   console.log("page:", page);
   const [products, setProducts] = useState([]);
   const itemsPerPage = 30;
-
+      
   useEffect(() => {
     console.log("SearchPage component loaded");
     console.log(`SearchPage useEffect: page=${page}`);
+    const accessAuth = JSON.parse(localStorage.getItem('accessAuth'));
     axios
       .get(
-        `https://sfb6484cu3.execute-api.ap-south-1.amazonaws.com/v1/api/advertisements?page=${page}&itemsPerPage=${itemsPerPage}`
+        `https://sfb6484cu3.execute-api.ap-south-1.amazonaws.com/v1/api/advertisements?page=${page}&itemsPerPage=${itemsPerPage}`,
+        {
+          headers: {
+            'Authorization': accessAuth?.accessToken,
+            'Content-Type': 'application/json'
+          },
+        }
       )
       .then((response) => {
         setProducts(response.data);

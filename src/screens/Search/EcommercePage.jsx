@@ -11,10 +11,16 @@ const EcommercePage = () => {
     type: "",
     format: "",
   });
-
+  
   useEffect(() => {
-    // Fetch data from the API
-    fetch("https://sfb6484cu3.execute-api.ap-south-1.amazonaws.com/v1/api/advertisements?page=0")
+    const accessAuth = JSON.parse(localStorage.getItem('accessAuth'));
+    fetch("https://sfb6484cu3.execute-api.ap-south-1.amazonaws.com/v1/api/advertisements?page=0", 
+    {
+      headers: {
+        'Authorization': accessAuth.accessToken,
+        'Content-Type': 'application/json'
+      },
+    })
       .then((response) => response.json())
       .then((data) => {
         // Assuming data.ads is an array of ad objects

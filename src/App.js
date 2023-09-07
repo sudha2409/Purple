@@ -16,24 +16,30 @@ import SignUp from "./screens/Home/SignUp";
 import SearchPage from "./screens/Search/SearchPage";
 import PrivacyPolicy from "./screens/PrivacyPolicy/PrivacyPolicy";
 import TermsCondition from "./screens/PrivacyPolicy/TermsCondition";
+import AuthNavigate from './hooks/AuthNavigate';
+import AuthVerify from './hooks/AuthVerify';
 
 const App = () => {
   return (
     <HashRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/Reset-password" element={<ResetPassword />} />
-          <Route path="/New-password" element={<NewPassword />} />
-          <Route path="/Verify-Email" element={<VerifyEmail />} />
-          <Route path="/Reverification-Email" element={<ReverificationEmail />} />
-          <Route path="/forgot-token" element={<ForgotVerification />} />
-          <Route path="/parent" element={<ParentComponent />} />
-          <Route path="/SearchPage/:page" element={<ParentComponent />} />
-          <Route path="/SearchPage" element={<SearchPage />} />
+            <Route element={< AuthNavigate />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/Reset-password" element={<ResetPassword />} />
+              <Route path="/New-password" element={<NewPassword />} />
+              <Route path="/Verify-Email" element={<VerifyEmail />} />
+              <Route path="/Reverification-Email" element={<ReverificationEmail />} />
+              <Route path="/forgot-token" element={<ForgotVerification />} />
+            </Route>
+          <Route element={< AuthVerify />}>
+            <Route path="/SearchPage/:page" element={<ParentComponent />} />
+            <Route path="/SearchPage" element={<SearchPage />} />
+            <Route path="/parent" element={<ParentComponent />} />
+          </Route>
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsCondition />} />
           <Route Component={NotFound} />

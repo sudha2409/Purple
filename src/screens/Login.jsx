@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import moment from 'moment';
 const Login = () => {
-  
+
   const [loginError, setLoginError] = useState("");
   const navigate =  useNavigate();
   const initialValues = {
@@ -14,28 +14,24 @@ const Login = () => {
     password: "",
   };
 
-  const onSubmit = (values) => {
+  const onSubmit = async (values) => {
     console.log(values);
-    axios.post('https://auth.purplemaze.co/api/v1/users/login',values)
-    .then((response) => {
+    try{
+      const response = await axios.post('https://auth.purplemaze.co/api/v1/users/login',values);
       if (response.status === 200) {
-        const authToken = response.data.token; // Assuming the server sends a token
         const accessToken = response.data.accessToken;
           const roles = response.data.roles;
           const expiresIn = response.data.expiresIn;
-          const expires = moment().add(expiresIn, 'seconds');
+          const expires = moment().add(expiresIn);
 
           // Store data in local storage
-          localStorage.setItem('accessToken', accessToken);
-          localStorage.setItem('roles', JSON.stringify(roles));
-          localStorage.setItem('expires', expires.toISOString());
-        console.log(response);
+          localStorage.setItem('accessAuth', JSON.stringify({accessToken, roles, expires}));
         
-        navigate  ('/SearchPage')
+        navigate  ('/SearchPage',  { replace: true })
 
       }
-    })
-    .catch((error) => {
+    }
+    catch(error) {
       console.log(error);
       if (error.response && error.response.status === 401) {
         // Unauthorized, incorrect credentials
@@ -44,7 +40,7 @@ const Login = () => {
         // Other errors
         setLoginError("An error occurred. Please try again later.");
       }
-    });
+    };
   };
 
   const validationSchema = Yup.object({
