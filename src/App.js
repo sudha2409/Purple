@@ -44,8 +44,8 @@ const App = () => {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsCondition />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/*" element={<NotFound />} />
 
-          <Route Component={NotFound} />
         </Routes>
         </HashRouter>
   );
