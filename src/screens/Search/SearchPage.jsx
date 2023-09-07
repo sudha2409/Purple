@@ -11,7 +11,10 @@ import useLogout from '../../hooks/useLogout';
 import moment from 'moment';
 
 export const SearchPage = () => {
-  const { page } = useParams();
+  let { page } = useParams();
+  if(!page){
+    page = 1
+  }
   console.log("page:", page);
   const [products, setProducts] = useState([]);
   const itemsPerPage = 30;
@@ -50,13 +53,13 @@ export const SearchPage = () => {
         <div className="pagination">
           <button
             disabled={page === "1"} 
-            onClick={() => window.location.href = `/SearchPage?page=${parseInt(page) - 1}`}
+            onClick={() => window.location.href = `/#/SearchPage/${parseInt(page) - 1}`}
           >
             Previous
           </button>
           <span>Page {page}</span>
           <button
-            onClick={() => window.location.href = `/SearchPage/${parseInt(page) + 1}`}
+            onClick={() => window.location.href = `/#/SearchPage/${parseInt(page) + 1}`}
           >
             Next
           </button>

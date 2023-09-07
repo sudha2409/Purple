@@ -3,7 +3,7 @@ import ProductCard from "../Search/Category";
 import Filter from "../Search/Filter";
 import "./ecommerce.css"
 
-const EcommercePage = () => {
+const EcommercePage = ({products}) => {
   const [ads, setAds] = useState([]);
   const [selectedFilters, setSelectedFilters] = useState({
     industry: "",
@@ -11,6 +11,13 @@ const EcommercePage = () => {
     type: "",
     format: "",
   });
+
+  useEffect(() => {
+    if(products?.ads){
+      setAds(products.ads);
+      console.log('products', products)
+    }
+  }, [products]);
   
   useEffect(() => {
     const accessAuth = JSON.parse(localStorage.getItem('accessAuth'));
@@ -41,11 +48,11 @@ const EcommercePage = () => {
 
   return (
     <div className="ad-list">
-      <Filter
+      {/* <Filter
         selectedFilters={selectedFilters}
         setSelectedFilters={setSelectedFilters}
         // pass filter options from API as props
-      />
+      /> */}
       <div className="product-grid">
         {filteredAds.map((ad) => (
           <ProductCard key={ad.id} ad={ad} />
