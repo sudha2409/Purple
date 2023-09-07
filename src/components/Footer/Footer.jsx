@@ -73,7 +73,8 @@ export const Footer = ({
             <div className="text-wrapper-7">FAQs</div>
             <div className="text-wrapper-7"> <a href="#/privacy-policy">Privacy</a></div>               
             <div className="text-wrapper-7"> <a href="#/terms-and-conditions">Terms</a></div>
-            <div className="text-wrapper-7">Contact Us</div>
+            <div className="text-wrapper-7"> <a href="#/contact-us">Contact Us</a></div>
+
           </div>
         </div>
         <div className="menu-footer">

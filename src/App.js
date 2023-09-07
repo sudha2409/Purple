@@ -18,6 +18,7 @@ import PrivacyPolicy from "./screens/PrivacyPolicy/PrivacyPolicy";
 import TermsCondition from "./screens/PrivacyPolicy/TermsCondition";
 import AuthNavigate from './hooks/AuthNavigate';
 import AuthVerify from './hooks/AuthVerify';
+import ContactUs from "./screens/PrivacyPolicy/ContactUs";
 
 const App = () => {
   return (
@@ -42,6 +43,8 @@ const App = () => {
           </Route>
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsCondition />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+
           <Route Component={NotFound} />
         </Routes>
         </HashRouter>
