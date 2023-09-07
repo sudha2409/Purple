@@ -21,7 +21,7 @@ const ForgotPassword = () => {
     const initialValues = {
         email: ""
     };
-    const onSubmit = (values) => {
+        const onSubmit = (values) => {
       //console.log(values);
       axios
       .post("https://auth.purplemaze.co/api/v1/users/forgot-password", values)  // if else wali conditions lagani h     
@@ -34,7 +34,7 @@ const ForgotPassword = () => {
             alertClass: "alert alert-success",
           });
           setShowPopup(true);
-          navigate("");
+          navigate("/");
         }
         else{
           setRequestResponse({
@@ -81,7 +81,7 @@ const ForgotPassword = () => {
                     <Field
                       type="text"
                       name="email"
-                      placeholder="Enter your Email address"
+                                            placeholder="Enter your Email address"
                       style={{ marginTop: '40px', marginBottom: '40px' }}
                       className={
                         formik.touched.Email

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import "../screens/Home/style.css";
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import axios from "axios";
 
 const ForgotVerification = () => { 
@@ -60,6 +60,14 @@ const ForgotVerification = () => {
 
     return(
         <div className="outer-container">
+          <div className="not-found">
+      <h1>401 - Link is expired</h1>
+      <p>The page you are looking for doesn't exist.</p>
+      <Link to="/" className="btn btn-primary">Go to Home</Link>
+      <p></p>
+      <Link to="/forgot-password" className="btn btn-secondary">Forgot Password</Link>
+
+    </div>
       </div>
   
     )

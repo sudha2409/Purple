@@ -3,10 +3,13 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios'; // Don't forget to import axios
 import '../Home/style.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import PasswordChangePopup from '../Pop-Ups/PasswordChangePopup';
 
 const NewPassword = () => {
+  const [forgotError, setForgotError] = useState("");
+  const navigate = useNavigate();
+
   const [forgotVerificationToken, setForgotVerificationToken] = useState('');
 
   useEffect(() => {
@@ -41,11 +44,13 @@ const NewPassword = () => {
       .then((response) => {
         console.log('Password change successful:', response);
         localStorage.removeItem('userToken')
+        navigate("/login");
+
        
       })
       .catch((error) => {
-        console.error('Password change failed:', error);
-       
+        console.error('Password change failed:', error.response.data.msg);
+        setForgotError( error.response.data.msg);
       });
   };
 
@@ -59,11 +64,12 @@ const NewPassword = () => {
   });
 
   return (
-    <div className="outer-container">
+    <div className="outer-container"> 
       <div className="container">
         <div className="centered-container">
           <div className="wrapper">
             <h2 className="text-center">Create New Password</h2>
+            <div style={{color: "red"}}>{forgotError}</div>
             <Formik
               initialValues={initialValues}
               onSubmit={onSubmit}
