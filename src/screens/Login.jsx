@@ -33,13 +33,8 @@ const Login = () => {
     }
     catch(error) {
       console.log(error);
-      if (error.response && error.response.status === 401) {
-        // Unauthorized, incorrect credentials
-        setLoginError("Invalid username or password");
-      } else {
-        // Other errors
-        setLoginError("An error occurred. Please try again later.");
-      }
+      console.log(error.response.data.msg)
+      setLoginError( error.response.data.msg);
     };
   };
 
@@ -58,6 +53,7 @@ const Login = () => {
         <div className="centered-container">
           <div className="wrapper">
             <h1 className="text-center">Login</h1>
+            <div style={{color: "red"}}>{loginError}</div>
             <Formik
               initialValues={initialValues}
               onSubmit={onSubmit}
@@ -101,6 +97,9 @@ const Login = () => {
                   </div>
                   <p className="forgot-password-link text-center">
                     <Link to="/forgot-password">Forgot password?</Link>
+                  </p>
+                  <p className="forgot-password-link text-center">
+                    <Link to="/Reverification-Email">Get email verify link</Link>
                   </p>
                   <button
                     type="submit"

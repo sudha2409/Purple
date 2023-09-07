@@ -8,7 +8,7 @@ import axios from "axios";
 
 const ReverificationEmail = () => {
   const navigate = useNavigate();
-  const [RequestResponse, setRequestResponse] = useState({
+    const [RequestResponse, setRequestResponse] = useState({
     textMessage: "",
     alertClass: "",
   });
@@ -24,7 +24,8 @@ const ReverificationEmail = () => {
               textMessage: "Reverification successful",
               alertClass: "alert alert-success",
             });
-  
+            localStorage.setItem('emailVerificationRequired', 'true');
+
             // Navigate to home page if status is 200
             navigate("/");
           }
@@ -92,7 +93,7 @@ const ReverificationEmail = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+          </div>
+      );
 };
 export default ReverificationEmail;
