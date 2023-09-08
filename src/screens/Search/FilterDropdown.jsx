@@ -5,13 +5,16 @@ const FilterDropdown = ({ data, onFilterChange }) => {
 
   // Handle filter selection and update state
   const handleFilterChange = (label, option) => {
+    const tempSelectedFilters = {
+        ...selectedFilters,
+        [label]: option,
+      }
     setSelectedFilters({
       ...selectedFilters,
       [label]: option,
     });
 
-    // Pass the selected filters to the parent component
-    onFilterChange(selectedFilters);
+    onFilterChange(tempSelectedFilters);
   };
 
   return (

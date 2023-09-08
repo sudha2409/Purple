@@ -16,16 +16,20 @@ export const SearchPage = () => {
     page = 1
   }
   console.log("page:", page);
+  const [filterCount, setFilterCount] = useState('');
   const [products, setProducts] = useState([]);
   const itemsPerPage = 30;
-      
+  const [filterparamsString, setfilterparamsString] = useState('');
+
   useEffect(() => {
     console.log("SearchPage component loaded");
     console.log(`SearchPage useEffect: page=${page}`);
+    console.log(`SearchPage useEffect: filterCount=${filterparamsString}`);
+
     const accessAuth = JSON.parse(localStorage.getItem('accessAuth'));
     axios
       .get(
-        `https://sfb6484cu3.execute-api.ap-south-1.amazonaws.com/v1/api/advertisements?page=${page}&itemsPerPage=${itemsPerPage}`,
+        `https://sfb6484cu3.execute-api.ap-south-1.amazonaws.com/v1/api/advertisements?page=${page}&itemsPerPage=${itemsPerPage}${filterparamsString}`,
         {
           headers: {
             'Authorization': accessAuth?.accessToken,
@@ -39,7 +43,32 @@ export const SearchPage = () => {
       .catch((error) => {
         console.error(error);
       });
-  }, [page]);
+  }, [page, filterCount]);
+
+  const handleSetFiltersChange = (FiltersChange) => {
+    console.log('I am in handleSetFiltersChange', FiltersChange)
+    let IndustryString = '';
+    let TypeString = '';
+    let FormatString = '';
+    let SubIndustryString = '';
+    let filterparams = '';
+    if(FiltersChange?.Industry){
+      IndustryString = `&industry=${FiltersChange?.Industry}`
+    }
+    if(FiltersChange?.Type){
+      TypeString = `&type=${FiltersChange?.Type}`
+    }
+    if(FiltersChange?.Format){
+      FormatString = `&format=${FiltersChange?.Format}`
+    }
+    if(FiltersChange?.SubIndustry){
+      SubIndustryString = `&subindustry=${FiltersChange?.SubIndustry}`
+    }
+    filterparams = IndustryString+TypeString+FormatString+SubIndustryString
+    setFilterCount(FiltersChange);
+    setfilterparamsString(`${filterparams}`);
+
+  }
 
   return (
     <div className="search">
@@ -47,7 +76,7 @@ export const SearchPage = () => {
         <LogInHeader />
         <div className="cards">
           {/* <Filter /> */}
-          <EcommercePage products={products} />
+          <EcommercePage products={products}  setFiltersChange={handleSetFiltersChange}/>
         </div>
         {/* Pagination */}
         <div className="pagination">

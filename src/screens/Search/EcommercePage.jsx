@@ -3,7 +3,7 @@ import ProductCard from "../Search/Category";
 import Filter from "../Search/Filter";
 import "./ecommerce.css"
 
-const EcommercePage = ({products}) => {
+const EcommercePage = ({products, setFiltersChange}) => {
   const [ads, setAds] = useState([]);
   const [selectedFilters, setSelectedFilters] = useState({
     industry: "",
@@ -45,13 +45,16 @@ const EcommercePage = ({products}) => {
 
     return industryMatch && subindustryMatch && typeMatch && formatMatch;
   });
+  const handleSetSelectedFiltersChange = (setFilters) => {
+    setFiltersChange(setFilters);
+  };
 
   return (
     <div className="ad-list">
       <Filter
         selectedFilters={selectedFilters}
         setSelectedFilters={setSelectedFilters}
-        // pass filter options from API as props
+        onSelectedFiltersChange={handleSetSelectedFiltersChange}
       />
       <div className="product-grid">
         {filteredAds.map((ad) => (

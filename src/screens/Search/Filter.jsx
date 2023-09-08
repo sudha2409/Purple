@@ -3,7 +3,7 @@ import "./filter.css";
 import axios from "axios";
 import FilterDropdown from "./FilterDropdown";
 
-const Filter = () => {
+const Filter = ({onSelectedFiltersChange}) => {
   const initialFilters = {};
 
   // const [selectedFilters, setSelectedFilters] = useState({});
@@ -21,11 +21,9 @@ const Filter = () => {
         // const typeResponse = await axios.get("https://sfb6484cu3.execute-api.ap-south-1.amazonaws.com/v1/api/advertisements/filters/type");
         // const formatResponse = await axios.get("https://sfb6484cu3.execute-api.ap-south-1.amazonaws.com/v1/api/advertisements/filters/format");
 
-        // Assuming the data is in the response's data property, adjust accordingly
-
         setFilterData([
           { label: "Industry", options: filterOption.data.industry || [] },
-          { label: "Sub Industry", options: filterOption.data.subindustry || [] },
+          { label: "SubIndustry", options: filterOption.data.subindustry || [] },
           { label: "Type", options: filterOption.data.type || [] },
           { label: "Format", options: filterOption.data.format || [] },
         ]);
@@ -38,25 +36,10 @@ const Filter = () => {
     fetchData();
   }, []);
 
-  const [selectedFilters, setSelectedFilters] = useState(initialFilters);
 
-  // Handle filter changes
   const handleFilterChange = (newFilters) => {
-    setSelectedFilters(newFilters);
-
-    console.log('Selected Filters:', newFilters);
+    onSelectedFiltersChange(newFilters)
   };
-
-  // const handleFilterChange = (category, value) => {
-  //   setSelectedFilters((prevFilters) => ({
-  //     ...prevFilters,
-  //     [category]: value,
-  //   }));
-  // };
-
-  // const handleDropdownToggle = () => {
-  //   setShowDropdown(!showDropdown);
-  // };
 
   return (
     <div className="container">
@@ -78,31 +61,6 @@ const Filter = () => {
         />
       </div> */}
       <FilterDropdown data={filterData} onFilterChange={handleFilterChange} />     
-      {/* <div className="frame-12">
-        {filterData.length > 0 &&
-          filterData.map((filter, index) => (
-            <div className="frame-13" key={index}>
-              <div className="dropdown">
-                <button className="dropdown-toggle" onClick={handleDropdownToggle}>
-                  Show Filters
-                </button>
-                {showDropdown && (
-                  <select
-                    value={selectedFilters[filter.label]}
-                    onChange={(e) => handleFilterChange(filter.label, e.target.value)}
-                  >
-                    <option value="">Select {filter.label}</option>
-                    {filter.options.map((option, optionIndex) => (
-                      <option value={option} key={optionIndex}>
-                        {option}
-                      </option>
-                    ))}
-                  </select>
-                )}
-              </div>
-            </div>
-          ))}
-      </div> */}
     </div>
   );
 };
