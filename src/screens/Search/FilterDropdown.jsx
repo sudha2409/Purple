@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './FilterDropdown.css';
 
 const FilterDropdown = ({ data, onFilterChange }) => {
   const [selectedFilters, setSelectedFilters] = useState({});
@@ -6,19 +7,17 @@ const FilterDropdown = ({ data, onFilterChange }) => {
   // Handle filter selection and update state
   const handleFilterChange = (label, option) => {
     const tempSelectedFilters = {
-        ...selectedFilters,
-        [label]: option,
-      }
-    setSelectedFilters({
       ...selectedFilters,
       [label]: option,
-    });
+    };
+    setSelectedFilters(tempSelectedFilters);
 
     onFilterChange(tempSelectedFilters);
   };
 
   return (
     <div className="filter-dropdown">
+         <div className="filter-group-container">
       {data.map((filterGroup) => (
         <div key={filterGroup.label} className="filter-group">
           <label>{filterGroup.label}</label>
@@ -35,6 +34,7 @@ const FilterDropdown = ({ data, onFilterChange }) => {
           </select>
         </div>
       ))}
+    </div>
     </div>
   );
 };
