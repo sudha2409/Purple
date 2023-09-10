@@ -1563,7 +1563,7 @@
   align-items: center;
   height: 70vh;
   font-family: "Mona-Sans-Medium", Helvetica;
-  margin-top: 12vh;
+  margin-top: 30px;
 }
 
 .wrapper {
@@ -1636,7 +1636,12 @@
   margin-top: 10px; 
 }
 
-
+.blue-italic-style {
+  color: #455ecf;
+  font-family: "IBM Plex Serif", Helvetica;
+  font-style: italic;
+  font-weight: 500;
+}
 
 .modal {
   display: none;
