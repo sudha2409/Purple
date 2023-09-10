@@ -1,16 +1,24 @@
 import React from "react";
 import Navbar from "../Home/Navbar";
 import { Footer } from "../../components/Footer";
+import LogInHeader from "../Search/LogInHeader";
 
 const TermsCondition = () => {
+  const accessAuth = JSON.parse(localStorage.getItem('accessAuth'));
+
+  const renderHeader = accessAuth?.accessToken ? (
+    <LogInHeader />
+  ) : (
+    <Navbar />
+  );
   return (
     <div>
-      <Navbar />
+      {renderHeader}
 
       <div className="container" style={{ marginTop: 100 }}>
         <h1 className="text-center">Terms and Conditions</h1>
         <p>
-          Welcome to PurpleMaze! This website is owned by [insert name of owner]
+          Welcome to PurpleMaze! This website is owned by One Orange Digital
           and is operated under the brand name, Purple Maze(“we”, “us” or
           “PurpleMaze”).
         </p>
@@ -134,7 +142,7 @@ const TermsCondition = () => {
           date information on this website, errors or omissions sometimes occur.
           Purple Mazemakes no warranties or representations as to the accuracy
           of this website. Under no circumstances, including, but not limited
-          to, negligence, shall [insert name of owner] or Purple Mazeor any
+          to, negligence, shall One Orange Digital or Purple Mazeor any
           party involved in creating, producing, or delivering the website be
           liable to you for any direct, incidental, consequential, indirect, or
           punitive damages that result from the use of, or the inability to use,
@@ -167,7 +175,7 @@ const TermsCondition = () => {
         <h5>Trademarks and Copyrights</h5>
         <p>
           All trademarks, trade names, logos, copyrights, registrations, and
-          icons are proprietary to [insert name of owner]. Nothing contained on
+          icons are proprietary to One Orange Digital. Nothing contained on
           the website should be construed as granting, by implication, estoppel,
           or otherwise, any license or right to use any trademark or other
           intellectual property displayed on this website without the written

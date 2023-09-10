@@ -1,22 +1,22 @@
 import React from "react";
 import Navbar from "../Home/Navbar";
 import { Footer } from "../../components/Footer";
+import LogInHeader from "../Search/LogInHeader";
 
 const PrivacyPolicy = () => {
+  const accessAuth = JSON.parse(localStorage.getItem('accessAuth'));
+
+  const renderHeader = accessAuth?.accessToken ? (
+    <LogInHeader />
+  ) : (
+    <Navbar />
+  );
   return (
     <div>
-      <Navbar />
+      {renderHeader}
 
       <div className="container" style={{ marginTop: 100 }}>
         <h1 className="text-center">Privacy Policy</h1>
-        <p className="note">
-          [Note for customer: please note that this is a generic privacy policy
-          and is only meant to be used as a base/ reference document. The
-          customer is required to modify the details set out below to accurately
-          reflect the customer’s policies towards data collection, data
-          processing, information storage, usage, sharing, deletion and other
-          matters]
-        </p>
         <h5>1. Introduction</h5>
         <p>
           We, at PurpleMaze (“we” or “us” or "[insert name of entity]”) are

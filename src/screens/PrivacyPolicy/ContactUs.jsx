@@ -3,8 +3,10 @@ import './contactUs.css'
 import Navbar from '../Home/Navbar';
 import { Footer } from '../../components/Footer';
 import axios from 'axios';
+import LogInHeader from '../Search/LogInHeader';
 
 const ContactUs = () => {
+    const accessAuth = JSON.parse(localStorage.getItem('accessAuth'));
     const [responseMessage, setResponseMessage] = useState("")
   const [formData, setFormData] = useState({
     name: '',
@@ -45,10 +47,33 @@ const ContactUs = () => {
         setResponseMessage("Something went wrong")
     };
   };
+  const renderHeader = accessAuth?.accessToken ? (
+    <LogInHeader />
+  ) : (
+    <Navbar />
+  );
 
   return (
+
     <div>
-    <Navbar />
+
+        {renderHeader}
+
+
+    <div className="address-section">
+          <h2>Our Address</h2>
+          <p>
+            One Orange Digital
+            <br />
+            First floor, 88, c block, South City 2, sector 49,
+            <br />
+            Gurgaon, Haryana, India
+            <br />
+            122018
+            <br />
+            M. 9773533007
+          </p>
+        </div>
 
     <div className="contact-us-container">
       <h1>Contact Us</h1>
@@ -88,6 +113,7 @@ const ContactUs = () => {
         </div>
         <button type="submit">Submit</button>
       </form>
+      
     </div>
     <Footer/>
 
