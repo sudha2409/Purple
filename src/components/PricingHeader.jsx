@@ -27,7 +27,11 @@ const PricingHeader = () =>{
     <div className="ellipse-5" />
     <div className="ellipse-6" />
   </div>
-  <div className="text-wrapper-23">Purple Maze</div>
+  <div >
+    <a className="text-wrapper-23" style={{ textDecorationLine: 'none' }} href="/">
+      Purple Maze
+    </a>
+  </div>
 </div>
 </div>
 
