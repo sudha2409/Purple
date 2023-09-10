@@ -48,13 +48,13 @@ export const Home = () => {
                       <p className="find-best-creatives">
                         <span className="text-wrapper">
                           Find best creatives &amp; Creators for <br />
+                          <span className="blue-italic-style"> Social media </span> 
                         </span>
                         <span className="span">
                           social m <br />
                         </span>
                         <span className="text-wrapper">Marketing</span>
                       </p>
-                      <div className="text-wrapper-2">Social media</div>
                     </div>
                   </div>
                   <PopupMsg />
@@ -96,13 +96,12 @@ export const Home = () => {
                   <div className="overlap-group-3">
                     <p className="here-are-few-reasons">
                       <span className="text-wrapper">Here are few</span>
-                      <span className="text-wrapper-6"> Reasons</span>
+                      <span className="blue-italic-style" > Reasons</span>
                       <span className="text-wrapper">
                         {" "}
                         why our customers choose Purple Maze
                       </span>
                     </p>
-                    <div className="text-wrapper-7">Reasons</div>
                   </div>
                 </div>
               </div>
@@ -159,10 +158,10 @@ export const Home = () => {
                 <div className="overlap-group-6">
                   <p className="we-offer-great">
                     We offer great prices, premium products
-                    and&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Services
-                    for your product
+                    and 
+                    <span className="blue-italic-style"> Quality </span> 
+                    Services for your product
                   </p>
-                  <div className="text-wrapper-15">Quality</div>
                 </div>
               </div>
             </div>
@@ -410,10 +409,10 @@ export const Home = () => {
                   <div className="overlap-group-7">
                     <p className="the-service-we-offer">
                       The service we offer is <br />
-                      designed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to
-                      meet your needs
+                      designed 
+                      <span className="blue-italic-style"> Specifically </span> 
+                      to meet your needs
                     </p>
-                    <div className="text-wrapper-31">Specifically</div>
                   </div>
                 </div>
               </div>
