@@ -5,6 +5,7 @@ import "./Home/style.css";
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import moment from 'moment';
+import Navbar from './Home/Navbar';
 const Login = () => {
 
   const [loginError, setLoginError] = useState("");
@@ -49,6 +50,7 @@ const Login = () => {
 
   return (
     <div className="outer-container">
+          <Navbar />
       <div className="container">
         <div className="centered-container">
           <div className="wrapper">

@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import PopupReset from "../Pop-Ups/PopupReset";
 import axios from "axios";
+import Navbar from "./Navbar";
 
 const ReverificationEmail = () => {
   const navigate = useNavigate();
@@ -48,6 +49,7 @@ const ReverificationEmail = () => {
     
   return (
     <div className="outer-container">
+   <Navbar/>
       <div className="container">
         <div className="centered-container">
           <div

@@ -8,6 +8,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReverificationPopup from '../Pop-Ups/ReverificationPopup';
 import CheckEmailPopup from '../Pop-Ups/CheckEmailErrorPopup';
+import Navbar from './Navbar';
 
 
 const ForgotPassword = () => {
@@ -68,6 +69,7 @@ const ForgotPassword = () => {
       
      return(
         <div className='container'>
+                    <Navbar />
             <div className="centered-container">
                 <div className="wrapper" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
                     <h1 className='text-center'>Forgot Password?</h1>
