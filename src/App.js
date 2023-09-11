@@ -19,6 +19,7 @@ import TermsCondition from "./screens/PrivacyPolicy/TermsCondition";
 import AuthNavigate from './hooks/AuthNavigate';
 import AuthVerify from './hooks/AuthVerify';
 import ContactUs from "./screens/PrivacyPolicy/ContactUs";
+import PasswordPagePermission from './hooks/PasswordPagePermission';
 
 const App = () => {
   return (
@@ -31,7 +32,9 @@ const App = () => {
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/Reset-password" element={<ResetPassword />} />
-              <Route path="/New-password" element={<NewPassword />} />
+              <Route element={< PasswordPagePermission />}>
+                <Route path="/New-password" element={<NewPassword />} />
+              </Route>
               <Route path="/Verify-Email" element={<VerifyEmail />} />
               <Route path="/Reverification-Email" element={<ReverificationEmail />} />
               <Route path="/forgot-token" element={<ForgotVerification />} />
