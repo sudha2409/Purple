@@ -13,6 +13,10 @@ const LogInHeader = () => {
       await logout();
       navigate('/login');
   }
+
+  const resetPassword = () => {
+    navigate('/Reset-password');
+}
   const [isDropdownOpen, setIsDropdownOpen] = useState(true);
 
   const toggleDropdown = () => {
@@ -35,7 +39,7 @@ const LogInHeader = () => {
       <div className="frame-wrapper">
       <div className="frame-30 dropdown" onClick={toggleDropdown}>
             Profile
-            {isDropdownOpen && <Dropdown onLogout={signOut} />}
+            {isDropdownOpen && <Dropdown onLogout={signOut} resetPassword = {resetPassword} />}
           </div>
       </div>
       <div className="frame-31">

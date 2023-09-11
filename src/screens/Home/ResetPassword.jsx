@@ -4,8 +4,8 @@ import * as Yup from "yup";
 import "../Home/style.css";
 import { Link, useNavigate } from 'react-router-dom';
 import PasswordChangePopup from '../Pop-Ups/PasswordChangePopup';
-import Navbar from './Navbar';
 import axios from 'axios';
+import LogInHeader from '../Search/LogInHeader';
 
 const ResetPassword = () => {
     const [forgotError, setForgotError] = useState("");
@@ -62,8 +62,9 @@ const ResetPassword = () => {
     });
 
     return (
-        <div className="outer-container">
-            <Navbar />
+        <div>
+        <LogInHeader />
+        <div className="outer-container padding-top-50">
             <div className="container">
                 <div className="centered-container">
                     <div className="wrapper">
@@ -140,6 +141,7 @@ const ResetPassword = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 }

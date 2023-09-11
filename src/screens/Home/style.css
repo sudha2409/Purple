@@ -1565,6 +1565,10 @@
   font-family: "Mona-Sans-Medium", Helvetica;
   margin-top: 30px;
 }
+.padding-top-50{
+  padding-top: 50px;
+
+}
 
 .wrapper {
   width: 100%;
