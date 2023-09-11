@@ -31,7 +31,6 @@ const App = () => {
               <Route path="/login" element={<Login />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
-              <Route path="/Reset-password" element={<ResetPassword />} />
               <Route element={< PasswordPagePermission />}>
                 <Route path="/New-password" element={<NewPassword />} />
               </Route>
@@ -43,6 +42,7 @@ const App = () => {
             <Route path="/SearchPage/:page" element={<ParentComponent />} />
             <Route path="/SearchPage" element={<SearchPage />} />
             <Route path="/parent" element={<ParentComponent />} />
+            <Route path="/Reset-password" element={<ResetPassword />} />
           </Route>
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsCondition />} />

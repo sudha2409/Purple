@@ -1,19 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import "../Home/style.css";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import PasswordChangePopup from '../Pop-Ups/PasswordChangePopup';
+import Navbar from './Navbar';
+import axios from 'axios';
 
 const ResetPassword = () => {
+    const [forgotError, setForgotError] = useState("");
+    const [responseColor, setResponseColor] = useState("");
+
     const initialValues = {
         OldPassword: "",
         NewPassword: "",
         ConfirmPassword: "",
     };
 
-    const onSubmit = (values) => {
+    const onSubmit = (values, { resetForm }) => { 
         console.log(values);
+        const accessAuth = JSON.parse(localStorage.getItem('accessAuth'));
+
+        const dataToSend = {
+            oldPassword: values.OldPassword,
+            newPassword: values.NewPassword,
+        };
+
+        axios
+            .post(
+                "https://auth.purplemaze.co/api/v1/users/reset-password",
+                dataToSend,
+                {
+                    headers: {
+                        'Authorization': accessAuth?.accessToken,
+                        'Content-Type': 'application/json'
+                    },
+                }
+            )
+            .then((response) => {
+                setForgotError(response.data.msg);
+                setResponseColor("green");
+                resetForm();
+            })
+            .catch((error) => {
+                console.error("Password change failed:", error.response.data.msg);
+                setForgotError(error.response.data.msg);
+                setResponseColor("red");
+            });
     };
 
     const validationSchema = Yup.object({
@@ -30,13 +63,15 @@ const ResetPassword = () => {
 
     return (
         <div className="outer-container">
+            <Navbar />
             <div className="container">
                 <div className="centered-container">
                     <div className="wrapper">
                         <h2 className="text-center">Reset Password</h2>
+                        <div style={{ color: responseColor }}>{forgotError}</div>
                         <Formik
-                            initialValues={initialValues}
                             onSubmit={onSubmit}
+                            initialValues={initialValues}
                             validationSchema={validationSchema}
                         >
                             {(formik) => (
@@ -58,7 +93,6 @@ const ResetPassword = () => {
                                             )}
                                         </ErrorMessage>
                                     </div>
-                                    <PasswordChangePopup/>
                                     <div className="form-group my-3">
                                         <label>New Password</label>
                                         <Field
