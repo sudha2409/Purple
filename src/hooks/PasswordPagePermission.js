@@ -5,7 +5,6 @@ const PasswordPagePermission = ({ }) => {
   const userToken = localStorage.getItem('userToken');
 
   const location = useLocation();
-console.log("PasswordPagePermission",userToken)
   return (
        !userToken 
        ? <Navigate to="/#" state={{ from: location }} replace />
