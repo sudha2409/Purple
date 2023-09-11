@@ -8,6 +8,13 @@ import moment from 'moment';
 import Navbar from './Home/Navbar';
 const Login = () => {
 
+  const googleAuth = () => {
+		window.open(
+			`http://localhost:3500/api/v1/google/login`,
+			"_self"
+		);
+	};
+
   const [loginError, setLoginError] = useState("");
   const navigate =  useNavigate();
   const initialValues = {
@@ -116,7 +123,7 @@ const Login = () => {
             <div className="separator text-center">
               <span>or</span>
             </div>
-            <button className="btn btn-google btn-block">
+            <button className="btn btn-google btn-block" onClick={googleAuth}>
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"

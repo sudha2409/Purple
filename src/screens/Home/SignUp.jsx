@@ -15,6 +15,13 @@ const SignUp = () => {
     password: "",
   };
 
+  const googleAuth = () => {
+		window.open(
+			`http://localhost:3500/api/v1/google/login`,
+			"_self"
+		);
+	};
+
   const onSubmit = (values) => {
     //console.log(values);
     axios
@@ -108,7 +115,7 @@ const SignUp = () => {
           <div className="separator text-center">
             <span>or</span>
           </div>
-          <button className="btn btn-google btn-block">
+          <button className="btn btn-google btn-block" onClick={googleAuth}>
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
