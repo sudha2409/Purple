@@ -10,7 +10,7 @@ const Login = () => {
 
   const googleAuth = () => {
 		window.open(
-			`http://localhost:3500/api/v1/google/login`,
+			`https://auth.purplemaze.co/api/v1/google/login`,
 			"_self"
 		);
 	};
