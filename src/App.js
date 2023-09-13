@@ -20,6 +20,7 @@ import AuthNavigate from './hooks/AuthNavigate';
 import AuthVerify from './hooks/AuthVerify';
 import ContactUs from "./screens/PrivacyPolicy/ContactUs";
 import PasswordPagePermission from './hooks/PasswordPagePermission';
+import LoginWithGoogle from "./screens/LoginWithGoogle";
 
 const App = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
               <Route path="/Verify-Email" element={<VerifyEmail />} />
               <Route path="/Reverification-Email" element={<ReverificationEmail />} />
               <Route path="/forgot-token" element={<ForgotVerification />} />
+              <Route path="/google-login" element={<LoginWithGoogle />} />
             </Route>
           <Route element={< AuthVerify />}>
             <Route path="/SearchPage/:page" element={<ParentComponent />} />
