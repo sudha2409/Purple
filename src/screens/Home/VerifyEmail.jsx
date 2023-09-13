@@ -3,6 +3,7 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import "../Home/style.css";
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import axios from "axios";
+import { BASE_AUTH_URL } from '../../api/config';
 
 const VerifyEmail = () => { 
     const navigate = useNavigate();
@@ -18,7 +19,7 @@ const VerifyEmail = () => {
         //console.log(values);
         const verifyToken = {verificationCode:verifyTokenString}
         axios
-        .post("https://auth.purplemaze.co/api/v1/users/email-verification", verifyToken)
+        .post(BASE_AUTH_URL+"/api/v1/users/email-verification", verifyToken)
         .then(
           (response) => {
             setRequestResponse({

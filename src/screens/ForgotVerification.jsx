@@ -3,6 +3,7 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import "../screens/Home/style.css";
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import axios from "axios";
+import { BASE_AUTH_URL } from '../api/config';
 
 const ForgotVerification = () => { 
     const navigate = useNavigate();
@@ -20,7 +21,7 @@ const ForgotVerification = () => {
         //console.log(values);
         const verifyToken = {passwordVerificationCode:forgotTokenString}
         axios
-        .post("https://auth.purplemaze.co/api/v1/users/verify-forgot-password", verifyToken)
+        .post(BASE_AUTH_URL+"/api/v1/users/verify-forgot-password", verifyToken)
         .then(
           (response) => {
             setRequestResponse({

@@ -6,6 +6,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import PopupReset from "../Pop-Ups/PopupReset";
 import axios from "axios";
 import Navbar from "./Navbar";
+import { BASE_AUTH_URL } from "../../api/config";
 
 const ReverificationEmail = () => {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const ReverificationEmail = () => {
       };
       const onSubmit = (values) => {
         console.log(values);
-        axios.post("https://auth.purplemaze.co/api/v1/users/email-reverification", values)
+        axios.post(BASE_AUTH_URL+"/api/v1/users/email-reverification", values)
         .then((response) => {
           if (response.status === 200) {
             setRequestResponse({

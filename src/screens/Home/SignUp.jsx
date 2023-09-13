@@ -6,6 +6,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
+import { BASE_AUTH_URL } from "../../api/config";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -25,7 +26,7 @@ const SignUp = () => {
   const onSubmit = (values) => {
     //console.log(values);
     axios
-      .post("https://auth.purplemaze.co/api/v1/users/register", values)
+      .post(BASE_AUTH_URL+"/api/v1/users/register", values)
       .then((response) => {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("user", JSON.stringify(response.data.user));

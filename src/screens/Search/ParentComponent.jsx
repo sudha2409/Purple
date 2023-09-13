@@ -3,6 +3,7 @@ import SearchPage from "./SearchPage";
 import axios from "axios";
 import Pagination from "./Pagination";
 import { useParams, useNavigate } from "react-router-dom";
+import { BASE_APP_URL } from "../../api/config";
 
 const ParentComponent = () => {
   console.log("ParentComponent loaded");
@@ -16,7 +17,7 @@ const ParentComponent = () => {
     
     axios
       .get(
-        `https://sfb6484cu3.execute-api.ap-south-1.amazonaws.com/v1/api/advertisements?page=${currentPage}&itemsPerPage=${itemsPerPage}`
+        `${BASE_APP_URL}/v1/api/advertisements?page=${currentPage}&itemsPerPage=${itemsPerPage}`
       )
       .then((response) => {
         setProducts(response.data);

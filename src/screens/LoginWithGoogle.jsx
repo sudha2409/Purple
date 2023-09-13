@@ -3,6 +3,7 @@ import "../screens/Home/style.css";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import axios from "axios";
 import moment from "moment";
+import { BASE_AUTH_URL } from '../api/config';
 
 const LoginWithGoogle = () => {
   const navigate = useNavigate();
@@ -25,7 +26,7 @@ const LoginWithGoogle = () => {
   const queryString = objectToQueryString(queryParamsObj);
 
   // Base URL
-  const baseUrl = "https://auth.purplemaze.co/api/v1/google/auth/callback";
+  const baseUrl = BASE_AUTH_URL+"/api/v1/google/auth/callback";
 
   const finalUrl = baseUrl + "?" + queryString;
 

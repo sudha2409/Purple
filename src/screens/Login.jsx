@@ -6,11 +6,13 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import moment from 'moment';
 import Navbar from './Home/Navbar';
+import {BASE_AUTH_URL} from '../api/config';
 const Login = () => {
+ 
 
   const googleAuth = () => {
 		window.open(
-			`https://auth.purplemaze.co/api/v1/google/login`,
+			`${BASE_AUTH_URL}/api/v1/google/login`,
 			"_self"
 		);
 	};
@@ -25,7 +27,7 @@ const Login = () => {
   const onSubmit = async (values) => {
     console.log(values);
     try{
-      const response = await axios.post('https://auth.purplemaze.co/api/v1/users/login',values);
+      const response = await axios.post(BASE_AUTH_URL+'/api/v1/users/login',values);
       if (response.status === 200) {
         const accessToken = response.data.accessToken;
           const roles = response.data.roles;

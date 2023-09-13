@@ -4,6 +4,7 @@ import Navbar from '../Home/Navbar';
 import { Footer } from '../../components/Footer';
 import axios from 'axios';
 import LogInHeader from '../Search/LogInHeader';
+import { BASE_AUTH_URL } from '../../api/config';
 
 const ContactUs = () => {
     const accessAuth = JSON.parse(localStorage.getItem('accessAuth'));
@@ -37,7 +38,7 @@ const ContactUs = () => {
   const sentMail = async (values) => {
     console.log(values);
     try{
-      const response = await axios.post('https://auth.purplemaze.co/api/v1/users/contact-us',values);
+      const response = await axios.post(BASE_AUTH_URL+'/api/v1/users/contact-us',values);
       if (response.status === 200) {
         setResponseMessage(response.data.msg)
       }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ProductCard from "../Search/Category";
 import Filter from "../Search/Filter";
 import "./ecommerce.css"
+import { BASE_APP_URL } from "../../api/config";
 
 const EcommercePage = ({products, setFiltersChange}) => {
   const [ads, setAds] = useState([]);
@@ -21,7 +22,7 @@ const EcommercePage = ({products, setFiltersChange}) => {
   
   useEffect(() => {
     const accessAuth = JSON.parse(localStorage.getItem('accessAuth'));
-    fetch("https://sfb6484cu3.execute-api.ap-south-1.amazonaws.com/v1/api/advertisements?page=0", 
+    fetch(BASE_APP_URL+"/v1/api/advertisements?page=0", 
     {
       headers: {
         'Authorization': accessAuth?.accessToken,

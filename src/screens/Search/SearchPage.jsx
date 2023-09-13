@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { useParams, useNavigate } from "react-router-dom";
 import useLogout from '../../hooks/useLogout';
 import moment from 'moment';
+import { BASE_APP_URL } from "../../api/config";
 
 export const SearchPage = () => {
   let { page } = useParams();
@@ -29,7 +30,7 @@ export const SearchPage = () => {
     const accessAuth = JSON.parse(localStorage.getItem('accessAuth'));
     axios
       .get(
-        `https://sfb6484cu3.execute-api.ap-south-1.amazonaws.com/v1/api/advertisements?page=${page}&itemsPerPage=${itemsPerPage}${filterparamsString}`,
+        `${BASE_APP_URL}/v1/api/advertisements?page=${page}&itemsPerPage=${itemsPerPage}${filterparamsString}`,
         {
           headers: {
             'Authorization': accessAuth?.accessToken,

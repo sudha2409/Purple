@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import ReverificationPopup from '../Pop-Ups/ReverificationPopup';
 import CheckEmailPopup from '../Pop-Ups/CheckEmailErrorPopup';
 import Navbar from './Navbar';
+import { BASE_AUTH_URL } from '../../api/config';
 
 
 const ForgotPassword = () => {
@@ -25,7 +26,7 @@ const ForgotPassword = () => {
         const onSubmit = (values) => {
       //console.log(values);
       axios
-      .post("https://auth.purplemaze.co/api/v1/users/forgot-password", values)  // if else wali conditions lagani h     
+      .post(BASE_AUTH_URL+"/api/v1/users/forgot-password", values)  // if else wali conditions lagani h     
       .then(
         (response) => {
           if(response.status === 200) {

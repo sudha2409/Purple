@@ -5,6 +5,7 @@ import axios from "axios"; // Don't forget to import axios
 import "../Home/style.css";
 import { Link, useNavigate } from "react-router-dom";
 import PasswordChangePopup from "../Pop-Ups/PasswordChangePopup";
+import { BASE_AUTH_URL } from "../../api/config";
 
 const NewPassword = () => {
   const [forgotError, setForgotError] = useState("");
@@ -35,7 +36,7 @@ const NewPassword = () => {
 
     axios
       .post(
-        "https://auth.purplemaze.co/api/v1/users/forgot-password-change",
+        BASE_AUTH_URL+"/api/v1/users/forgot-password-change",
         dataToSend
       )
       .then((response) => {
