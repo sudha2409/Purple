@@ -36,9 +36,8 @@ const ForgotVerification = () => {
                 navigate('/New-password');
                 console.log(response.status,"login");
             }
-            else{ //new small page for this
-                navigate('/Reverification-Email');
-                console.log(response.status,"Reverify");
+            else{ 
+                navigate('/forgot-password');
             }
           },
     
