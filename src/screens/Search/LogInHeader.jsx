@@ -56,7 +56,7 @@ const LogInHeader = () => {
           <div className="ellipse-6" />
         </div>
         <div >
-          <a className="text-wrapper-13" style={{ textDecorationLine: 'none' }} href="/#/SearchPage">
+          <a className="text-wrapper-13" style={{ textDecorationLine: 'none' }} href="/SearchPage">
             Purple Maze
           </a>
         </div>

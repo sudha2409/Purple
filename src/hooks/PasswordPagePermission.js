@@ -7,7 +7,7 @@ const PasswordPagePermission = ({ }) => {
   const location = useLocation();
   return (
        !userToken 
-       ? <Navigate to="/#" state={{ from: location }} replace />
+       ? <Navigate to="/" state={{ from: location }} replace />
        : <Outlet />
   );
 };

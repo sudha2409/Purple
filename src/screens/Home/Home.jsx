@@ -65,14 +65,14 @@ export const Home = () => {
                   <div className="frame-3">
                     <div className="div-wrapper">
                       <div >
-                        <a className="text-wrapper-3" style={{ textDecorationLine: 'none' }} href="/#/signup">
+                        <a className="text-wrapper-3" style={{ textDecorationLine: 'none' }} href="/signup">
                           Get Started              
                         </a>
                       </div>
                     </div>
                     <div className="frame-4">
                       <div >
-                        <a className="text-wrapper-4" style={{ textDecorationLine: 'none' }} href="/#/pricing">
+                        <a className="text-wrapper-4" style={{ textDecorationLine: 'none' }} href="/pricing">
                           See Pricing Options
                         </a>
                       </div>
@@ -217,7 +217,7 @@ export const Home = () => {
                     <div className="frame-29">
                       <div className="frame-30">
                         <div >
-                          <a className="text-wrapper-3" style={{ textDecorationLine: 'none' }} href="/#/signup">
+                          <a className="text-wrapper-3" style={{ textDecorationLine: 'none' }} href="/signup">
                             Sign Up        
                           </a>
                         </div>
@@ -301,7 +301,7 @@ export const Home = () => {
                     <div className="frame-29">
                       <div className="frame-30">
                         <div >
-                          <a className="text-wrapper-3" style={{ textDecorationLine: 'none' }} href="/#/signup">
+                          <a className="text-wrapper-3" style={{ textDecorationLine: 'none' }} href="/signup">
                           Upgrade      
                           </a>
                         </div>
@@ -423,14 +423,14 @@ export const Home = () => {
               <div className="frame-3">
                 <div className="div-wrapper">
                   <div >
-                    <a className="text-wrapper-3" style={{ textDecorationLine: 'none' }} href="/#/signup">
+                    <a className="text-wrapper-3" style={{ textDecorationLine: 'none' }} href="/signup">
                       Get Started              
                     </a>
                   </div>
                 </div>
                 <div className="frame-4">
                   <div >
-                    <a className="text-wrapper-4" style={{ textDecorationLine: 'none' }} href="/#/pricing">
+                    <a className="text-wrapper-4" style={{ textDecorationLine: 'none' }} href="/pricing">
                       See Pricing Options
                     </a>
                   </div>

@@ -83,13 +83,13 @@ export const SearchPage = () => {
         <div className="pagination">
           <button
             disabled={page === "1"} 
-            onClick={() => window.location.href = `/#/SearchPage/${parseInt(page) - 1}`}
+            onClick={() => window.location.href = `/SearchPage/${parseInt(page) - 1}`}
           >
             Previous
           </button>
           <span>Page {page}</span>
           <button
-            onClick={() => window.location.href = `/#/SearchPage/${parseInt(page) + 1}`}
+            onClick={() => window.location.href = `/SearchPage/${parseInt(page) + 1}`}
           >
             Next
           </button>
