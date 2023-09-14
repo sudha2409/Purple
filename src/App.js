@@ -24,7 +24,6 @@ import LoginWithGoogle from "./screens/LoginWithGoogle";
 
 const App = () => {
   return (
-    <HashRouter>
         <Routes>
             <Route element={< AuthNavigate />}>
               <Route path="/" element={<Home />} />
@@ -52,7 +51,6 @@ const App = () => {
           <Route path="/*" element={<NotFound />} />
 
         </Routes>
-        </HashRouter>
   );
 };
 
