@@ -18,7 +18,7 @@ const SignUp = () => {
 
   const googleAuth = () => {
 		window.open(
-			`http://localhost:3500/api/v1/google/login`,
+			`${BASE_AUTH_URL}/api/v1/google/login`,
 			"_self"
 		);
 	};
