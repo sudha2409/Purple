@@ -36,7 +36,7 @@ const App = () => {
               </Route>
               <Route path="/Verify-Email" element={<VerifyEmail />} />
               <Route path="/Reverification-Email" element={<ReverificationEmail />} />
-              <Route path="/forgot-token" element={<ForgotVerification />} />
+              <Route path="/forgot" element={<ForgotVerification />} />
               <Route path="/google-login" element={<LoginWithGoogle />} />
             </Route>
           <Route element={< AuthVerify />}>
