@@ -160,7 +160,7 @@ const Login = () => {
         </div>
         <div className="text-center mt-3 ">
           <p className="text-center new-user">
-            New to Purple Mazze ? <Link className='joinNow' to="/signup">Join Now </Link>
+            New to PurpleMaze ? <Link className='joinNow' to="/signup">Join Now </Link>
           </p>
         </div>
       </div>

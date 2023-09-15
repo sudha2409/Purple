@@ -28,15 +28,19 @@ const SignUp = () => {
     axios
       .post(BASE_AUTH_URL+"/api/v1/users/register", values)
       .then((response) => {
+        if (response.status == 200){
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("user", JSON.stringify(response.data.user));
         localStorage.setItem("emailVerificationRequired", "true");
         navigate("/");
         console.log(response);
+        } else{
+          setRequestResponse(error.response.data.msg);
+        }
       })
       .catch((error) => {
-        console.log(error.response.data.msg);
-        setRequestResponse(error.response.data.msg);
+        console.log(error?.response?.data?.msg);
+        setRequestResponse(error?.response?.data?.msg);
       });
   };
 
