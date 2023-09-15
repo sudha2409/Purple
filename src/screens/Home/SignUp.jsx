@@ -35,7 +35,7 @@ const SignUp = () => {
         navigate("/");
         console.log(response);
         } else{
-          setRequestResponse(error.response.data.msg);
+          navigate("/something-went-wrong");
         }
       })
       .catch((error) => {
