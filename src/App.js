@@ -21,6 +21,7 @@ import AuthVerify from './hooks/AuthVerify';
 import ContactUs from "./screens/PrivacyPolicy/ContactUs";
 import PasswordPagePermission from './hooks/PasswordPagePermission';
 import LoginWithGoogle from "./screens/LoginWithGoogle";
+import SomethingWentWrong from "./screens/Home/SomethingWentWrong";
 
 const App = () => {
   return (
