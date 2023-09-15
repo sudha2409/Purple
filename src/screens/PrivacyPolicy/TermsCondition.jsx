@@ -93,7 +93,7 @@ const TermsCondition = () => {
           the age of 18 (eighteen) should seek the consent of their
           parents/legal guardians before providing any information about
           themselves or their parents and other family members on the website.
-          Please be aware that [insert brand name] reserves the right to revoke
+          Please be aware that Purplemaze reserves the right to revoke
           your access to the website, subject to our reasonable discretion. In
           this regard, we may also choose to suspend your Purple MazeAccount or
           your access to the same. As a registered User, in such an event, you
@@ -148,7 +148,7 @@ const TermsCondition = () => {
           punitive damages that result from the use of, or the inability to use,
           the materials on this website, even if PurpleMazeor any authorized
           representative has been advised of the possibility of such damages. In
-          no event shall [insert brand name]’s total liability to you for all
+          no event shall Purplemaze’s total liability to you for all
           damages, losses, and causes of action exceed the amount paid by you,
           if any, for accessing this website. Purple Mazealso assumes no
           responsibility, and shall not be liable for, any damages to, or
@@ -161,7 +161,7 @@ const TermsCondition = () => {
         <p>
           Except as otherwise expressly permitted, no materials from this
           website or any website owned, operated, licensed or controlled by
-          [insert brand name] may be copied, reproduced, republished, uploaded,
+          Purplemaze may be copied, reproduced, republished, uploaded,
           posted, transmitted, or distributed in any way. You may download
           material displayed on this website for your use only provided you also
           retain all copyright and other proprietary notices contained on the
@@ -189,13 +189,12 @@ const TermsCondition = () => {
           These Terms will be governed by and construed in accordance with the
           laws of India, excluding its conflict of law provisions. You agree
           that any judicial proceedings will be brought in and you hereby
-          consent to the exclusive jurisdiction of courts in [insert name of
-          courts that would have jurisdiction].
+          consent to the exclusive jurisdiction of courts.
         </p>
         <h5>Contacting PurpleMaze</h5>
         <p>
           For questions, comments, complaints, or claims please contact us at:
-          Purple Maze[insert mailing address] [insert e-mail address]
+          Purple Maze support@purplemaze.co
         </p>
       </div>
       <Footer/>
