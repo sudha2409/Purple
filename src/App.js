@@ -1,6 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import ParentComponent from "./screens/Search/ParentComponent";
 import ForgotVerification from "./screens/ForgotVerification";
 import ReverificationEmail from "./screens/Home/ReverificationEmail";
@@ -22,6 +21,8 @@ import ContactUs from "./screens/PrivacyPolicy/ContactUs";
 import PasswordPagePermission from './hooks/PasswordPagePermission';
 import LoginWithGoogle from "./screens/LoginWithGoogle";
 import SomethingWentWrong from "./screens/Home/SomethingWentWrong";
+import Payment from "./screens/Checkout-payment/Payment";
+import Completion from "./screens/Checkout-payment/Completion";
 
 const App = () => {
   return (
@@ -45,6 +46,8 @@ const App = () => {
             <Route path="/SearchPage" element={<SearchPage />} />
             <Route path="/parent" element={<ParentComponent />} />
             <Route path="/Reset-password" element={<ResetPassword />} />
+            <Route path="/checkout-payment" element={<Payment />} />
+            <Route path="/completion" element={<Completion />} />
           </Route>
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsCondition />} />

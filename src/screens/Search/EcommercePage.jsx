@@ -4,11 +4,13 @@ import Filter from "../Search/Filter";
 import "./ecommerce.css"
 import { BASE_APP_URL, ROLES_LIST } from "../../api/config";
 import FreeTrialInfo from "./UpgradeNow";
+import { useNavigate } from "react-router-dom";
 
 const EcommercePage = ({products, setFiltersChange}) => {
   const [ads, setAds] = useState([]);
   const accessAuth = JSON.parse(localStorage.getItem('accessAuth'));
   const [freeRole, setFreeRole] = useState(true);
+  const navigate = useNavigate();
 
   const [selectedFilters, setSelectedFilters] = useState({
     industry: "",
@@ -34,7 +36,6 @@ const EcommercePage = ({products, setFiltersChange}) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        // Assuming data.ads is an array of ad objects
         setAds(data.ads);
       })
       .catch((error) => {
@@ -42,11 +43,7 @@ const EcommercePage = ({products, setFiltersChange}) => {
       });
   }, []);
   const handleUpgradeClick = () => {
-    // Implement the logic to handle the upgrade action here
-    // This can include showing a modal or redirecting the user to an upgrade page.
-    // You can also manage state to control the visibility of this component.
-    // For example, you might set a state variable to hide it after upgrading.
-    alert('Upgrade functionality to be implemented.');
+    navigate('/checkout-payment');
   };
   const filteredAds = ads.filter((ad) => {
     const industryMatch = !selectedFilters.industry || ad.industry === selectedFilters.industry;
@@ -61,7 +58,7 @@ const EcommercePage = ({products, setFiltersChange}) => {
   };
 
   useEffect(() => {
-    if((accessAuth?.roles == ROLES_LIST.Admin || accessAuth?.roles == ROLES_LIST.PaidUser)){
+    if((accessAuth?.roles === ROLES_LIST.Admin || accessAuth?.roles === ROLES_LIST.PaidUser)){
       setFreeRole(false);
     }
   }, [])

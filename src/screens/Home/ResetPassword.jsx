@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import "../Home/style.css";
-import { Link, useNavigate } from 'react-router-dom';
-import PasswordChangePopup from '../Pop-Ups/PasswordChangePopup';
 import axios from 'axios';
 import LogInHeader from '../Search/LogInHeader';
 import { BASE_AUTH_URL } from '../../api/config';

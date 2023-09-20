@@ -1,7 +1,6 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import "./style.css";
-import { FaGoogle } from "react-icons/fa";
 import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -24,11 +23,10 @@ const SignUp = () => {
 	};
 
   const onSubmit = (values) => {
-    //console.log(values);
     axios
       .post(BASE_AUTH_URL+"/api/v1/users/register", values)
       .then((response) => {
-        if (response.status == 200){
+        if (response.status === 200){
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("user", JSON.stringify(response.data.user));
         localStorage.setItem("emailVerificationRequired", "true");

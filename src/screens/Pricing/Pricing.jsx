@@ -1,6 +1,5 @@
 import React from "react";
 import { Footer } from "../../components/Footer";
-import { LogoutHeader } from "../../components/LogoutHeader";
 import { VuesaxBulkTick } from "../../components/VuesaxBulkTick";
 import { VuesaxBulkPlayCircle } from "../../icons/VuesaxBulkPlayCircle";
 import { VuesaxBulkTickCircle } from "../../icons/VuesaxBulkTickCircle";
@@ -142,32 +141,32 @@ const Pricing = () => {
           <div className="frame-27">
             <img
               className="image"
-              alt="Image"
+              alt=""
               src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/image-2-1@2x.png"
             />
             <img
               className="image-2"
-              alt="Image"
+              alt=""
               src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/image-3-1@2x.png"
             />
             <img
               className="image"
-              alt="Image"
+              alt=""
               src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d53bb23acc02a59b7cfa6b/img/image-4@2x.png"
             />
             <img
               className="image-2"
-              alt="Image"
+              alt=""
               src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/image-6@2x.png"
             />
             <img
               className="image"
-              alt="Image"
+              alt=""
               src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d53bb23acc02a59b7cfa6b/img/image-5@2x.png"
             />
             <img
               className="image-3"
-              alt="Image"
+              alt=""
               src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/image-7@2x.png"
             />
           </div>
@@ -187,7 +186,7 @@ const Pricing = () => {
               <div className="image-wrapper">
                 <img
                   className="image-4"
-                  alt="Image"
+                  alt=""
                   src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d53bb23acc02a59b7cfa6b/img/image-8.png"
                 />
               </div>
@@ -210,7 +209,7 @@ const Pricing = () => {
           <div className="frame-30">
             <img
               className="image-5"
-              alt="Image"
+              alt=""
               src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d53bb23acc02a59b7cfa6b/img/image-9.png"
             />
             <div className="frame-31">
@@ -251,7 +250,7 @@ const Pricing = () => {
             </div>
             <img
               className="image-5"
-              alt="Image"
+              alt=""
               src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d53bb23acc02a59b7cfa6b/img/image-9.png"
             />
           </div>

@@ -1,8 +1,7 @@
-import moment from 'moment';
-import React, { useEffect, useState } from "react";
-import { Navigate, Outlet, useLocation, useNavigate } from "react-router-dom";
+import React from "react";
+import { Navigate, Outlet, useLocation } from "react-router-dom";
 
-const AuthNavigate = ({ }) => {
+const AuthNavigate = () => {
   const accessAuth = JSON.parse(localStorage.getItem('accessAuth'));
 
   const location = useLocation();

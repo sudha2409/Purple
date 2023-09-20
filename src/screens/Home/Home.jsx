@@ -1,16 +1,7 @@
 import React from "react";
-import { IconFacebook1 } from "../../icons/IconFacebook1";
-import { IconInstagram } from "../../icons/IconInstagram";
-import { IconLinkedin } from "../../icons/IconLinkedin";
-import { IconTwitter } from "../../icons/IconTwitter2";
-import { IconYoutube } from "../../icons/IconYoutube";
-import { VuesaxBulkPlay } from "../../components/VuesaxBulkPlay";
-import { VuesaxBulkTick } from "../../components/VuesaxBulkTick";
 import VideoModal from './VideoModal';
 
 import "./style.css";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { Footer } from "../../components/Footer";
 import Navbar from "./Navbar";
 import PopupMsg from "../Pop-Ups/PopupMsg";
@@ -441,7 +432,7 @@ export const Home = () => {
               <div className="frame-38">
                 <img
                   className="IMAGE-5"
-                  alt="Image"
+                  alt=""
                   src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d90915bde965d8a1d78907/img/image-11@2x.png"
                 />
                 <div className="frame-34">
@@ -455,7 +446,7 @@ export const Home = () => {
               <div className="frame-38">
                 <img
                   className="IMAGE-6"
-                  alt="Image"
+                  alt=""
                   src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/image-12@2x.png"
                 />
                 <div className="frame-34">
@@ -469,7 +460,7 @@ export const Home = () => {
               <div className="frame-38">
                 <img
                   className="IMAGE-7"
-                  alt="Image"
+                  alt=""
                   src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d90915bde965d8a1d78907/img/image-13@2x.png"
                 />
                 <div className="frame-34">

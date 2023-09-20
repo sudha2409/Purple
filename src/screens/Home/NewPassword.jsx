@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import axios from "axios"; // Don't forget to import axios
 import "../Home/style.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import PasswordChangePopup from "../Pop-Ups/PasswordChangePopup";
 import { BASE_AUTH_URL } from "../../api/config";
 
@@ -11,28 +11,16 @@ const NewPassword = () => {
   const [forgotError, setForgotError] = useState("");
   const navigate = useNavigate();
 
-  const [forgotVerificationToken, setForgotVerificationToken] = useState("");
-
-  useEffect(() => {
-    const tokenFromLocalStorage = localStorage.getItem("yourTokenKey"); // Replace 'yourTokenKey' with the actual key you used to store the token
-    if (tokenFromLocalStorage) {
-      setForgotVerificationToken(tokenFromLocalStorage);
-    }
-  }, []);
-
   const initialValues = {
     password: "",
     ConfirmPassword: "",
   };
 
   const onSubmit = (values) => {
-    // Prepare data for sending to the backend
     const dataToSend = {
       passwordVerificationCode: localStorage.getItem("userToken"),
       password: values.password,
     };
-
-    // Send data to the backend
 
     axios
       .post(

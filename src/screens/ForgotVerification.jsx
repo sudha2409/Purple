@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { ErrorMessage, Field, Form, Formik } from "formik";
+import React, { useEffect } from 'react';
 import "../screens/Home/style.css";
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import axios from "axios";
@@ -9,29 +8,15 @@ const ForgotVerification = () => {
     const navigate = useNavigate();
     const [searchParams] = useSearchParams();
     const forgotTokenString =  searchParams.get('forgotPasswordToken')
-    // console.log(verifyTokenString);
-   
-    const [RequestResponse, setRequestResponse] = useState({
-        textMessage: "",
-        alertClass: "",
-      });
-
      
     const onLanding = () => {
-        //console.log(values);
         const verifyToken = {passwordVerificationCode:forgotTokenString}
         axios
         .post(BASE_AUTH_URL+"/api/v1/users/verify-forgot-password", verifyToken)
         .then(
           (response) => {
-            setRequestResponse({
-              textMessage: "Login successful",
-              alertClass: "alert alert-success",
-            });
-    
-            // navigate("/");
-             console.log(response.status);
-            if(response.status == 200){
+            
+            if(response.status === 200){
                 localStorage.setItem('userToken',forgotTokenString);
                
                 navigate('/New-password');
@@ -43,10 +28,7 @@ const ForgotVerification = () => {
           },
     
           (error) => {
-            setRequestResponse({
-              textMessage: error.response.data.message,
-              alertClass: "alert alert-danger",
-            })
+            console.log("error",error);
           }
         )
         .catch((error) => console.log("error",error));

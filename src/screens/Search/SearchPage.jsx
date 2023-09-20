@@ -3,12 +3,8 @@ import { Footer } from "../../components/Footer";
 import "../Search/styleSearch.css";
 import LogInHeader from "./LogInHeader";
 import EcommercePage from "../Search/EcommercePage";
-import Filter from "./Filter";
 import axios from "axios";
-import { Link } from "react-router-dom"; 
-import { useParams, useNavigate } from "react-router-dom";
-import useLogout from '../../hooks/useLogout';
-import moment from 'moment';
+import { useParams } from "react-router-dom";
 import { BASE_APP_URL } from "../../api/config";
 
 export const SearchPage = () => {

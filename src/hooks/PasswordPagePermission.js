@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { Navigate, Outlet, useLocation, useNavigate } from "react-router-dom";
+import React from "react";
+import { Navigate, Outlet, useLocation } from "react-router-dom";
 
-const PasswordPagePermission = ({ }) => {
+const PasswordPagePermission = () => {
   const userToken = localStorage.getItem('userToken');
 
   const location = useLocation();
