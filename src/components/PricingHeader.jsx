@@ -4,9 +4,9 @@ const PricingHeader = () =>{
     return(
         <div className="login-header">
 <div className="navbar">
-  <div className="text-wrapper-21">Creatives</div>
+  {/* <div className="text-wrapper-21">Creatives</div>
   <div className="text-wrapper-21">Influencers</div>
-  <div className="text-wrapper-21">Favourites</div>
+  <div className="text-wrapper-21">Favourites</div> */}
   <div className="text-wrapper-21">Upgrade plan</div>
 </div>
 <div className="frame-wrapper">

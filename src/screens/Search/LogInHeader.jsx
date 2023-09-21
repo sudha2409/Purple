@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import './loginHeader.css';
 import useLogout from '../../hooks/useLogout';
 import Dropdown from './ProfileDropdown';
+import { ROLES_LIST } from '../../api/config';
 
 const LogInHeader = () => {
   const navigate = useNavigate();
   const logout = useLogout();
-
+  const accessAuth = JSON.parse(localStorage.getItem('accessAuth'));
+  const [freeRole, setFreeRole] = useState(true);
   const signOut = async () => {
       await logout();
       navigate('/login');
@@ -28,13 +30,19 @@ const LogInHeader = () => {
     console.log("isDropdownOpen:", isDropdownOpen);
   }, [isDropdownOpen]);
   
+  useEffect(() => {
+    if((accessAuth?.roles === ROLES_LIST.Admin || accessAuth?.roles === ROLES_LIST.PaidUser)){
+      setFreeRole(false);
+    }
+  }, [])
   return (
     <div className="login-header">
       <div className="navbar">
-        <div className="text-wrapper-11">Creatives</div>
+        {/* <div className="text-wrapper-11">Creatives</div>
         <div className="text-wrapper-11">Influencers</div>
-        <div className="text-wrapper-11">Favourites</div>
-        <div className="text-wrapper-11">Upgrade plan</div>
+        <div className="text-wrapper-11">Favourites</div> */}
+        <div className="text-wrapper-11"> {freeRole ?  <Link className="text-wrapper-47" to={"/checkout-payment"} >Upgrade plan</Link>  :  "" } </div>
+
       </div>
       <div className="frame-wrapper">
       <div className="frame-30 dropdown" onClick={toggleDropdown}>

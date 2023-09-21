@@ -9,7 +9,12 @@ const Navbar = () => {
         <div className="logout-header">
           <div className="frame-47">
             <div className="text-wrapper-47"></div>
-            <Link className="text-wrapper-47" to={"/pricing"} >Pricing</Link>
+            {/* <Link className="text-wrapper-47" to={"/see-pricing"} >Pricing</Link> */}
+            <a
+                          className="text-wrapper-47"
+                          style={{ textDecorationLine: "none" }}
+                          href="/#see-pricing"
+                        >Pricing</a>
           </div>
           <div className="frame-48">
             <div className="frame-49">
