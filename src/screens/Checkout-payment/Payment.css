@@ -1,0 +1,107 @@
+.article-container {
+    margin-top: 140px;
+    margin-bottom: 200px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .article {
+    flex-basis: 50%;
+  }
+  
+  .article:after {
+    content: "";
+    flex: auto;
+  }
+  
+
+  /* Add this CSS to your stylesheets */
+
+.premium-product-checkout {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .feature-list ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .feature-list li {
+    margin-bottom: 5px;
+  }
+  
+  .pricing h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .pricing-options {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .option {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .option p {
+    font-weight: bold;
+  }
+  
+  button.checkout-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.checkout-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Add this CSS to your stylesheets */
+
+.premium-upgrade {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.premium-upgrade-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.checkout-container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style your CheckoutForm component as needed */
