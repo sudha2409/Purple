@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import { BASE_AUTH_URL } from "../../api/config";
+import { Footer } from "../../components/Footer";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -158,6 +159,7 @@ const SignUp = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

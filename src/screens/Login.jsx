@@ -7,6 +7,7 @@ import axios from 'axios';
 import moment from 'moment';
 import Navbar from './Home/Navbar';
 import {BASE_AUTH_URL} from '../api/config';
+import { Footer } from '../components/Footer';
 const Login = () => {
  
 
@@ -163,6 +164,7 @@ const Login = () => {
           </p>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
