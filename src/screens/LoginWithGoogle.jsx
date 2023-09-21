@@ -22,15 +22,11 @@ const LoginWithGoogle = () => {
     return params.toString();
   };
 
-  // Convert the queryParamsObj to a URL query string
   const queryString = objectToQueryString(queryParamsObj);
 
   const baseUrl = BASE_AUTH_URL + "/api/v1/google/auth/callback";
 
   const finalUrl = baseUrl + "?" + queryString;
-
-  // Log the final URL
-  console.log("finalUrl", finalUrl);
 
   const onLanding = async () => {
     try {

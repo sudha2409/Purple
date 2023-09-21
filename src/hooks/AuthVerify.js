@@ -17,7 +17,6 @@ const AuthVerify = () => {
       }
     } else {
       localStorage.clear();
-      console.log("login");
       setAuthExpire(true);
     }
   }, []);

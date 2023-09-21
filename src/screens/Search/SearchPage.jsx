@@ -12,17 +12,12 @@ export const SearchPage = () => {
   if(!page){
     page = 1
   }
-  console.log("page:", page);
   const [filterCount, setFilterCount] = useState('');
   const [products, setProducts] = useState([]);
   const itemsPerPage = 30;
   const [filterparamsString, setfilterparamsString] = useState('');
 
   useEffect(() => {
-    console.log("SearchPage component loaded");
-    console.log(`SearchPage useEffect: page=${page}`);
-    console.log(`SearchPage useEffect: filterCount=${filterparamsString}`);
-
     const accessAuth = JSON.parse(localStorage.getItem('accessAuth'));
     axios
       .get(
@@ -43,7 +38,6 @@ export const SearchPage = () => {
   }, [page, filterCount]);
 
   const handleSetFiltersChange = (FiltersChange) => {
-    console.log('I am in handleSetFiltersChange', FiltersChange)
     let IndustryString = '';
     let TypeString = '';
     let FormatString = '';

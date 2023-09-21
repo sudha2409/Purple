@@ -28,12 +28,10 @@ const NewPassword = () => {
         dataToSend
       )
       .then((response) => {
-        console.log("Password change successful:", response);
         localStorage.removeItem("userToken");
         navigate("/login");
       })
       .catch((error) => {
-        console.error("Password change failed:", error.response.data.msg);
         setForgotError(error.response.data.msg);
       });
   };

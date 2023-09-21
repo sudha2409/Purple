@@ -6,7 +6,6 @@ import { useParams, useNavigate } from "react-router-dom";
 import { BASE_APP_URL } from "../../api/config";
 
 const ParentComponent = () => {
-  console.log("ParentComponent loaded");
   const { page } = useParams();
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(parseInt(page, 10) || 1);
@@ -28,7 +27,6 @@ const ParentComponent = () => {
   }, [currentPage]);
 
   const handlePageChange = (pageNumber) => {
-    console.log(`Changing to page ${pageNumber}`);
     setCurrentPage(pageNumber);
     navigate(`/SearchPage/${pageNumber}`);
   };

@@ -31,7 +31,6 @@ const SignUp = () => {
         localStorage.setItem("user", JSON.stringify(response.data.user));
         localStorage.setItem("emailVerificationRequired", "true");
         navigate("/");
-        console.log(response);
         } else{
           navigate("/something-went-wrong");
         }

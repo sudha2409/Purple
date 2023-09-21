@@ -19,7 +19,6 @@ const Filter = ({onSelectedFiltersChange}) => {
           { label: "Type", options: filterOption.data.type || [] },
           { label: "Format", options: filterOption.data.format || [] },
         ]);
-        console.log('filterData', filterData);
       } catch (error) {
         console.error(error);
       }

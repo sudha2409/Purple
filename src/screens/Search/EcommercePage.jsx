@@ -22,7 +22,6 @@ const EcommercePage = ({products, setFiltersChange}) => {
   useEffect(() => {
     if(products?.ads){
       setAds(products.ads);
-      console.log('products', products)
     }
   }, [products]);
   

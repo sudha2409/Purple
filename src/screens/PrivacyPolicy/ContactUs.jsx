@@ -25,7 +25,6 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData); // Log the form data for testing
     sentMail(formData)
 
     setFormData({
@@ -36,7 +35,6 @@ const ContactUs = () => {
   };
 
   const sentMail = async (values) => {
-    console.log(values);
     try{
       const response = await axios.post(BASE_AUTH_URL+'/api/v1/users/contact-us',values);
       if (response.status === 200) {

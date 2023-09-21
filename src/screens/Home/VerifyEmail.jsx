@@ -17,10 +17,8 @@ const VerifyEmail = () => {
         (response) => {
           if (response.status === 200) {
             navigate("/login");
-            console.log(response.status, "login");
           } else {
             navigate("/Reverification-Email");
-            console.log(response.status, "Reverify");
           }
         },
 

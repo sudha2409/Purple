@@ -22,12 +22,10 @@ const LogInHeader = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(true);
 
   const toggleDropdown = () => {
-    console.log("Dropdown clicked");
     setIsDropdownOpen(!isDropdownOpen);
   };
   
   useEffect(() => {
-    console.log("isDropdownOpen:", isDropdownOpen);
   }, [isDropdownOpen]);
   
   useEffect(() => {

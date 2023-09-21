@@ -19,15 +19,12 @@ const Completion = () => {
                   },
                 }
               ) 
-              console.log('before if response', response)
          
             if (response.status === 200) {
             const accessToken = response.data.accessToken;
               const roles = response.data.roles;
               const expiresIn = response.data.expiresIn;
               const expires = moment().add(expiresIn);
-    
-              console.log('response', response)
               localStorage.setItem('accessAuth', JSON.stringify({accessToken, roles, expires}));
 
           }

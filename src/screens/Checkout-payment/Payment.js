@@ -12,7 +12,6 @@ const Payment = () => {
 
   useEffect(() => {
     const publishableKey = process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY;
-    console.log("process.env.STRIPE_PUBLISHABLE_KEY", process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY)
     setStripePromise(loadStripe(publishableKey));
   }, []);
 
@@ -30,7 +29,6 @@ const Payment = () => {
         }
       )
       .then((response) => {
-        console.log("payment response", response);
         let clientSecret = response.data.client_secret;
         setClientSecret(clientSecret);
       });

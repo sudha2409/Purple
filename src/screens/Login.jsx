@@ -25,7 +25,6 @@ const Login = () => {
   };
 
   const onSubmit = async (values) => {
-    console.log(values);
     try{
       const response = await axios.post(BASE_AUTH_URL+'/api/v1/users/login',values);
       if (response.status === 200) {

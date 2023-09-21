@@ -20,7 +20,6 @@ const ForgotVerification = () => {
                 localStorage.setItem('userToken',forgotTokenString);
                
                 navigate('/New-password');
-                console.log(response.status,"login");
             }
             else{ 
                 navigate('/forgot-password');
