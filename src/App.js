@@ -51,10 +51,7 @@ const App = () => {
         <Route element={<RequireAuth allowedRoles={ROLES.FreeUser} />}>
           <Route path="/checkout-payment" element={<Payment />} />
         </Route>
-        <Route element={<RequireAuth allowedRoles={ROLES.PaidUser} />}>
-          <Route path="/completion" element={<Completion />} />
-        </Route>
-
+        <Route path="/completion" element={<Completion />} />
       </Route>
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms-and-conditions" element={<TermsCondition />} />
@@ -62,7 +59,6 @@ const App = () => {
       <Route path="/something-went-wrong" element={<SomethingWentWrong />} />
       <Route path="/unauthorized" element={<NotFound />} />
       <Route path="/*" element={<NotFound />} />
-
     </Routes>
   );
 };
