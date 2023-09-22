@@ -13,8 +13,8 @@
     position: absolute;
     background-color: #fff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    top: 100%;
-    left: 0;
+    top: 18px;
+    left: -100px;
     list-style: none;
     padding: 0;
   }

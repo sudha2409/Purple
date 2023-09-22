@@ -100,7 +100,7 @@ export const Home = () => {
                       <span className="text-wrapper">
                         Purple Maze is designed
                         <span className="blue-italic-style">
-                          {" "} Specifically {" "}
+                          {" "} specifically {" "}
                         </span>
                         to meet your needs.
                       </span>
@@ -417,7 +417,7 @@ Now, picture the potential impact if you take action on this data and begin prio
                   <div className="text-wrapper-33">Reason For choosing
                   </div>
                   <p className="text-wrapper-34">
-                    3000+ high performing creatives from all the top brands.
+                  Trusted by 100+ brands & agencies.
                   </p>
                 </div>
               </div>
@@ -431,7 +431,7 @@ Now, picture the potential impact if you take action on this data and begin prio
                   <div className="text-wrapper-33">Reason For choosing
 </div>
                   <p className="text-wrapper-34">
-                    Filter by brand, keyword, industry, format.
+                  24/7 prompt customer service
                   </p>
                 </div>
               </div>
@@ -444,7 +444,7 @@ Now, picture the potential impact if you take action on this data and begin prio
                 <div className="frame-34">
                   <div className="text-wrapper-33">Reason For choosing
 </div>
-                  <p className="text-wrapper-34">50+ ecommerce niches.</p>
+                  <p className="text-wrapper-34">7 Day Money Back Guarantee.</p>
                 </div>
               </div>
             </div>

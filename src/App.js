@@ -50,8 +50,11 @@ const App = () => {
         <Route path="/Reset-password" element={<ResetPassword />} />
         <Route element={<RequireAuth allowedRoles={ROLES.FreeUser} />}>
           <Route path="/checkout-payment" element={<Payment />} />
+        </Route>
+        <Route element={<RequireAuth allowedRoles={ROLES.PaidUser} />}>
           <Route path="/completion" element={<Completion />} />
         </Route>
+
       </Route>
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms-and-conditions" element={<TermsCondition />} />
