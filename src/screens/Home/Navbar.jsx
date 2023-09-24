@@ -8,8 +8,13 @@ const Navbar = () => {
         <>
         <div className="logout-header">
           <div className="frame-47">
-            <div className="text-wrapper-47">Resources</div>
-            <Link className="text-wrapper-47" to={"/pricing"} >Pricing</Link>
+            <div className="text-wrapper-47"></div>
+            {/* <Link className="text-wrapper-47" to={"/see-pricing"} >Pricing</Link> */}
+            <a
+                          className="text-wrapper-47"
+                          style={{ textDecorationLine: "none" }}
+                          href="/#see-pricing"
+                        >Pricing</a>
           </div>
           <div className="frame-48">
             <div className="frame-49">
@@ -32,7 +37,11 @@ const Navbar = () => {
               <div className="ellipse-5" />
               <div className="ellipse-6" />
             </div>
-            <div className="text-wrapper-48">Purple Maze</div>
+            <div >
+              <a className="text-wrapper-48" style={{ textDecorationLine: 'none' }} href="/">
+                Purple Maze
+              </a>
+            </div>
           </div>
         </div>
         </>

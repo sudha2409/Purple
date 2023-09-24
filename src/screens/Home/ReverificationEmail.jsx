@@ -1,40 +1,30 @@
-import React, { useState, useEffect } from "react";
-import { ErrorMessage, Field, Form, Formik } from "formik";
+import React from "react";
+import { Field, Form, Formik } from "formik";
 import "../Home/style.css";
 import * as Yup from "yup";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import PopupReset from "../Pop-Ups/PopupReset";
 import axios from "axios";
+import Navbar from "./Navbar";
+import { BASE_AUTH_URL } from "../../api/config";
 
 const ReverificationEmail = () => {
   const navigate = useNavigate();
-  const [RequestResponse, setRequestResponse] = useState({
-    textMessage: "",
-    alertClass: "",
-  });
     const initialValues = {
         email: "",
       };
       const onSubmit = (values) => {
         console.log(values);
-        axios.post("https://auth.purplemaze.co/api/v1/users/email-reverification", values)
+        axios.post(BASE_AUTH_URL+"/api/v1/users/email-reverification", values)
         .then((response) => {
           if (response.status === 200) {
-            setRequestResponse({
-              textMessage: "Reverification successful",
-              alertClass: "alert alert-success",
-            });
-  
-            // Navigate to home page if status is 200
+            localStorage.setItem('emailVerificationRequired', 'true');
             navigate("/");
           }
         })
         .catch((error) => {
           if (error.response && error.response.status === 400) {
-            setRequestResponse({
-              textMessage: "Bad Access",
-              alertClass: "alert alert-danger",
-            });
+            console.log("error",error)
           }
         });
       
@@ -47,6 +37,7 @@ const ReverificationEmail = () => {
     
   return (
     <div className="outer-container">
+   <Navbar/>
       <div className="container">
         <div className="centered-container">
           <div
@@ -92,7 +83,7 @@ const ReverificationEmail = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+          </div>
+      );
 };
 export default ReverificationEmail;

@@ -64,6 +64,11 @@ export const Footer = ({
           <div className="frame-7">
             <div className="text-wrapper-7">support@purplemaze.co</div>
           </div>
+          <div className="frame-7">
+            <div className="text-wrapper-7"><p>One Orange Digital <br/>
+First floor, 88, c block,<br/> South City 2, sector 49, <br/>Gurgaon, Haryana, India
+122018 <br/> 9773533007</p></div>
+          </div>
         </div>
         <div className="menu-footer">
           <div className="text-wrapper-5">Company</div>
@@ -71,9 +76,10 @@ export const Footer = ({
             <div className="text-wrapper-8">About Us</div>
             <div className="text-wrapper-7">Careers</div>
             <div className="text-wrapper-7">FAQs</div>
-            <div className="text-wrapper-7"> <a href="\privacy-policy">Privacy</a></div>               
-            <div className="text-wrapper-7"> <a href="\terms-and-conditions">Terms</a></div>
-            <div className="text-wrapper-7">Contact Us</div>
+            <div className="text-wrapper-7"> <a href="/privacy-policy">Privacy</a></div>               
+            <div className="text-wrapper-7"> <a href="/terms-and-conditions">Terms</a></div>
+            <div className="text-wrapper-7"> <a href="/contact-us">Contact Us</a></div>
+
           </div>
         </div>
         <div className="menu-footer">

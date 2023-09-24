@@ -1,6 +1,5 @@
 import React from "react";
 import { Footer } from "../../components/Footer";
-import { LogoutHeader } from "../../components/LogoutHeader";
 import { VuesaxBulkTick } from "../../components/VuesaxBulkTick";
 import { VuesaxBulkPlayCircle } from "../../icons/VuesaxBulkPlayCircle";
 import { VuesaxBulkTickCircle } from "../../icons/VuesaxBulkTickCircle";
@@ -30,38 +29,23 @@ const Pricing = () => {
                 <div className="frame-19">
                   <div className="text-wrapper-17">₹</div>
                   <div className="text-wrapper-18">0</div>
-                  <div className="text-wrapper-19">/mo</div>
+                  <div className="text-wrapper-19">/year</div>
                 </div>
                 <div className="text-wrapper-20">Free Plan</div>
               </div>
               <div className="frame-20">
                 <div className="frame-21">
                   <VuesaxBulkTickCircle className="vuesax-bulk-tick" />
-                  <div className="text-wrapper-21">Search thousands of influencers</div>
+                  <div className="text-wrapper-21">Limited access to creatives</div>
                 </div>
                 <div className="frame-21">
                   <VuesaxBulkTickCircle className="vuesax-bulk-tick" />
-                  <p className="text-wrapper-21">Manually purchase content from influencers</p>
+                  <p className="text-wrapper-21">Filter by brand, keyword, industry, format</p>
                 </div>
                 <div className="frame-21">
                   <VuesaxBulkTickCircle className="vuesax-bulk-tick" />
-                  <p className="div-3">
-                    <span className="span">10%</span>
-                    <span className="text-wrapper-22"> marketplace fee</span>
-                  </p>
-                </div>
-                <div className="frame-22">
-                  <VuesaxBulkTick />
-                  <p className="div-3">
-                    <span className="span">30 influencers</span>
-                    <span className="text-wrapper-22"> apply per month</span>
-                  </p>
-                </div>
-                <div className="frame-22">
-                  <VuesaxBulkTick />
-                  <p className="div-3">
-                    <span className="span">30 influencers</span>
-                    <span className="text-wrapper-22"> apply per month</span>
+                  <p className="text-wrapper-21">
+                  No credit card required
                   </p>
                 </div>
               </div>
@@ -77,9 +61,9 @@ const Pricing = () => {
                 <div className="frame-wrapper">
                   <div className="frame-19">
                     <div className="text-wrapper-17">₹</div>
-                    <div className="text-wrapper-25">1998</div>
-                    <div className="text-wrapper-26">1998</div>
-                    <div className="text-wrapper-19">/mo</div>
+                    <div className="text-wrapper-25">199</div>
+                    <div className="text-wrapper-26">98</div>
+                    <div className="text-wrapper-19">/Year</div>
                   </div>
                 </div>
                 <div className="text-wrapper-20">Pro Plan</div>
@@ -87,34 +71,20 @@ const Pricing = () => {
               <div className="frame-20">
                 <div className="frame-21">
                   <VuesaxBulkTickCircle className="vuesax-bulk-tick" />
-                  <div className="text-wrapper-27">Everything included in Basic</div>
+                  <div className="text-wrapper-27">Get access to 3000+ creatives</div>
                 </div>
                 <div className="frame-21">
                   <VuesaxBulkTickCircle className="vuesax-bulk-tick" />
-                  <p className="post-unlimited">
-                    <span className="text-wrapper-28">Post </span>
-                    <span className="text-wrapper-29">unlimited</span>
-                    <span className="text-wrapper-28"> campaigns</span>
-                  </p>
+                  <div className="text-wrapper-27">Filter by brand, keyword, industry, format
+                  </div>
                 </div>
+                
                 <div className="frame-21">
                   <VuesaxBulkTickCircle className="vuesax-bulk-tick" />
-                  <p className="div-4">
-                    <span className="span">30 influencers</span>
-                    <span className="text-wrapper-22"> apply per month</span>
-                  </p>
+                  <div className="text-wrapper-27">Wishlist and save</div>
                 </div>
-                <div className="frame-21">
-                  <VuesaxBulkTickCircle className="vuesax-bulk-tick" />
-                  <p className="text-wrapper-21">Chat with influencers before accepting</p>
-                </div>
-                <div className="frame-21">
-                  <VuesaxBulkTickCircle className="vuesax-bulk-tick" />
-                  <p className="div-4">
-                    <span className="span">10%</span>
-                    <span className="text-wrapper-22"> marketplace fee</span>
-                  </p>
-                </div>
+                
+                
               </div>
               <div className="frame-21">
                 <div className="frame-23">
@@ -142,32 +112,32 @@ const Pricing = () => {
           <div className="frame-27">
             <img
               className="image"
-              alt="Image"
+              alt=""
               src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/image-2-1@2x.png"
             />
             <img
               className="image-2"
-              alt="Image"
+              alt=""
               src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/image-3-1@2x.png"
             />
             <img
               className="image"
-              alt="Image"
+              alt=""
               src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d53bb23acc02a59b7cfa6b/img/image-4@2x.png"
             />
             <img
               className="image-2"
-              alt="Image"
+              alt=""
               src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/image-6@2x.png"
             />
             <img
               className="image"
-              alt="Image"
+              alt=""
               src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d53bb23acc02a59b7cfa6b/img/image-5@2x.png"
             />
             <img
               className="image-3"
-              alt="Image"
+              alt=""
               src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/image-7@2x.png"
             />
           </div>
@@ -187,7 +157,7 @@ const Pricing = () => {
               <div className="image-wrapper">
                 <img
                   className="image-4"
-                  alt="Image"
+                  alt=""
                   src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d53bb23acc02a59b7cfa6b/img/image-8.png"
                 />
               </div>
@@ -210,20 +180,22 @@ const Pricing = () => {
           <div className="frame-30">
             <img
               className="image-5"
-              alt="Image"
+              alt=""
               src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d53bb23acc02a59b7cfa6b/img/image-9.png"
             />
             <div className="frame-31">
               <p className="text-wrapper-37">Save Hours With Campaigns and Work With Influencers at Scale</p>
               <div className="frame-32">
                 <div className="frame-33">
-                  <div className="text-wrapper-38">Reason one For choosing</div>
+                  <div className="text-wrapper-38">Reason For choosing
+</div>
                   <p className="text-wrapper-39">
                     Duis mollis gravida commodo id luctus erat porttitor ligula, eget lacinia odio sem aget elit.
                   </p>
                 </div>
                 <div className="frame-33">
-                  <div className="text-wrapper-38">Reason one For choosing</div>
+                  <div className="text-wrapper-38">Reason For choosing
+</div>
                   <p className="text-wrapper-39">
                     Duis mollis gravida commodo id luctus erat porttitor ligula, eget lacinia odio sem aget elit.
                   </p>
@@ -236,13 +208,15 @@ const Pricing = () => {
               <p className="text-wrapper-37">Save Hours With Campaigns and Work With Influencers at Scale</p>
               <div className="frame-32">
                 <div className="frame-33">
-                  <div className="text-wrapper-38">Reason one For choosing</div>
+                  <div className="text-wrapper-38">Reason For choosing
+</div>
                   <p className="text-wrapper-39">
                     Duis mollis gravida commodo id luctus erat porttitor ligula, eget lacinia odio sem aget elit.
                   </p>
                 </div>
                 <div className="frame-33">
-                  <div className="text-wrapper-38">Reason one For choosing</div>
+                  <div className="text-wrapper-38">Reason For choosing
+</div>
                   <p className="text-wrapper-39">
                     Duis mollis gravida commodo id luctus erat porttitor ligula, eget lacinia odio sem aget elit.
                   </p>
@@ -251,7 +225,7 @@ const Pricing = () => {
             </div>
             <img
               className="image-5"
-              alt="Image"
+              alt=""
               src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d53bb23acc02a59b7cfa6b/img/image-9.png"
             />
           </div>

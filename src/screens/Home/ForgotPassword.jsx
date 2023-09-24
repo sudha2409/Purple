@@ -8,6 +8,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReverificationPopup from '../Pop-Ups/ReverificationPopup';
 import CheckEmailPopup from '../Pop-Ups/CheckEmailErrorPopup';
+import Navbar from './Navbar';
+import { BASE_AUTH_URL } from '../../api/config';
 
 
 const ForgotPassword = () => {
@@ -21,10 +23,10 @@ const ForgotPassword = () => {
     const initialValues = {
         email: ""
     };
-    const onSubmit = (values) => {
+        const onSubmit = (values) => {
       //console.log(values);
       axios
-      .post("https://auth.purplemaze.co/api/v1/users/forgot-password", values)  // if else wali conditions lagani h     
+      .post(BASE_AUTH_URL+"/api/v1/users/forgot-password", values)  // if else wali conditions lagani h     
       .then(
         (response) => {
           if(response.status === 200) {
@@ -34,7 +36,7 @@ const ForgotPassword = () => {
             alertClass: "alert alert-success",
           });
           setShowPopup(true);
-          navigate("");
+          navigate("/");
         }
         else{
           setRequestResponse({
@@ -68,6 +70,7 @@ const ForgotPassword = () => {
       
      return(
         <div className='container'>
+                    <Navbar />
             <div className="centered-container">
                 <div className="wrapper" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
                     <h1 className='text-center'>Forgot Password?</h1>
@@ -81,7 +84,7 @@ const ForgotPassword = () => {
                     <Field
                       type="text"
                       name="email"
-                      placeholder="Enter your Email address"
+                                            placeholder="Enter your Email address"
                       style={{ marginTop: '40px', marginBottom: '40px' }}
                       className={
                         formik.touched.Email

@@ -154,7 +154,7 @@
   letter-spacing: 0;
   line-height: 36px;
   position: relative;
-  width: 549px;
+  width: 551px;
 }
 
 .home .frame-3 {
@@ -351,11 +351,10 @@
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0px 5px 35px #1e222812;
-  height: 158px;
+  height: 246px;
   overflow: hidden;
   position: relative;
   width: 398px;
-  z-home: 2;
 }
 
 .home .text-wrapper-8 {
@@ -790,7 +789,9 @@
   gap: 10px;
   position: relative;
 }
-
+.home .magin-bottom-1 {
+  margin-bottom: 65px;
+}
 .home .img-5 {
   height: 24px;
   position: relative;
@@ -965,7 +966,7 @@
   display: flex;
   flex: 0 0 auto;
   flex-wrap: wrap;
-  gap: 90px 40px;
+  gap: 40px 40px;
   position: relative;
   width: 1290px;
 }
@@ -1117,7 +1118,7 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  height: 784px;
+  height: 684px;
   margin-right: -73px;
   overflow: hidden;
   overflow-y: scroll;
@@ -1562,7 +1563,11 @@
   align-items: center;
   height: 70vh;
   font-family: "Mona-Sans-Medium", Helvetica;
-  margin-top: 12vh;
+  margin-top: 150px;
+}
+.padding-top-50{
+  padding-top: 50px;
+
 }
 
 .wrapper {
@@ -1635,3 +1640,74 @@
   margin-top: 10px; 
 }
 
+.blue-italic-style {
+  color: #455ecf;
+  font-family: "IBM Plex Serif", Helvetica;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+/* Styles for the modal background (clickable to close the modal) */
+.modal-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* Styles for the modal content (video player) */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the close button */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  outline: none;
+}
+
+/* Styles for the "Open Video" button in the main application */
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  outline: none;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

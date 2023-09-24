@@ -5,8 +5,19 @@ import "./Home/style.css";
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import moment from 'moment';
+import Navbar from './Home/Navbar';
+import {BASE_AUTH_URL} from '../api/config';
+import { Footer } from '../components/Footer';
 const Login = () => {
-  
+ 
+
+  const googleAuth = () => {
+		window.open(
+			`${BASE_AUTH_URL}/api/v1/google/login`,
+			"_self"
+		);
+	};
+
   const [loginError, setLoginError] = useState("");
   const navigate =  useNavigate();
   const initialValues = {
@@ -14,37 +25,27 @@ const Login = () => {
     password: "",
   };
 
-  const onSubmit = (values) => {
-    console.log(values);
-    axios.post('https://auth.purplemaze.co/api/v1/users/login',values)
-    .then((response) => {
+  const onSubmit = async (values) => {
+    try{
+      const response = await axios.post(BASE_AUTH_URL+'/api/v1/users/login',values);
       if (response.status === 200) {
-        const authToken = response.data.token; // Assuming the server sends a token
         const accessToken = response.data.accessToken;
           const roles = response.data.roles;
           const expiresIn = response.data.expiresIn;
-          const expires = moment().add(expiresIn, 'seconds');
+          const expires = moment().add(expiresIn);
 
           // Store data in local storage
-          localStorage.setItem('accessToken', accessToken);
-          localStorage.setItem('roles', JSON.stringify(roles));
-          localStorage.setItem('expires', expires.toISOString());
-        console.log(response);
+          localStorage.setItem('accessAuth', JSON.stringify({accessToken, roles, expires}));
         
-        navigate  ('/SearchPage')
+        navigate  ('/SearchPage',  { replace: true })
 
       }
-    })
-    .catch((error) => {
+    }
+    catch(error) {
       console.log(error);
-      if (error.response && error.response.status === 401) {
-        // Unauthorized, incorrect credentials
-        setLoginError("Invalid username or password");
-      } else {
-        // Other errors
-        setLoginError("An error occurred. Please try again later.");
-      }
-    });
+      console.log(error.response.data.msg)
+      setLoginError( error.response.data.msg);
+    };
   };
 
   const validationSchema = Yup.object({
@@ -58,10 +59,12 @@ const Login = () => {
 
   return (
     <div className="outer-container">
+          <Navbar />
       <div className="container">
         <div className="centered-container">
           <div className="wrapper">
             <h1 className="text-center">Login</h1>
+            <div style={{color: "red"}}>{loginError}</div>
             <Formik
               initialValues={initialValues}
               onSubmit={onSubmit}
@@ -106,6 +109,9 @@ const Login = () => {
                   <p className="forgot-password-link text-center">
                     <Link to="/forgot-password">Forgot password?</Link>
                   </p>
+                  <p className="forgot-password-link text-center">
+                    <Link to="/Reverification-Email">Get email verify link</Link>
+                  </p>
                   <button
                     type="submit"
                     className="btn btn-primary btn-block w-100 circular-button"
@@ -119,7 +125,7 @@ const Login = () => {
             <div className="separator text-center">
               <span>or</span>
             </div>
-            <button className="btn btn-google btn-block">
+            <button className="btn btn-google btn-block" onClick={googleAuth}>
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -154,10 +160,11 @@ const Login = () => {
         </div>
         <div className="text-center mt-3 ">
           <p className="text-center new-user">
-            New to Purple Mazze ? <Link className='joinNow' to="/signup">Join Now </Link>
+            New to PurpleMaze ? <Link className='joinNow' to="/signup">Join Now </Link>
           </p>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

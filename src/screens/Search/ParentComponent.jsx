@@ -3,9 +3,9 @@ import SearchPage from "./SearchPage";
 import axios from "axios";
 import Pagination from "./Pagination";
 import { useParams, useNavigate } from "react-router-dom";
+import { BASE_APP_URL } from "../../api/config";
 
 const ParentComponent = () => {
-  console.log("ParentComponent loaded");
   const { page } = useParams();
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(parseInt(page, 10) || 1);
@@ -16,7 +16,7 @@ const ParentComponent = () => {
     
     axios
       .get(
-        `https://sfb6484cu3.execute-api.ap-south-1.amazonaws.com/v1/api/advertisements?page=${currentPage}&itemsPerPage=${itemsPerPage}`
+        `${BASE_APP_URL}/v1/api/advertisements?page=${currentPage}&itemsPerPage=${itemsPerPage}`
       )
       .then((response) => {
         setProducts(response.data);
@@ -27,7 +27,6 @@ const ParentComponent = () => {
   }, [currentPage]);
 
   const handlePageChange = (pageNumber) => {
-    console.log(`Changing to page ${pageNumber}`);
     setCurrentPage(pageNumber);
     navigate(`/SearchPage/${pageNumber}`);
   };

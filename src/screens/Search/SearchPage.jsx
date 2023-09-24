@@ -3,23 +3,31 @@ import { Footer } from "../../components/Footer";
 import "../Search/styleSearch.css";
 import LogInHeader from "./LogInHeader";
 import EcommercePage from "../Search/EcommercePage";
-import Filter from "./Filter";
 import axios from "axios";
-import { Link } from "react-router-dom"; 
 import { useParams } from "react-router-dom";
+import { BASE_APP_URL } from "../../api/config";
 
 export const SearchPage = () => {
-  const { page } = useParams();
-  console.log("page:", page);
+  let { page } = useParams();
+  if(!page){
+    page = 1
+  }
+  const [filterCount, setFilterCount] = useState('');
   const [products, setProducts] = useState([]);
   const itemsPerPage = 30;
+  const [filterparamsString, setfilterparamsString] = useState('');
 
   useEffect(() => {
-    console.log("SearchPage component loaded");
-    console.log(`SearchPage useEffect: page=${page}`);
+    const accessAuth = JSON.parse(localStorage.getItem('accessAuth'));
     axios
       .get(
-        `https://sfb6484cu3.execute-api.ap-south-1.amazonaws.com/v1/api/advertisements?page=${page}&itemsPerPage=${itemsPerPage}`
+        `${BASE_APP_URL}/v1/api/advertisements?page=${page}&itemsPerPage=${itemsPerPage}${filterparamsString}`,
+        {
+          headers: {
+            'Authorization': accessAuth?.accessToken,
+            'Content-Type': 'application/json'
+          },
+        }
       )
       .then((response) => {
         setProducts(response.data);
@@ -27,7 +35,31 @@ export const SearchPage = () => {
       .catch((error) => {
         console.error(error);
       });
-  }, [page]);
+  }, [page, filterCount]);
+
+  const handleSetFiltersChange = (FiltersChange) => {
+    let IndustryString = '';
+    let TypeString = '';
+    let FormatString = '';
+    let SubIndustryString = '';
+    let filterparams = '';
+    if(FiltersChange?.Industry){
+      IndustryString = `&industry=${FiltersChange?.Industry}`
+    }
+    if(FiltersChange?.Type){
+      TypeString = `&type=${FiltersChange?.Type}`
+    }
+    if(FiltersChange?.Format){
+      FormatString = `&format=${FiltersChange?.Format}`
+    }
+    if(FiltersChange?.SubIndustry){
+      SubIndustryString = `&subindustry=${FiltersChange?.SubIndustry}`
+    }
+    filterparams = IndustryString+TypeString+FormatString+SubIndustryString
+    setFilterCount(FiltersChange);
+    setfilterparamsString(`${filterparams}`);
+
+  }
 
   return (
     <div className="search">
@@ -35,13 +67,13 @@ export const SearchPage = () => {
         <LogInHeader />
         <div className="cards">
           {/* <Filter /> */}
-          <EcommercePage products={products} />
+          <EcommercePage products={products}  setFiltersChange={handleSetFiltersChange}/>
         </div>
         {/* Pagination */}
         <div className="pagination">
           <button
             disabled={page === "1"} 
-            onClick={() => window.location.href = `/SearchPage?page=${parseInt(page) - 1}`}
+            onClick={() => window.location.href = `/SearchPage/${parseInt(page) - 1}`}
           >
             Previous
           </button>

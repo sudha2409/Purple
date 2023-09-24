@@ -1,0 +1,33 @@
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+  }
+  
+  
+  /* Dropdown menu */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    top: 18px;
+    left: -100px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Dropdown menu items */
+  .dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Show the dropdown menu on hover or click */
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus-within .dropdown-menu {
+    display: block;
+  }
+  

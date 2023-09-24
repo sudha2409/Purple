@@ -4,15 +4,12 @@ import "./ecommerce.css";
 const Category = ({ ad }) => {
   const {
     name,
-    primary_text,
     headline,
-    description,
     display_link,
     call_to_action,
     media_resource_url,
     logo_resource_url,
     format,
-    video_type,
   } = ad;
 
   return (

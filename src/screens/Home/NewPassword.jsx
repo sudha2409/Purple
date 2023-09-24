@@ -1,61 +1,48 @@
-import React, { useState, useEffect } from 'react';
-import { ErrorMessage, Field, Form, Formik } from 'formik';
-import * as Yup from 'yup';
-import axios from 'axios'; // Don't forget to import axios
-import '../Home/style.css';
-import { Link } from 'react-router-dom';
-import PasswordChangePopup from '../Pop-Ups/PasswordChangePopup';
+import React, { useState } from "react";
+import { ErrorMessage, Field, Form, Formik } from "formik";
+import * as Yup from "yup";
+import axios from "axios"; // Don't forget to import axios
+import "../Home/style.css";
+import { useNavigate } from "react-router-dom";
+import PasswordChangePopup from "../Pop-Ups/PasswordChangePopup";
+import { BASE_AUTH_URL } from "../../api/config";
 
 const NewPassword = () => {
-  const [forgotVerificationToken, setForgotVerificationToken] = useState('');
-
-  useEffect(() => {
-    const tokenFromLocalStorage = localStorage.getItem('yourTokenKey'); // Replace 'yourTokenKey' with the actual key you used to store the token
-    if (tokenFromLocalStorage) {
-      setForgotVerificationToken(tokenFromLocalStorage);
-    }
-  }, []);
+  const [forgotError, setForgotError] = useState("");
+  const navigate = useNavigate();
 
   const initialValues = {
-    password: '',
-    ConfirmPassword: '',
+    password: "",
+    ConfirmPassword: "",
   };
 
   const onSubmit = (values) => {
-
-    
-
-    // Prepare data for sending to the backend
     const dataToSend = {
-    
-    passwordVerificationCode:  localStorage.getItem("userToken"),
+      passwordVerificationCode: localStorage.getItem("userToken"),
       password: values.password,
-      email: "sudhalohani1@gmail.com"
-     
     };
-    
-    // Send data to the backend
 
     axios
-      .post('https://auth.purplemaze.co/api/v1/users/forgot-password-change', dataToSend) 
+      .post(
+        BASE_AUTH_URL+"/api/v1/users/forgot-password-change",
+        dataToSend
+      )
       .then((response) => {
-        console.log('Password change successful:', response);
-        localStorage.removeItem('userToken')
-       
+        localStorage.removeItem("userToken");
+        navigate("/login");
       })
       .catch((error) => {
-        console.error('Password change failed:', error);
-       
+        setForgotError(error.response.data.msg);
       });
   };
 
   const validationSchema = Yup.object({
     password: Yup.string()
-      .required('New Password is required')
-      .min(6, 'New Password must be at least 6 characters long'),
+      .required("New Password is required")
+      .min(6, "New Password must be at least 6 characters long"),
     ConfirmPassword: Yup.string()
-      .oneOf([Yup.ref('password'), null], 'Passwords must match')
-      .required('Confirm Password is required'),
+      .oneOf([Yup.ref("password"), null], "Passwords must match")
+      .required("Confirm Password is required"),
   });
 
   return (
@@ -64,6 +51,7 @@ const NewPassword = () => {
         <div className="centered-container">
           <div className="wrapper">
             <h2 className="text-center">Create New Password</h2>
+            <div style={{ color: "red" }}>{forgotError}</div>
             <Formik
               initialValues={initialValues}
               onSubmit={onSubmit}
@@ -78,8 +66,8 @@ const NewPassword = () => {
                       name="password"
                       className={
                         formik.touched.password && formik.errors.password
-                          ? 'form-control is-invalid'
-                          : 'form-control'
+                          ? "form-control is-invalid"
+                          : "form-control"
                       }
                     />
                     <ErrorMessage name="password">
@@ -88,7 +76,7 @@ const NewPassword = () => {
                       )}
                     </ErrorMessage>
                   </div>
-                  <PasswordChangePopup/>
+                  <PasswordChangePopup />
 
                   <div className="form-group my-3">
                     <label>Confirm New Password</label>
@@ -98,8 +86,8 @@ const NewPassword = () => {
                       className={
                         formik.touched.ConfirmPassword &&
                         formik.errors.ConfirmPassword
-                          ? 'form-control is-invalid'
-                          : 'form-control'
+                          ? "form-control is-invalid"
+                          : "form-control"
                       }
                     />
                     <ErrorMessage name="ConfirmPassword">

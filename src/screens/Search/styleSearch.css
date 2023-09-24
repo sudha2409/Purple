@@ -21,26 +21,6 @@
 
 }
 
-/* Updated styles for LogInHeader */
-.search .login-header {
-  background-color: #ffffffcc;
-  height: 96px;
-  position: fixed;
-  top: 0;
-  width: 100%; /* Full width */
-  z-index: 100; /* Higher z-index to appear on top */
-}
 
-
-
-
-.search .frame-wrapper {
-  align-items: flex-start;
-  display: inline-flex;
-  gap: 24px;
-  left: 1232px;
-  position: absolute;
-  top: 26px;
-}
 
 

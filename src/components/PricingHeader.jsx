@@ -4,9 +4,9 @@ const PricingHeader = () =>{
     return(
         <div className="login-header">
 <div className="navbar">
-  <div className="text-wrapper-21">Creatives</div>
+  {/* <div className="text-wrapper-21">Creatives</div>
   <div className="text-wrapper-21">Influencers</div>
-  <div className="text-wrapper-21">Favourites</div>
+  <div className="text-wrapper-21">Favourites</div> */}
   <div className="text-wrapper-21">Upgrade plan</div>
 </div>
 <div className="frame-wrapper">
@@ -27,7 +27,11 @@ const PricingHeader = () =>{
     <div className="ellipse-5" />
     <div className="ellipse-6" />
   </div>
-  <div className="text-wrapper-23">Purple Maze</div>
+  <div >
+    <a className="text-wrapper-23" style={{ textDecorationLine: 'none' }} href="/">
+      Purple Maze
+    </a>
+  </div>
 </div>
 </div>
 
