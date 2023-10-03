@@ -64,7 +64,7 @@ const ContactUs = () => {
           <p>
             One Orange Digital
             <br />
-            First floor, 88, c block, South City 2, sector 49,
+            South City 2, sector 49,
             <br />
             Gurgaon, Haryana, India
             <br />

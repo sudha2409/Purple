@@ -66,7 +66,7 @@ export const Footer = ({
           </div>
           <div className="frame-7">
             <div className="text-wrapper-7"><p>One Orange Digital <br/>
-First floor, 88, c block,<br/> South City 2, sector 49, <br/>Gurgaon, Haryana, India
+South City 2, sector 49, <br/>Gurgaon, Haryana, India
 122018 <br/> 9773533007</p></div>
           </div>
         </div>
