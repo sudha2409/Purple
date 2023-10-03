@@ -1,0 +1,15 @@
+.foldable-faq {
+    cursor: pointer;
+    width: 500px;
+  }
+  
+.faq-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Adjust as needed */
+  }
+  
+  .faq-column {
+    width: 100%;
+  }
+  

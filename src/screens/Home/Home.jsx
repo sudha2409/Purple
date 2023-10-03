@@ -1,10 +1,10 @@
 import React from "react";
 import VideoModal from "./VideoModal";
-
 import "./style.css";
 import { Footer } from "../../components/Footer";
 import Navbar from "./Navbar";
 import PopupMsg from "../Pop-Ups/PopupMsg";
+import FoldableFAQ from "./FoldableFAQ";
 
 export const Home = () => {
   // const videoUrl = "https://www.youtube.com/watch?v=og_ob8Xdlvk";
@@ -97,9 +97,10 @@ export const Home = () => {
                   <div className="overlap-group-3">
                     <p className="here-are-few-reasons">
                       <span className="text-wrapper">
-                        What you get from 
+                        What you get from
                         <span className="blue-italic-style">
-                          {" "} Purple Maze? {" "}
+                          {" "}
+                          Purple Maze?{" "}
                         </span>
                       </span>
                     </p>
@@ -118,23 +119,22 @@ export const Home = () => {
                         - 3000+ top performing creatives
                         <br />
                         <br />
-                        - Filter by brand, industry and format  
+                        - Filter by brand, industry and format
                         <br />
-                        <br />
-                        - 50+ ecomm niches & 1000+ brands
+                        <br />- 50+ ecomm niches & 1000+ brands
                       </p>
                     </div>
                   </div>
                   <div className="frame-9">
                     <div className="text-wrapper-8">02</div>
                     <div className="frame-10">
-                      <div className="text-wrapper-9">Learn from the top brands</div>
+                      <div className="text-wrapper-9">
+                        Learn from the top brands
+                      </div>
                       <p className="text-wrapper-10">
-                      - View & analyze ads, generate 6x ROI
-                      <br />
-                      <br />
-                      - Recreate and go viral and grow big
-                    
+                        - View & analyze ads, generate 6x ROI
+                        <br />
+                        <br />- Recreate and go viral and grow big
                       </p>
                     </div>
                   </div>
@@ -149,10 +149,10 @@ export const Home = () => {
           </div>
           <div className="frame-21">
             <div className="frame-6" id="see-pricing">
-              <div className="text-wrapper-5" >OUR PRICING</div>
-              <div className="group-3" >
-                <div className="overlap-group-6" >
-                  <p className="we-offer-great" >
+              <div className="text-wrapper-5">OUR PRICING</div>
+              <div className="group-3">
+                <div className="overlap-group-6">
+                  <p className="we-offer-great">
                     Stay ahead of the
                     <span className="blue-italic-style"> Competition. </span>
                   </p>
@@ -279,84 +279,63 @@ export const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="frame-31">
-              <div className="frame-32">
-                <div className="frame-33">
-                  <div className="text-wrapper-28">?</div>
-                </div>
-                <div className="frame-34">
-                  <p className="text-wrapper-29">
-                    How do you select the best ads?
-                  </p>
-                  <p className="text-wrapper-30">
-                  We've devised a comprehensive evaluation protocol for the curation of Social Media ads.
-<br /><br />Before an ad example is accepted into Purple Maze, we conduct a thorough assessment of the associated brand, considering factors such as:
-<br />* 		Is it a rapidly expanding eCommerce brand?
-<br />* 		Does it boast an estimated annual revenue of at least $1 million?
-<br />* 		What's the volume of traffic it generates?
-<br />* 		Details of its ad testing procedures, among other criteria.
+            <div className="frame-31"></div>
 
-
-<br /><br />Should a brand meet our stringent standards, it becomes part of our internal brand portfolio, which now comprises over 1000+ brands. We continuously analyze these brands on a weekly basis to gain insights into their successful strategies.
-
-<br />At the creative level, we scrutinize a variety of attributes, including:
-
-<br />* 		The ad's duration relative to the testing period.
-<br />* 		The effectiveness of the hook in capturing users' attention.
-<br />* 		Concept, style, visual elements, and copy.
-
-<br /> Our dedicated curation team evaluates more than 10,000 ads each month, but only a select few pass this rigorous process. We handpick and incorporate just over 100 ads into Purple Maze each month, emphasizing quality above all else.
-                  </p>
-                </div>
-              </div>
-              <div className="frame-32">
-                <div className="frame-33">
-                  <div className="text-wrapper-28">?</div>
-                </div>
-                <div className="frame-34">
-                  <p className="text-wrapper-29">
-                  What are all the possibilities with Purple Maze?
-                  </p>
-                  <p className="text-wrapper-30">
-                  You'll gain entry to a vast library of 3000+ Facebook/Instagram ad illustrations. This resource empowers you to launch your ad campaigns and videos in your industry ahead of your competitors, uncover hidden ad creatives, stay connected to the broader marketing landscape, and grasp the strategies driving today's viral trends.⁣⁣⁣
-
-                  <br /><br />But perhaps most crucially, you'll be equipped to produce high-performing ads!⁣⁣
-
-                  <br /><br />It's straightforward. Apply your newfound knowledge to create significantly improved ads and videos tailored to your audience!⁣
-                  </p>
-                </div>
-              </div>
-              <div className="frame-32">
-                <div className="frame-33">
-                  <div className="text-wrapper-28">?</div>
-                </div>
-                <div className="frame-34">
-                  <p className="text-wrapper-29">
-                    Do you offer refunds?
-                  </p>
-                  <p className="text-wrapper-30">
-                  Should you not discover a new successful ad for your business
-                  within the initial 7 days of testing our creative ideas,
-                  we will provide a full refund of your payment!
-                  </p>
-                </div>
-              </div>
-              <div className="frame-32">
-                <div className="frame-33">
-                  <div className="text-wrapper-28">?</div>
-                </div>
-                <div className="frame-34">
-                  <p className="text-wrapper-29">
-                  Does ads have impact on ROI?
-                  </p>
-                  <p className="text-wrapper-30">
-                  According to research, creative impact accounts for up to 50% of the variation in advertising results. Surprisingly, many leaders allocate only a fraction, not even 5%, of their focus to this aspect.⁣⁣⁣⁣⁣⁣
+            <div className="faq-row">
+              <div className="faq-column">
+                <FoldableFAQ
+                  question="How do you select the best ads?"
+                  answer="We've devised a comprehensive evaluation protocol for the curation of Social Media ads.
+                  <br /><br />
+                  Before an ad example is accepted into Purple Maze, 
+                  we conduct a thorough assessment of the associated brand, considering factors such as:
                   <br />
+                  - Is it a rapidly expanding eCommerce brand?
                   <br />
-Now, picture the potential impact if you take action on this data and begin prioritizing the study and enhancement of ad creatives!⁣⁣
-                  </p>
-                </div>
+                  - Does it boast an estimated annual revenue of at least $1 million?
+                  <br />
+                  - What's the volume of traffic it generates?
+                  <br />
+                  - Details of its ad testing procedures, among other criteria.
+                  <br /><br />
+                  Should a brand meet our stringent standards, it becomes part of our internal brand portfolio, which now comprises over 1000+ brands. We continuously analyze these brands on a weekly basis to gain insights into their successful strategies.
+                  <br />
+                  At the creative level, we scrutinize a variety of attributes, including:
+                  <br />
+                  - The ad's duration relative to the testing period.
+                  <br />
+                  - The effectiveness of the hook in capturing users' attention.
+                  <br />
+                  - Concept, style, visual elements, and copy.
+                  <br />
+                  Our dedicated curation team evaluates more than 10,000 ads each month, but only a select few pass this rigorous process. We handpick and incorporate just over 100 ads into Purple Maze each month, emphasizing quality above all else.
+                `"
+                />
+                  <FoldableFAQ
+                    question="What are all the possibilities with Purple Maze?"
+                    answer="You'll gain entry to a vast library of 3000+ Facebook/Instagram ad illustrations. This resource empowers you to launch your ad campaigns and videos in your industry ahead of your competitors, uncover hidden ad creatives, stay connected to the broader marketing landscape, and grasp the strategies driving today's viral trends.⁣⁣⁣
+
+    <br /><br />But perhaps most crucially, you'll be equipped to produce high-performing ads!⁣⁣
+
+    <br /><br />It's straightforward. Apply your newfound knowledge to create significantly improved ads and videos tailored to your audience!⁣"
+                  />
               </div>
+                <div className="faq-column">
+                  <FoldableFAQ
+                    question="Do you offer refunds?"
+                    answer="Should you not discover a new successful ad for your business
+                    within the initial 7 days of testing our creative ideas,
+                    we will provide a full refund of your payment!"
+                  />
+                  <FoldableFAQ
+                    question="Does ads have impact on ROI?"
+                    answer="According to research, creative impact accounts for up to 50% of the variation in advertising results. Surprisingly, many leaders allocate only a fraction, not even 5%, of their focus to this aspect.⁣⁣⁣⁣⁣⁣
+    <br />
+    <br />
+Now, picture the potential impact if you take action on this data and begin prioritizing the study and enhancement of ad creatives!⁣⁣"
+                  />
+                </div>
+                  
             </div>
           </div>
           <div className="frame-35">
@@ -412,11 +391,9 @@ Now, picture the potential impact if you take action on this data and begin prio
                   src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d90915bde965d8a1d78907/img/image-11@2x.png"
                 />
                 <div className="frame-34">
-                  <div className="text-wrapper-33">Reason For choosing
+                  <div className="text-wrapper-33">
+                    Trusted by 100+ brands & agencies.
                   </div>
-                  <p className="text-wrapper-34">
-                  Trusted by 100+ brands & agencies.
-                  </p>
                 </div>
               </div>
               <div className="frame-38">
@@ -426,11 +403,9 @@ Now, picture the potential impact if you take action on this data and begin prio
                   src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/image-12@2x.png"
                 />
                 <div className="frame-34">
-                  <div className="text-wrapper-33">Reason For choosing
-</div>
-                  <p className="text-wrapper-34">
-                  24/7 prompt customer service
-                  </p>
+                  <div className="text-wrapper-33">
+                    24/7 prompt customer service
+                  </div>
                 </div>
               </div>
               <div className="frame-38">
@@ -440,9 +415,9 @@ Now, picture the potential impact if you take action on this data and begin prio
                   src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d90915bde965d8a1d78907/img/image-13@2x.png"
                 />
                 <div className="frame-34">
-                  <div className="text-wrapper-33">Reason For choosing
-</div>
-                  <p className="text-wrapper-34">7 Day Money Back Guarantee.</p>
+                  <div className="text-wrapper-33">
+                    7 Day Money Back Guarantee.
+                  </div>
                 </div>
               </div>
             </div>
