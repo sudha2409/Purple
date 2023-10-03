@@ -7,6 +7,10 @@ const SomethingWentWrong = () => {
       <h1>401 - Page Not Found</h1>
       <p>There is some error, we are working on it.</p>
       <Link to="/" className="btn btn-primary">Go to Home</Link>
+      <p></p>
+      <Link to="/login" className="btn btn-secondary">
+          Login
+        </Link>
     </div>
   );
 };

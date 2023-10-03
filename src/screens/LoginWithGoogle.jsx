@@ -44,6 +44,8 @@ const LoginWithGoogle = () => {
         );
 
         navigate("/SearchPage", { replace: true });
+      } else {
+        navigate("/something-went-wrong");
       }
     } catch (error) {
       console.log(error);
@@ -54,20 +56,6 @@ const LoginWithGoogle = () => {
     onLanding();
   }, []);
 
-  return (
-    <div className="outer-container">
-      <div className="not-found">
-        <h1>401 - Please try another login method</h1>
-        <p>The page you are looking for doesn't exist.</p>
-        <Link to="/" className="btn btn-primary">
-          Go to Home
-        </Link>
-        <p></p>
-        <Link to="/login" className="btn btn-secondary">
-          Login
-        </Link>
-      </div>
-    </div>
-  );
+  return <div className="outer-container"></div>;
 };
 export default LoginWithGoogle;
