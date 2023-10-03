@@ -93,16 +93,14 @@ export const Home = () => {
             ..
             <div className="frame-5">
               <div className="frame-6">
-                <div className="text-wrapper-5">WHY CHOOSE US?</div>
                 <div className="overlap-group-wrapper">
                   <div className="overlap-group-3">
                     <p className="here-are-few-reasons">
                       <span className="text-wrapper">
-                        Purple Maze is designed
+                        What you get from 
                         <span className="blue-italic-style">
-                          {" "} specifically {" "}
+                          {" "} Purple Maze? {" "}
                         </span>
-                        to meet your needs.
                       </span>
                     </p>
                   </div>
@@ -114,29 +112,29 @@ export const Home = () => {
                     <div className="text-wrapper-8">01</div>
                     <div className="frame-10">
                       <div className="text-wrapper-9">
-                        Biggest library of creatives
+                        Access to top creatives
                       </div>
                       <p className="text-wrapper-10">
-                      3000+ high performing creatives from all the top brands
+                        - 3000+ top performing creatives
+                        <br />
+                        <br />
+                        - Filter by brand, industry and format  
+                        <br />
+                        <br />
+                        - 50+ ecomm niches & 1000+ brands
                       </p>
                     </div>
                   </div>
                   <div className="frame-9">
                     <div className="text-wrapper-8">02</div>
                     <div className="frame-10">
-                      <div className="text-wrapper-9">Filter to your needs</div>
+                      <div className="text-wrapper-9">Learn from the top brands</div>
                       <p className="text-wrapper-10">
-                      Filter by brand, keyword, industry, format
-                      </p>
-                    </div>
-                  </div>
-                  <div className="frame-9">
-                    <div className="text-wrapper-8">03</div>
-                    <div className="frame-10">
-                      <div className="text-wrapper-9">Stay up to the trend</div>
-                      <p className="text-wrapper-10">
-                      50+ ecommerce niches
-
+                      - View & analyze ads, generate 6x ROI
+                      <br />
+                      <br />
+                      - Recreate and go viral and grow big
+                    
                       </p>
                     </div>
                   </div>
