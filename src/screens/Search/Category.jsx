@@ -30,7 +30,7 @@ const Category = ({ ad }) => {
         ) : (
           <img className="media-image" src={media_resource_url} alt={name} />
         )}
-        <div className="content-details">
+        {/* <div className="content-details">
           <h2 className="headline">{headline}</h2>
           <a
             className="display-link"
@@ -40,10 +40,10 @@ const Category = ({ ad }) => {
           >
             {display_link}
           </a>
-        </div>
-        <div className="cta-container">
+        </div> */}
+        {/* <div className="cta-container">
           <button className="cta-button">{call_to_action}</button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
