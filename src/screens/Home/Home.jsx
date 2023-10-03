@@ -7,7 +7,7 @@ import Navbar from "./Navbar";
 import PopupMsg from "../Pop-Ups/PopupMsg";
 
 export const Home = () => {
-  const videoUrl = "https://www.youtube.com/watch?v=og_ob8Xdlvk";
+  // const videoUrl = "https://www.youtube.com/watch?v=og_ob8Xdlvk";
   return (
     <div className="homePage">
       <div className="home">
@@ -20,7 +20,7 @@ export const Home = () => {
                   alt="Rectangle"
                   src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/rectangle-6.png"
                 />
-                <VideoModal videoUrl={videoUrl} />
+                {/* <VideoModal videoUrl={videoUrl} /> */}
               </div>
               <div className="overlap-2">
                 <img
@@ -28,11 +28,11 @@ export const Home = () => {
                   alt="Img"
                   src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/64088dfd259d863110d90801-doodle1-1-1.svg"
                 />
-                <img
+                {/* <img
                   className="img-2"
                   alt="Img"
                   src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/64088dfd55b652dcf8126b5d-doodle2-1.svg"
-                />
+                /> */}
                 <div className="frame-2">
                   <div className="group">
                     <div className="overlap-group-2">
@@ -168,7 +168,7 @@ export const Home = () => {
                     <div className="frame-25">
                       <div className="text-wrapper-16">₹</div>
                       <div className="text-wrapper-17">0</div>
-                      <div className="text-wrapper-18">/month</div>
+                      <div className="text-wrapper-18">/year</div>
                     </div>
                     <div className="text-wrapper-19">Free Plan</div>
                   </div>
@@ -226,8 +226,8 @@ export const Home = () => {
                   <div className="frame-24">
                     <div className="frame-25">
                       <div className="text-wrapper-16">₹</div>
-                      <div className="text-wrapper-24">99</div>
-                      <div className="text-wrapper-18">/month</div>
+                      <div className="text-wrapper-24">7999</div>
+                      <div className="text-wrapper-18">/year</div>
                     </div>
                     <div className="text-wrapper-19">Pro Plan</div>
                   </div>
