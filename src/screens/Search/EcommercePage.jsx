@@ -25,22 +25,22 @@ const EcommercePage = ({products, setFiltersChange}) => {
     }
   }, [products]);
   
-  useEffect(() => {
-    fetch(BASE_APP_URL+"/v1/api/advertisements?page=0", 
-    {
-      headers: {
-        'Authorization': accessAuth?.accessToken,
-        'Content-Type': 'application/json'
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setAds(data.ads);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch(BASE_APP_URL+"/v1/api/advertisements?page=0", 
+  //   {
+  //     headers: {
+  //       'Authorization': accessAuth?.accessToken,
+  //       'Content-Type': 'application/json'
+  //     },
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setAds(data.ads);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching data:", error);
+  //     });
+  // }, []);
   const handleUpgradeClick = () => {
     navigate('/checkout-payment');
   };
