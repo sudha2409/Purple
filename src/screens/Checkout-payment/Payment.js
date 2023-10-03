@@ -23,7 +23,7 @@ const Payment = () => {
 
   const pricing = {
     // monthly: '$29.99',
-    yearly: "$99",
+    yearly: "₹7999",
   };
 
   useEffect(() => {
