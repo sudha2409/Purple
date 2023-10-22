@@ -33,7 +33,7 @@ const Filter = ({onSelectedFiltersChange}) => {
   };
 
   return (
-    <div className="container">
+    <div className="flex items-center justify-center">
       {/* <div className="overlap">
         <div className="frame-10">
           <div className="frame-11">
