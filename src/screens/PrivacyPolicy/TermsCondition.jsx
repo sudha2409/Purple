@@ -12,11 +12,11 @@ const TermsCondition = () => {
     <Navbar />
   );
   return (
-    <div>
+    <div class="flex flex-col">
       {renderHeader}
 
-      <div className="container" style={{ marginTop: 100 }}>
-        <h1 className="text-center">Terms and Conditions</h1>
+      <div className="flex flex-col px-6 py-4" >
+        <h1 className="text-center font-bold">Terms and Conditions</h1>
         <p>
           Welcome to PurpleMaze! This website is owned by One Orange Digital
           and is operated under the brand name, Purple Maze(“we”, “us” or
