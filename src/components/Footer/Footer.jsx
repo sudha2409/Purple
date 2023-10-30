@@ -30,18 +30,20 @@ export const Footer = ({
 
         <div class="flex flex-col lg:flex-row px-8 py-10">
           <div class="flex flex-col lg:w-1/3 px-2">
-            <div class="flex items-center">
+            <a href="/">
+              <div class="flex items-center">
 
-              <img className="px-2" alt="Img" src="" />            
-              <span class="py-4 text-white text-size-1">Purple Maze</span>
-            </div>
+                <img className="px-2" alt="Img" src="" />
+                <span class="py-4 text-white text-size-1">Purple Maze</span>
+              </div>
+            </a>
             <span class="text-sm text-white text-size-3">High level experience in web design and development knowledge, producing quality work.</span>
             <div class="flex space-x-6 py-6">
               <IconFacebook1 className="icon-instance-node" color="white" />
-             <IconInstagram className="icon-instance-node" color="white" />
-             <IconLinkedin className="icon-instance-node" />
-             <IconTwitter2 className="icon-instance-node" color="white" />
-             <IconYoutube className="icon-instance-node" />
+              <IconInstagram className="icon-instance-node" color="white" />
+              <IconLinkedin className="icon-instance-node" />
+              <IconTwitter2 className="icon-instance-node" color="white" />
+              <IconYoutube className="icon-instance-node" />
             </div>
 
           </div>
@@ -59,16 +61,16 @@ export const Footer = ({
               <span class="text-white text-sm text-size-5 py-2">Careers</span>
               <span class="text-white text-sm text-size-5 py-2">FAQs</span>
               <a href="/privacy-policy" class="py-2 my-0">
-              <span class="text-white text-sm text-size-5 ">Privacy</span>
+                <span class="text-white text-sm text-size-5 ">Privacy</span>
 
               </a>
               <a href="/terms-and-conditions" class="my-0 py-2">
 
-              <span class="text-white text-sm text-size-5">Terms</span>
+                <span class="text-white text-sm text-size-5">Terms</span>
               </a>
               <a href="/contact-us" class="my-0 py-2">
 
-              <span class="text-white text-sm text-size-5">Contact Us</span>
+                <span class="text-white text-sm text-size-5">Contact Us</span>
               </a>
             </div>
 
@@ -76,7 +78,7 @@ export const Footer = ({
               <span class="py-4 text-white text-lg text-size-4">Our Newsletter</span>
               <span class="text-white text-sm text-size-5 py-2">Subscribe to our newsletter to get our news delivered to you.</span>
               <div class="flex pr-2 py-2">
-              <input type="email" id="email" class="input_text text-size-2 enter_mail" placeholder="Enter email" required />
+                <input type="email" id="email" class="input_text text-size-2 enter_mail" placeholder="Enter email" required />
                 <button class="signup_color rounded-r-full px-4 pr-4 w-20 my-0 text-size-2">Join</button>
               </div>
 

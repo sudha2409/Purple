@@ -3,17 +3,21 @@ import "./navbar.css";
 import { Link } from "react-router-dom";
 
 
+
+
 const Navbar = () => {
   return (
     <>
       <header class="flex header_color justify-between bx-auto py-2">
-        <div class="flex justify-center items-center px-8 sm:px-8">
+        <a href="/">
+        <div class="flex justify-center items-center px-8 py-2 sm:px-8">
           <img src="Group 1.png" />
           <h1 class="px-2 text-color font-type-quicksand">Purple Maze</h1>
         </div>
+        </a>
+        
         <div class="flex items-center px-4">
           <a href="/#see-pricing" class="hidden font-type-monasans text-color-1 sm:inline sm:px-4 ">Pricing</a>
-          <a href="" class="hidden font-type-monasans text-color-1 sm:inline sm:px-4 ">Resources</a>
           <Link to={"/login"}>
 
             <button class="hidden sm:bg-transparent my-2 text-color-1 login_border sm:px-6 sm:py-2 sm:rounded-full font-type-monasans sm:inline sm:px-4">Login</button>
@@ -24,6 +28,7 @@ const Navbar = () => {
 
           </Link>
         </div>
+        
 
       </header>
 {/*      <div className="logout-header">

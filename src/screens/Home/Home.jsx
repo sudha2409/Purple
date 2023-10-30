@@ -54,26 +54,21 @@ export const Home = () => {
         </div>
         <div class="flex w-full space-x-10 flex-col lg:flex-row py-8">
           <div class="flex lg:flex-col lg:w-1/3 lg:justify-between lg:pl-8 lg:pr-4 overflow-x-auto">
-            <div class="flex h-32 justify-between py-4 bg-white rounded-md px-2 min-w-[280px] mx-2">
+            <div class="flex h-1/2 py-4 bg-white rounded-md px-2 min-w-[280px] mx-2">
               <span class="text-5xl px-3 text-color-4">01</span>
-              <div class="text flex flex-col">
-                <span class="text-base font-medium py-1 text-color">Biggest library of creatives</span>
-                <p class="text-sm text-color-3">Choose from over 100000+ high performing creatives</p>
+              <div class="text flex flex-col lg:space-y-5">
+                <span class="text-base font-medium py-1 text-color">Access to top creatives</span>
+                <p class="text-sm text-color-3">3000+ top performing creatives</p>
+                <p class="text-sm text-color-3">Filter by brand, industry and format</p>
+                <p class="text-sm text-color-3">50+ ecomm niches & 1000+ brands</p>
               </div>
             </div>
-            <div class="flex h-32 justify-between py-4 bg-white rounded-md px-2 min-w-[280px] mx-2">
+            <div class="flex h-1/2  py-4 bg-white rounded-md px-2 min-w-[280px] mx-2">
               <span class="text-5xl px-3 text-color-4">02</span>
-              <div class="text flex flex-col">
-                <span class="text-base font-medium py-1 text-color">Filter to your needs</span>
-                <p class="text-sm text-color-3">Narrow down by product, industry, location, platform & more
-                </p>
-              </div>
-            </div>
-            <div class="flex h-32 justify-between py-4 bg-white rounded-md px-2 min-w-[280px] mx-2">
-              <span class="text-5xl px-3 text-color-4">03</span>
-              <div class="text flex flex-col">
-                <span class="text-base font-medium py-1 text-color">Stay up to the trend</span>
-                <p class="text-sm text-color-3">We add 100+ creatives every month after analyzing thousands of latest creatives</p>
+              <div class="text flex flex-col lg:space-y-5">
+                <span class="text-base font-medium py-1 text-color">Learn from the top brands</span>
+                <p class="text-sm text-color-3">View & analyze ads, generate 6x ROI</p>
+                <p class="text-sm text-color-3">Recreate and go viral and grow big</p>
               </div>
             </div>
 
@@ -110,29 +105,19 @@ export const Home = () => {
           <div class="flex flex-row space-x-6 items-center bg-white px-4 py-6 max-w-[80%]">
             <img class="w-20 h-20" src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d90915bde965d8a1d78907/img/image-11@2x.png" />
             <div class="flex flex-col space-y-4">
-              <span class="bold">Reason one for choosing</span>
-              <span class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In nobis praesentium voluptas illum ipsam </span>
+              <span class="bold">Trusted by 100+ brands & agencies.</span>
+            </div>
+          </div>
+          <div class="flex flex-row space-x-6 items-center bg-white px-4 py-6 mx-8 max-w-[80%]">
+            <img class="w-20 h-20" src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/image-12@2x.png" />
+            <div class="flex flex-col space-y-4">
+              <span class="bold">24/7 prompt customer service</span>
             </div>
           </div>
           <div class="flex flex-row space-x-6 items-center bg-white px-4 py-6 max-w-[80%]">
-            <img class="w-20 h-20" src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d90915bde965d8a1d78907/img/image-11@2x.png" />
+            <img class="w-20 h-20" src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d90915bde965d8a1d78907/img/image-13@2x.png" />
             <div class="flex flex-col space-y-4">
-              <span class="bold">Reason one for choosing</span>
-              <span class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In nobis praesentium voluptas illum ipsam </span>
-            </div>
-          </div>
-          <div class="flex flex-row space-x-6 items-center bg-white px-4 py-6 max-w-[80%]">
-            <img class="w-20 h-20" src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d90915bde965d8a1d78907/img/image-11@2x.png" />
-            <div class="flex flex-col space-y-4">
-              <span class="bold">Reason one for choosing</span>
-              <span class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In nobis praesentium voluptas illum ipsam </span>
-            </div>
-          </div>
-          <div class="flex flex-row space-x-6 items-center bg-white px-4 py-6 max-w-[80%]">
-            <img class="w-20 h-20" src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64d90915bde965d8a1d78907/img/image-11@2x.png" />
-            <div class="flex flex-col space-y-4">
-              <span class="bold">Reason one for choosing</span>
-              <span class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In nobis praesentium voluptas illum ipsam </span>
+              <span class="bold">7 Day Money Back Guarantee.</span>
             </div>
           </div>
 
@@ -147,7 +132,7 @@ export const Home = () => {
           <span class="text-xl py-2 sm:text-4xl">and <span class="blue-italic-style">Quality</span> Services for your product</span>
         </div>
 
-        <div class="flex flex-col space-y-6 lg:space-y-0 lg:flex-row lg:space-x-9">
+        <div class="flex flex-col space-y-6 lg:space-y-0 lg:flex-row lg:space-x-9 "  id="see-pricing">
         <div class="flex flex-col bg-white py-2 lg:my-0">
             <div class="flex flex-col items-center space-y-4 pt-4 px-4">
               <div class="flex items-end space-x-3">
@@ -214,18 +199,15 @@ export const Home = () => {
           </div>
         </div>
       </div>
-
     <div class="mx-20 my-10">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-2 gap-y-8">
     <FoldableFAQ
                   question="How do you select the best ads?"
                   answer="We've devised a comprehensive evaluation protocol for the curation of Social Media ads.
-                  <br /><br />
                   Before an ad example is accepted into Purple Maze, 
                   we conduct a thorough assessment of the associated brand, considering factors such as:
-                  <br />
-                  - Is it a rapidly expanding eCommerce brand?
-                  <br />
+                  - Is it a rapidly expanding eCommerce brand? 
+                      
                   - Does it boast an estimated annual revenue of at least $1 million?
                   <br />
                   - What's the volume of traffic it generates?

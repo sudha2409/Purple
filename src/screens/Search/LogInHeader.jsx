@@ -35,7 +35,7 @@ const LogInHeader = () => {
   }, [])
   return (
     <header class="flex header_color justify-between bx-auto py-2">
-      <a href='/'>
+      <a href="/">
       <div class="flex justify-center items-center px-8 sm:px-8">
         <img src="Group 1.png" />
         <h1 class="px-2 text-color font-type-quicksand">Purple Maze</h1>
@@ -46,13 +46,16 @@ const LogInHeader = () => {
           <a href="/#see-pricing" class="hidden font-type-monasans text-color-1 sm:inline sm:px-4 ">Upgrade Plan</a> : ""}
 
 
-        <div className="purple signup_color px-6 py-2 rounded-full sm:mx-2 " onClick={toggleDropdown}>
-          Profile
-          {isDropdownOpen && <Dropdown onLogout={signOut} resetPassword={resetPassword} />}
-        </div>
+<div className="frame-30 dropdown mr-3" onClick={toggleDropdown}>
+            Profile
+            {isDropdownOpen && <Dropdown onLogout={signOut} resetPassword = {resetPassword} />}
+          </div>
       </div>
 
     </header>
+
+
+
 
     // <div className="login-header">
     //   <div className="navbar">

@@ -14,7 +14,7 @@ const FoldableFAQ = ({ question, answer }) => {
       <span>?</span>
       {isOpen && (<div class="flex flex-col space-y-2" onClick={toggleFAQ}>
         <span>{question}</span>
-        <p>{answer}</p>
+        <p dangerouslySetInnerHTML={{ __html: answer }}></p>
 
       </div>)
       }

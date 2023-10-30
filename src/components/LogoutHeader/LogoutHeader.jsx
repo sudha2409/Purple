@@ -47,7 +47,6 @@ export const LogoutHeader = ({
   </Link>
 <div class="flex items-center px-4">
   <a href="/pricing" class="hidden font-type-monasans text-color-1 sm:inline sm:px-4 ">Pricing</a>
-  <a href="" class="hidden font-type-monasans text-color-1 sm:inline sm:px-4 ">Resources</a>
   <Link to={"/login"}>
 
     <button class="hidden sm:bg-transparent my-2 text-color-1 login_border sm:px-6 sm:py-2 sm:rounded-full font-type-monasans sm:inline sm:px-4">Login</button>
