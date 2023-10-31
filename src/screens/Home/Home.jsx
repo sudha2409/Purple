@@ -42,6 +42,9 @@ export const Home = () => {
           </div>
         </div>
 
+        <PopupMsg />
+
+
         <div class=" h:full lg:h-full lg:w-1/2">
           <img class="object-cover h-1/2 w-full" src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/rectangle-6.png" />
         </div>
