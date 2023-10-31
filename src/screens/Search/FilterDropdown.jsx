@@ -19,7 +19,7 @@ const FilterDropdown = ({ data, onFilterChange }) => {
 
     <div class="flex py-4 lg:flex-row flex-col space-y-2  lg:space-x-6">
       {data.map((filterGroup) => (
-        <div key={filterGroup.label} className="filter-group">
+        <div key={filterGroup.label} className="filter-group space-x-20">
           <label>{filterGroup.label}</label>
           <select
             onChange={(e) => handleFilterChange(filterGroup.label, e.target.value)}

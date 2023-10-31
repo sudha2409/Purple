@@ -7,6 +7,7 @@ import PopupReset from "../Pop-Ups/PopupReset";
 import axios from "axios";
 import Navbar from "./Navbar";
 import { BASE_AUTH_URL } from "../../api/config";
+import { Footer } from "../../components/Footer";
 
 const ReverificationEmail = () => {
   const navigate = useNavigate();
@@ -36,9 +37,9 @@ const ReverificationEmail = () => {
       });    
     
   return (
-    <div className="outer-container">
+    <div className="">
    <Navbar/>
-      <div className="container">
+      <div className="flex flex-col items-center items-stretch">
         <div className="centered-container">
           <div
             className="wrapper"
@@ -47,7 +48,6 @@ const ReverificationEmail = () => {
               padding: "20px",
               borderRadius: "10px",
               boxShadow: "0px 2px 6px rgba(0, 0, 0, 0.1)",
-              overflow: "hidden",
             }}
           >
             <h1 className="text-center">ReVerification</h1>
@@ -82,6 +82,10 @@ const ReverificationEmail = () => {
             </Formik>
           </div>
         </div>
+      </div>
+      <div class="pt-4">
+        
+      <Footer></Footer>
       </div>
           </div>
       );

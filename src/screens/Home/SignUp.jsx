@@ -55,7 +55,7 @@ const SignUp = () => {
   });
 
   return (
-    <div>
+    <div class="flex flex-col">
       <Navbar />
       <div className="centered-container">
         <div
@@ -159,7 +159,7 @@ const SignUp = () => {
           </div>
         </div>
       </div>
-      <div class="pt-40">
+      <div class="pt-6">
         <Footer></Footer>
       </div>
     </div>

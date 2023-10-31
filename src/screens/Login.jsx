@@ -60,8 +60,8 @@ const Login = () => {
   return (
     <div className="outer-container">
           <Navbar />
-      <div className="container">
-        <div className="centered-container">
+      <div className="flex flex-col items-center items-stretch py-4">
+        <div className="centered-container ">
           <div className="wrapper">
             <h1 className="text-center">Login</h1>
             <div style={{color: "red"}}>{loginError}</div>
