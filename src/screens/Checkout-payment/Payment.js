@@ -78,7 +78,7 @@ const Payment = () => {
                   <span>{pricing.yearly}</span>
                 </div>
               </div>
-              <p>* Prices are in USD</p>
+              <p>* Prices are in INR</p>
             </div>
           </div>
         </div>
