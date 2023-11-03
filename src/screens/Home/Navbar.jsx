@@ -1,8 +1,7 @@
 import "./navbar.css";
 import { Link } from "react-router-dom";
 import React, { useState } from 'react'
-
-
+import iconimg from "../images/iconimg.png";
 
 
 const Navbar = () => {
@@ -13,7 +12,7 @@ const Navbar = () => {
       <header class="flex header_color justify-between bx-auto py-2">
         <a href="/">
         <div class="flex justify-center items-center px-8 py-3 sm:px-8">
-          <img src="Group 1.png" />
+          <img src={iconimg} />
           <h1 class="px-2 text-color font-type-quicksand">Purple Maze</h1>
         </div>
         </a>

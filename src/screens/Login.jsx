@@ -58,9 +58,9 @@ const Login = () => {
   });
 
   return (
-    <div className="outer-container">
+    <div className="flex flex-col space-y-0">
           <Navbar />
-      <div className="flex flex-col items-center items-stretch py-4">
+      <div className="flex flex-col items-center items-stretch py-4 xl:py-0 max-h-[800px]">
         <div className="centered-container ">
           <div className="wrapper">
             <h1 className="text-center">Login</h1>
@@ -158,13 +158,15 @@ const Login = () => {
             </button>
           </div>
         </div>
-        <div className="text-center mt-3 ">
+        <div className="text-center mt-3 2xl:mt-1 2xl:mb-48">
           <p className="text-center new-user">
             New to PurpleMaze ? <Link className='joinNow' to="/signup">Join Now </Link>
           </p>
         </div>
       </div>
-      <Footer/>
+      <div class="2xl:pt-56">
+        <Footer></Footer>
+      </div>
     </div>
   );
 }

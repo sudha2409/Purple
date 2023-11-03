@@ -5,6 +5,7 @@ import './loginHeader.css';
 import useLogout from '../../hooks/useLogout';
 import Dropdown from './ProfileDropdown';
 import { ROLES_LIST } from '../../api/config';
+import iconimg from "../images/iconimg.png";
 
 const LogInHeader = () => {
   const navigate = useNavigate();
@@ -18,6 +19,10 @@ const LogInHeader = () => {
 
   const resetPassword = () => {
     navigate('/Reset-password');
+  }
+
+  const upgradeprofile = () => {
+    navigate('/checkout-payment')
   }
   const [isDropdownOpen, setIsDropdownOpen] = useState(true);
 
@@ -37,18 +42,18 @@ const LogInHeader = () => {
     <header class="flex header_color justify-between bx-auto py-2">
       <a href="/">
       <div class="flex justify-center items-center px-8 sm:px-8">
-        <img src="Group 1.png" />
+      <img src={iconimg} />
         <h1 class="px-2 text-color font-type-quicksand">Purple Maze</h1>
       </div>
       </a>
       <div class="flex items-center px-2">
         {freeRole ?
-          <a href="/#see-pricing" class="hidden font-type-monasans text-color-1 sm:inline sm:px-4 ">Upgrade Plan</a> : ""}
+          <a href="/checkout-payment" class="hidden font-type-monasans text-color-1 sm:inline sm:px-4 ">Upgrade Plan</a> : ""}
 
 
 <div className="frame-30 dropdown mr-3" onClick={toggleDropdown}>
             Profile
-            {isDropdownOpen && <Dropdown onLogout={signOut} resetPassword = {resetPassword} />}
+            {isDropdownOpen && <Dropdown onLogout={signOut} resetPassword = {resetPassword} upgradeprofile={upgradeprofile} />}
           </div>
       </div>
 

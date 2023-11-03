@@ -8,6 +8,7 @@ import { IconLinkedin } from "../../icons/IconLinkedin";
 import { IconTwitter2 } from "../../icons/IconTwitter2";
 import { IconYoutube } from "../../icons/IconYoutube";
 import "./footerstyle.css";
+import footericon from "./images/footer_icon.png"
 
 export const Footer = ({
   className,
@@ -33,7 +34,7 @@ export const Footer = ({
             <a href="/">
               <div class="flex items-center">
 
-                <img className="px-2" alt="Img" src="" />
+                <img className="px-2" alt="Img" src={footericon} />
                 <span class="py-4 text-white text-size-1">Purple Maze</span>
               </div>
             </a>
@@ -52,8 +53,8 @@ export const Footer = ({
             <div class="flex flex-col lg:space-y-2 lg:w-2/5 px-2">
               <span class="py-4 text-white text-lg text-size-4">How to Reach Us</span>
               <span class="text-white text-sm text-size-5">One Orange Digital South City 2, sector 49,Gurgaon, Haryana, India 122018</span>
-              <span class="text-white text-sm text-size-5 py-2">support@purplemaze.co</span>
-              <span class="text-white text-sm text-size-5 py-2">(+91) 9773533007</span>
+              <span onClick={(e) => {window.location.href ='mailto:support@purplemaze.co';}} class="text-white text-sm text-size-5 py-2">support@purplemaze.co</span>
+              <span onClick={(e) => {window.location.href ='tel:9773533007';}} class="text-white text-sm text-size-5 py-2">(+91) 9773533007</span>
             </div>
             <div class="flex flex-col lg:space-y-2 lg:w-1/6">
               <span class="py-4 text-white text-lg text-size-4">Company</span>

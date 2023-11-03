@@ -54,7 +54,7 @@ const Payment = () => {
     <>
         <LogInHeader />
 
-      <div class="article-container">
+      <div class="flex flex-col lg:flex-row lg:space-x-4 space-y-5 py-6 ">
         <div class="article">
           <div className="premium-product-checkout">
             <h2>Premium Purple Maze</h2>

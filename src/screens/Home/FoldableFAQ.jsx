@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./FoldableFAQ.css";
+import questionicon from "../images/questionicon.png"
 
 const FoldableFAQ = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,10 +11,10 @@ const FoldableFAQ = ({ question, answer }) => {
 
   return (
 
-    <div class="flex space-x-4 px-6">
-      <span>?</span>
-      {isOpen && (<div class="flex flex-col space-y-2" onClick={toggleFAQ}>
-        <span>{question}</span>
+    <div class="flex space-x-4 px-6 items-center">
+      <img class="" src={questionicon}></img>
+      {isOpen && (<div class="flex flex-col space-y-2 pt-8" onClick={toggleFAQ}>
+        <span class="font-bold">{question}</span>
         <p dangerouslySetInnerHTML={{ __html: answer }}></p>
 
       </div>)
@@ -21,7 +22,7 @@ const FoldableFAQ = ({ question, answer }) => {
 
       {!isOpen &&(
         <div class="flex space-x-2" onClick={toggleFAQ}>
-          <span>{question}</span>
+          <span class="font-bold">{question}</span>
           <div class="py-1">
           <svg
               xmlns="http://www.w3.org/2000/svg"

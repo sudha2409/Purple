@@ -36,7 +36,6 @@ export const Home = () => {
             </a>
 
               <a href="/#see-pricing" class="py-2 min-w-fit px-2 see_pricing lg:mx-4"> See Pricing</a>
-              <img class="hidden lg:inline lg:w-40 lg:h-10 lg-px-6 lg-mx-10 xl:w-60 xl:h-20 xl:px-6 xl:mx-40" src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/64088dfd55b652dcf8126b5d-doodle2-1.svg" />
             </div>
 
           </div>
@@ -56,7 +55,7 @@ export const Home = () => {
           <span class="text-xl py-2 sm:text-4xl">customes choose PurpleMaze</span>
         </div>
         <div class="flex w-full space-x-10 flex-col lg:flex-row py-8">
-          <div class="flex lg:flex-col lg:w-1/3 lg:justify-between lg:pl-8 lg:pr-4 overflow-x-auto">
+          <div class="flex lg:flex-col lg:w-1/3 lg:justify-between lg:pl-8 lg:pr-4 overflow-x-auto space-y-6">
             <div class="flex h-1/2 py-4 bg-white rounded-md px-2 min-w-[280px] mx-2">
               <span class="text-5xl px-3 text-color-4">01</span>
               <div class="text flex flex-col lg:space-y-5">
@@ -128,7 +127,7 @@ export const Home = () => {
 
       </div>
 
-      <div class="flex flex-col items-center py-20 space-y-10 complete_screen">
+      <div class="flex flex-col items-center py-20 space-y-10 overall">
         <div class="flex flex-col items-center">
           <span class="uppercase text-sm text-color-3 py-4">our pricing</span>
           <span class="text-xl py-2 sm:text-4xl">We offer great prices, premium products</span>
@@ -202,7 +201,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
-    <div class="mx-20 my-10">
+    <div class="px-20 py-10 overall">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-2 gap-y-8">
     <FoldableFAQ
                   question="How do you select the best ads?"
