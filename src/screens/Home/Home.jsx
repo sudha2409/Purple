@@ -5,6 +5,8 @@ import { Footer } from "../../components/Footer";
 import Navbar from "./Navbar";
 import PopupMsg from "../Pop-Ups/PopupMsg";
 import FoldableFAQ from "./FoldableFAQ";
+import { Link } from "react-router-dom";
+
 
 export const Home = () => {
   // const videoUrl = "https://www.youtube.com/watch?v=og_ob8Xdlvk";
@@ -30,12 +32,12 @@ export const Home = () => {
               and handpick the best ones for you.
             </span>
             <div class="flex items-center space-x-4">
-            <a href="/signup">
+            <Link to="/signup">
 
               <button class="signup_color min-w-fit	 px-6 py-2 my-1 rounded-full lg:px-6 lg:py-2 lg:rounded-full">Get Started</button>
-            </a>
+            </Link>
 
-              <a href="/#see-pricing" class="py-2 min-w-fit px-2 see_pricing lg:mx-4"> See Pricing</a>
+              <Link to="/#see-pricing" class="py-2 min-w-fit px-2 see_pricing lg:mx-4"> See Pricing</Link>
             </div>
 
           </div>
@@ -92,12 +94,12 @@ export const Home = () => {
             and handpick the best ones for you.
           </span>
           <div class="flex items-center space-x-4">
-            <a href="/signup">
+            <Link to="/signup">
 
               <button class="signup_color min-w-fit	 px-6 py-2 my-1 rounded-full lg:px-6 lg:py-2 lg:rounded-full">Get Started</button>
-            </a>
+            </Link>
 
-              <a href="/#see-pricing" class="py-2 min-w-fit px-2 see_pricing lg:mx-4"> See Pricing</a>
+              <Link to="/#see-pricing" class="py-2 min-w-fit px-2 see_pricing lg:mx-4"> See Pricing</Link>
             </div>
 
 
@@ -158,10 +160,10 @@ export const Home = () => {
                 </div>
               </div>
               <div class="flex flex-col items-center space-y-2 py-20">
-                <a href="/signup">
+                <Link to="/signup">
                 <button class="signup_color min-w-fit my-1 px-6 py-2 rounded-full lg:px-6 lg:py-2 lg:rounded-full">Sign up</button>
 
-                </a>
+                </Link>
                 <span class="pricing_bottom">Current Plan</span>
 
               </div>
@@ -190,10 +192,10 @@ export const Home = () => {
                 </div>
               </div>
               <div class="flex flex-col items-center space-y-2 py-20">
-              <a href="/signup">
+              <Link to="/signup">
                 <button class="signup_color min-w-fit my-1 px-6 py-2 rounded-full lg:px-6 lg:py-2 lg:rounded-full">Sign up</button>
 
-                </a>                
+                </Link>                
                 <span class="pricing_bottom">Cancel Anytime</span>
 
               </div>

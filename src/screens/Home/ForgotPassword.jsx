@@ -122,7 +122,7 @@ const ForgotPassword = () => {
             </div>
             {showPopup && <CheckEmailPopup onClose={() => setShowPopup(false)} />}
             {reverificationPopup && <ReverificationPopup onClose={() => setReverificationPopup(false)} />}
-            <Footer></Footer>
+            <Footer/>
         </div>
      )
 }

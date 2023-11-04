@@ -85,7 +85,7 @@ const ReverificationEmail = () => {
       </div>
       <div class="pt-4">
         
-      <Footer></Footer>
+      <Footer/>
       </div>
           </div>
       );

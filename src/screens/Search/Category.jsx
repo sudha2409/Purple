@@ -30,20 +30,6 @@ const Category = ({ ad }) => {
         ) : (
           <img className="media-image" src={media_resource_url} alt={name} />
         )}
-        {/* <div className="content-details">
-          <h2 className="headline">{headline}</h2>
-          <a
-            className="display-link"
-            href={display_link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {display_link}
-          </a>
-        </div> */}
-        {/* <div className="cta-container">
-          <button className="cta-button">{call_to_action}</button>
-        </div> */}
       </div>
     </div>
   );

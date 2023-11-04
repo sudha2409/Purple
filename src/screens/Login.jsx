@@ -165,7 +165,7 @@ const Login = () => {
         </div>
       </div>
       <div class="2xl:pt-56">
-        <Footer></Footer>
+        <Footer/>
       </div>
     </div>
   );

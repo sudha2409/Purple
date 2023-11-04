@@ -79,19 +79,6 @@ const EcommercePage = ({products, setFiltersChange}) => {
       </div>
 
     </div>
-    // <div className="ad-list">
-    //   <Filter
-    //     selectedFilters={selectedFilters}
-    //     setSelectedFilters={setSelectedFilters}
-    //     onSelectedFiltersChange={handleSetSelectedFiltersChange}
-    //   />
-    //      {freeRole ? (<FreeTrialInfo onUpgradeClick={handleUpgradeClick} />) : <></>}          
-    //   <div className="product-grid">
-    //     {filteredAds.map((ad) => (
-    //       <ProductCard key={ad.id} ad={ad} />
-    //     ))}
-    //   </div>
-    // </div>
   );
 };
 

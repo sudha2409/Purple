@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
 
   return (
     <div class="flex flex-col">
-      <Navbar></Navbar>
+      <Navbar/>
       <div className="flex flex-col px-6 py-8">
         <h1 className="text-center font-bold">Privacy Policy</h1>
         <h5>1. Introduction</h5>

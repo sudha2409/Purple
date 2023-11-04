@@ -160,7 +160,7 @@ const SignUp = () => {
         </div>
       </div>
       <div class="pt-6">
-        <Footer></Footer>
+        <Footer/>
       </div>
     </div>
 

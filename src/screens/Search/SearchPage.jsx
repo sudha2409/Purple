@@ -100,24 +100,9 @@ export const SearchPage = () => {
             </button>
           )}
         </div>
-          <Footer></Footer>
+          <Footer/>
 
     </div>
-
-    // <div className="search">
-    //   <div className="div-2">
-    //     <LogInHeader />
-    //     <div className="cards">
-    //       {/* <Filter /> */}
-    //       <EcommercePage
-    //         products={products}
-    //         setFiltersChange={handleSetFiltersChange}
-    //       />
-    //     </div>
-    //     {/* Pagination */}
-    //     <Footer></Footer>
-    //   </div>
-    // </div>
   );
 };
 

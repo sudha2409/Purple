@@ -7,7 +7,7 @@ import useLogout from '../../hooks/useLogout';
 
 import './profileDropdown.css';
 
-const Dropdown = ({ onLogout, resetPassword, upgradeprofile }) => {
+const Dropdown = ({ onLogout, resetPassword, upgradeProfile }) => {
   const navigate = useNavigate();
   const logout = useLogout();
   const accessAuth = JSON.parse(localStorage.getItem('accessAuth'));
@@ -38,7 +38,7 @@ const Dropdown = ({ onLogout, resetPassword, upgradeprofile }) => {
         <li onClick={resetPassword}>Reset Password</li>
         <li onClick={onLogout}>Logout</li>
         {freeRole ?
-        <li class = "sm:hidden py-2" onClick={upgradeprofile}>Upgrade Profile</li>:""}
+        <li class = "sm:hidden py-2" onClick={upgradeProfile}>Upgrade Profile</li>:""}
       </ul>
     </div>
   );
