@@ -72,18 +72,13 @@ export const SearchPage = () => {
   }, [page]);
 
   return (
-    <div className="search">
-      <div className="div-2">
-        <LogInHeader />
-        <div className="cards">
-          {/* <Filter /> */}
-          <EcommercePage
+    <div class="flex flex-col">
+      <LogInHeader></LogInHeader>
+             <EcommercePage
             products={products}
             setFiltersChange={handleSetFiltersChange}
-          />
-        </div>
-        {/* Pagination */}
-        <div className="pagination">
+          />      
+        <div className="pagination py-2 pb-4">
           {currentPageNumber > 0 && (
             <button
               disabled={page === "0"}
@@ -105,13 +100,8 @@ export const SearchPage = () => {
             </button>
           )}
         </div>
-        <Footer
-          className="footer-instance"
-          iconInstagramIconInstagram="https://generation-sessions.s3.amazonaws.com/14fee2d83e15953598a18f47bcb63aab/img/icon-instagram.svg"
-          iconTwitterIconTwitter="https://generation-sessions.s3.amazonaws.com/14fee2d83e15953598a18f47bcb63aab/img/icon-twitter.svg"
-          img="https://generation-sessions.s3.amazonaws.com/14fee2d83e15953598a18f47bcb63aab/img/--1.svg"
-        />
-      </div>
+          <Footer/>
+
     </div>
   );
 };

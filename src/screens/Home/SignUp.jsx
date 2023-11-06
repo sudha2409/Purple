@@ -55,7 +55,7 @@ const SignUp = () => {
   });
 
   return (
-    <div className="outer-container">
+    <div class="flex flex-col">
       <Navbar />
       <div className="centered-container">
         <div
@@ -159,8 +159,11 @@ const SignUp = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <div class="pt-6">
+        <Footer/>
+      </div>
     </div>
+
   );
 };
 

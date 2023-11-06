@@ -64,18 +64,20 @@ const EcommercePage = ({products, setFiltersChange}) => {
   
 
   return (
-    <div className="ad-list">
-      <Filter
+
+    <div class="flex justify-center flex-col	" >
+        <Filter
         selectedFilters={selectedFilters}
         setSelectedFilters={setSelectedFilters}
         onSelectedFiltersChange={handleSetSelectedFiltersChange}
       />
          {freeRole ? (<FreeTrialInfo onUpgradeClick={handleUpgradeClick} />) : <></>}          
-      <div className="product-grid">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 ">
         {filteredAds.map((ad) => (
           <ProductCard key={ad.id} ad={ad} />
         ))}
       </div>
+
     </div>
   );
 };

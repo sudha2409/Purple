@@ -6,17 +6,12 @@ import LogInHeader from "../Search/LogInHeader";
 const PrivacyPolicy = () => {
   const accessAuth = JSON.parse(localStorage.getItem('accessAuth'));
 
-  const renderHeader = accessAuth?.accessToken ? (
-    <LogInHeader />
-  ) : (
-    <Navbar />
-  );
-  return (
-    <div>
-      {renderHeader}
 
-      <div className="container" style={{ marginTop: 100 }}>
-        <h1 className="text-center">Privacy Policy</h1>
+  return (
+    <div class="flex flex-col">
+      <Navbar/>
+      <div className="flex flex-col px-6 py-8">
+        <h1 className="text-center font-bold">Privacy Policy</h1>
         <h5>1. Introduction</h5>
         <p>
           We, at PurpleMaze (“we” or “us” or "PurpleMaze”) are
@@ -450,7 +445,7 @@ const PrivacyPolicy = () => {
               href="https://policies.google.com/technologies/ads"
               target="_blank"
               rel="noopener noreferrer"
-            >
+              >
               AdSense
             </a>
           </li>
@@ -459,7 +454,7 @@ const PrivacyPolicy = () => {
               href="https://www.google.com/analytics/learn/privacy.html"
               target="_blank"
               rel="noopener noreferrer"
-            >
+              >
               Google Analytics
             </a>
           </li>
@@ -468,7 +463,7 @@ const PrivacyPolicy = () => {
               href="https://www.google.com/analytics/tag-manager/faq/"
               target="_blank"
               rel="noopener noreferrer"
-            >
+              >
               Google Tag Manager
             </a>
           </li>
@@ -486,7 +481,7 @@ const PrivacyPolicy = () => {
               href="https://twitter.com/en/privacy"
               target="_blank"
               rel="noopener noreferrer"
-            >
+              >
               Twitter
             </a>
           </li>
@@ -495,7 +490,7 @@ const PrivacyPolicy = () => {
               href="https://support.google.com/dfp_premium/answer/2839090?hl=en"
               target="_blank"
               rel="noopener noreferrer"
-            >
+              >
               Google DoubleClick
             </a>
           </li>
@@ -549,7 +544,7 @@ const PrivacyPolicy = () => {
             href="https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies"
             target="_blank"
             rel="noopener noreferrer"
-          >
+            >
             Cookie settings in Internet Explorer
           </a>
         </li>
@@ -558,7 +553,7 @@ const PrivacyPolicy = () => {
             href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences"
             target="_blank"
             rel="noopener noreferrer"
-          >
+            >
             Cookie settings in Firefox
           </a>
         </li>
@@ -567,7 +562,7 @@ const PrivacyPolicy = () => {
             href="https://support.google.com/chrome/answer/95647"
             target="_blank"
             rel="noopener noreferrer"
-          >
+            >
             Cookie settings in Chrome
           </a>
         </li>
@@ -581,7 +576,7 @@ const PrivacyPolicy = () => {
           </a>
         </li>
       </div>
-      <Footer/>
+<Footer></Footer>
     </div>
   );
 };
