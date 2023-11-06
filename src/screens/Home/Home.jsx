@@ -37,7 +37,7 @@ export const Home = () => {
               <button class="signup_color min-w-fit	 px-6 py-2 my-1 rounded-full lg:px-6 lg:py-2 lg:rounded-full">Get Started</button>
             </Link>
 
-              <Link to="/#see-pricing" class="py-2 min-w-fit px-2 see_pricing lg:mx-4"> See Pricing</Link>
+              <a href="/#see-pricing" class="py-2 min-w-fit px-2 see_pricing lg:mx-4"> See Pricing</a>
             </div>
 
           </div>
@@ -56,8 +56,8 @@ export const Home = () => {
           <span class="text-xl py-2 sm:text-4xl">Here are few <span class="blue-italic-style">Reasons</span> why our</span>
           <span class="text-xl py-2 sm:text-4xl">customes choose PurpleMaze</span>
         </div>
-        <div class="flex w-full space-x-10 flex-col lg:flex-row py-8">
-          <div class="flex lg:flex-col lg:w-1/3 lg:justify-between lg:pl-8 lg:pr-4 overflow-x-auto space-y-6">
+        <div class="flex w-full justify-center flex-col lg:flex-row py-8 ">
+          <div class="flex flex-col lg:w-1/3 lg:justify-between lg:pl-8 lg:pr-4 space-y-6">
             <div class="flex h-1/2 py-4 bg-white rounded-md px-2 min-w-[280px] mx-2">
               <span class="text-5xl px-3 text-color-4">01</span>
               <div class="text flex flex-col lg:space-y-5">
@@ -77,13 +77,13 @@ export const Home = () => {
             </div>
 
           </div>
-          <div class="py-4 w-full lg:w-2/3 px-2 mx-1 ">
+          <div class="py-4 px-2 mx-1 ">
             <img class="object-contain" src="https://anima-uploads.s3.amazonaws.com/projects/64941b1b7b1311a96e83e640/releases/64c5661df29788c65e4e3a24/img/rectangle-7.svg" />
           </div>
         </div>
       </div>
 
-      <div class="flex flex-col lg:flex-row complete_screen">
+      <div class="flex flex-col justify-center lg:flex-row complete_screen">
         <div class="flex flex-col px-9 ml-5">
           <span class="uppercase text-sm text-color-3 py-4">What we do?</span>
           <span class="text-xl py-2 sm:text-4xl">The service we offer is</span>
@@ -99,7 +99,7 @@ export const Home = () => {
               <button class="signup_color min-w-fit	 px-6 py-2 my-1 rounded-full lg:px-6 lg:py-2 lg:rounded-full">Get Started</button>
             </Link>
 
-              <Link to="/#see-pricing" class="py-2 min-w-fit px-2 see_pricing lg:mx-4"> See Pricing</Link>
+              <a href="/#see-pricing" class="py-2 min-w-fit px-2 see_pricing lg:mx-4"> See Pricing</a>
             </div>
 
 
@@ -136,7 +136,7 @@ export const Home = () => {
           <span class="text-xl py-2 sm:text-4xl">and <span class="blue-italic-style">Quality</span> Services for your product</span>
         </div>
 
-        <div class="flex flex-col space-y-6 lg:space-y-0 lg:flex-row lg:space-x-9 "  id="see-pricing">
+        <div class="flex flex-col space-y-6 lg:space-y-0 lg:flex-row lg:space-x-9 " id="see-pricing">
         <div class="flex flex-col bg-white py-2 lg:my-0">
             <div class="flex flex-col items-center space-y-4 pt-4 px-4">
               <div class="flex items-end space-x-3">

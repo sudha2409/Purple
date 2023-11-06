@@ -24,7 +24,7 @@ const Navbar = () => {
         </div>
         
         <div className={`flex flex-col space-y-[2px] sm:py-2 md:flex md:flex-row md:items-center md:pb-0 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20 ':'top-[-490px]'}`}>
-          <Link to="/#see-pricing" class="px-3 font-type-monasans text-color-1 sm:inline sm:px-4 ">Pricing</Link>
+          <a href="/#see-pricing" class="px-3 font-type-monasans text-color-1 sm:inline sm:px-4 ">Pricing</a>
           <Link to={"/login"}>
 
             <button class="bg-transparent my-2 text-color-1 login_border px-6 py-2 rounded-full font-type-monasans inline px-4">Login</button>
