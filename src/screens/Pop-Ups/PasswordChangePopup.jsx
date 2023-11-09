@@ -21,7 +21,7 @@ const PasswordChangePopup = () => {
     <div className={`popup-container ${showPasswordChangeMessage ? 'show' : ''}`}>
       <div className="popup-message">
         <p>Password Changed  Please log in again.</p>
-        <Link to="/login">
+        <Link to="/login" class="no-underline hover:no-underline">
           <button onClick={closeMessage}>Login</button>
         </Link>
         <button onClick={closeMessage}>Close</button>
