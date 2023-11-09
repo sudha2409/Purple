@@ -56,7 +56,7 @@ const EcommercePage = ({products, setFiltersChange}) => {
         onSelectedFiltersChange={handleSetSelectedFiltersChange}
       />
          {freeRole ? (<FreeTrialInfo onUpgradeClick={handleUpgradeClick} />) : <></>}          
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center">
+      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center">
         {filteredAds.map((ad) => (
           <ProductCard key={ad.id} ad={ad} />
         ))}
