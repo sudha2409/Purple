@@ -41,13 +41,13 @@ export const Footer = ({
               </div>
               </Link>
             <span class="text-sm text-white text-size-3">High level experience in web design and development knowledge, producing quality work.</span>
-            <div class="flex space-x-6 py-6">
+            {/* <div class="flex space-x-6 py-6">
               <IconFacebook1 className="icon-instance-node" color="white" />
               <IconInstagram className="icon-instance-node" color="white" />
               <IconLinkedin className="icon-instance-node" />
               <IconTwitter2 className="icon-instance-node" color="white" />
               <IconYoutube className="icon-instance-node" />
-            </div>
+            </div> */}
 
           </div>
           <div class="flex flex-col lg:flex-row space-x-2 w-2/3 py-2">
@@ -62,7 +62,10 @@ export const Footer = ({
               <span class="py-4 text-white text-lg text-size-4">Company</span>
               <span class="text-white text-sm text-size-5 py-2">About us</span>
               <span class="text-white text-sm text-size-5 py-2">Careers</span>
+              <a href = "/#faq">
+
               <span class="text-white text-sm text-size-5 py-2">FAQs</span>
+              </a>
               <Link to="/privacy-policy" class="py-2 my-0">
                 <span class="text-white text-sm text-size-5 ">Privacy</span>
 

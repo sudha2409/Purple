@@ -25,22 +25,6 @@ const EcommercePage = ({products, setFiltersChange}) => {
     }
   }, [products]);
   
-  // useEffect(() => {
-  //   fetch(BASE_APP_URL+"/v1/api/advertisements?page=0", 
-  //   {
-  //     headers: {
-  //       'Authorization': accessAuth?.accessToken,
-  //       'Content-Type': 'application/json'
-  //     },
-  //   })
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       setAds(data.ads);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error fetching data:", error);
-  //     });
-  // }, []);
   const handleUpgradeClick = () => {
     navigate('/checkout-payment');
   };
@@ -72,7 +56,7 @@ const EcommercePage = ({products, setFiltersChange}) => {
         onSelectedFiltersChange={handleSetSelectedFiltersChange}
       />
          {freeRole ? (<FreeTrialInfo onUpgradeClick={handleUpgradeClick} />) : <></>}          
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 ">
+      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center">
         {filteredAds.map((ad) => (
           <ProductCard key={ad.id} ad={ad} />
         ))}
