@@ -16,7 +16,7 @@ const Category = ({ ad }) => {
     <div className="product-card">
       <div className="card-header"></div>
       <div className="card-body">
-        <div className="logo-name-container">
+        <div className="logo-name-container max-h-[40px]">
           <img className="logo-image" src={logo_resource_url} alt={name} />
           <h2 className="name">{name}</h2>
         </div>

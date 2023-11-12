@@ -14,8 +14,8 @@ const FoldableFAQ = ({ question, answer }) => {
   return (
 
     <div class="flex space-x-4 px-6 items-center">
-      <img class="" src={questionicon}></img>
-      {isOpen && (<div class="flex flex-col space-y-2 pt-8" onClick={toggleFAQ}>
+      <img class="" src={questionicon} onClick={toggleFAQ}></img>
+      {isOpen && (<div class="flex flex-col space-y-2 pt-8" >
         <span class="font-bold">{question}</span>
         <p dangerouslySetInnerHTML={{ __html: sanitizer(answer) }}></p>
 
@@ -23,7 +23,7 @@ const FoldableFAQ = ({ question, answer }) => {
       }
 
       {!isOpen &&(
-        <div class="flex space-x-2" onClick={toggleFAQ}>
+        <div class="flex space-x-2">
           <span class="font-bold">{question}</span>
           <div class="py-1">
           <svg
