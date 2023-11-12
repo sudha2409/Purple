@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./FoldableFAQ.css";
-import questionicon from "../images/question_icon.png"
-import dompurify from 'dompurify';
+import questionicon from "../images/question_icon.png";
+import dompurify from "dompurify";
 
 const FoldableFAQ = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,21 +12,24 @@ const FoldableFAQ = ({ question, answer }) => {
   const sanitizer = dompurify.sanitize;
 
   return (
+    <div
+      className="cursor-pointer flex items-center gap-3"
+      onClick={toggleFAQ}
+      class="flex space-x-4 px-6 items-center"
+    >
+      <img src={questionicon} alt="question mark" />
+      {isOpen && (
+        <div class="flex flex-col space-y-2 pt-8">
+          <span class="font-bold">{question}</span>
+          <p dangerouslySetInnerHTML={{ __html: sanitizer(answer) }}></p>
+        </div>
+      )}
 
-    <div class="flex space-x-4 px-6 items-center">
-      <img class="" src={questionicon} onClick={toggleFAQ}></img>
-      {isOpen && (<div class="flex flex-col space-y-2 pt-8" >
-        <span class="font-bold">{question}</span>
-        <p dangerouslySetInnerHTML={{ __html: sanitizer(answer) }}></p>
-
-      </div>)
-      }
-
-      {!isOpen &&(
+      {!isOpen && (
         <div class="flex space-x-2">
           <span class="font-bold">{question}</span>
           <div class="py-1">
-          <svg
+            <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
               width="16"
@@ -42,11 +45,9 @@ const FoldableFAQ = ({ question, answer }) => {
                 d="M8 1 8 15M1 8 15 8"
               ></path>
             </svg>
-            </div>
           </div>
+        </div>
       )}
-      
-
     </div>
   );
 };

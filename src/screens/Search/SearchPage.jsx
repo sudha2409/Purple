@@ -5,7 +5,7 @@ import LogInHeader from "./LogInHeader";
 import EcommercePage from "../Search/EcommercePage";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { BASE_APP_URL } from "../../api/config";
+import { BASE_APP_URL, ROLES_LIST } from "../../api/config";
 
 export const SearchPage = () => {
   let { page } = useParams();
@@ -20,6 +20,18 @@ export const SearchPage = () => {
 
   const itemsPerPage = 30;
   const [filterparamsString, setfilterparamsString] = useState("");
+
+  const accessAuth = JSON.parse(localStorage.getItem("accessAuth"));
+  const [isPaidUser, setIsPaidUser] = useState(false);
+
+  useEffect(() => {
+    if (
+      accessAuth?.roles === ROLES_LIST.Admin ||
+      accessAuth?.roles === ROLES_LIST.PaidUser
+    ) {
+      setIsPaidUser(true);
+    }
+  }, []);
 
   useEffect(() => {
     const accessAuth = JSON.parse(localStorage.getItem("accessAuth"));
@@ -73,11 +85,12 @@ export const SearchPage = () => {
 
   return (
     <div class="flex flex-col">
-      <LogInHeader></LogInHeader>
-             <EcommercePage
-            products={products}
-            setFiltersChange={handleSetFiltersChange}
-          />      
+      <LogInHeader />
+      <EcommercePage
+        products={products}
+        setFiltersChange={handleSetFiltersChange}
+      />
+      {isPaidUser && (
         <div className="pagination py-2 pb-4">
           {currentPageNumber > 0 && (
             <button
@@ -100,8 +113,8 @@ export const SearchPage = () => {
             </button>
           )}
         </div>
-          <Footer/>
-
+      )}
+      <Footer />
     </div>
   );
 };
